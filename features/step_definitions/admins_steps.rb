@@ -4,8 +4,8 @@ Given /^I am an admin not authenticated$/ do
 end
 
 Given /^I am a new, authenticated admin$/ do
-  email = 'iam@milesdavis.com'
-  password = 'donalee'
+  email = 'email@domain.com'
+  password = '12345678'
   admin = Admin.new(:email => email, :password => password, :password_confirmation => password)
   role = Role.new(:name => "SuperAdmin")
   admin.roles << role

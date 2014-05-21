@@ -38,7 +38,8 @@ gem "unicorn"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
+gem "cancan"
+gem "scaffold-bootstrap3"
 gem "bootstrap-sass", "~> 3.1.1.1"
 gem "compass-rails", group: :assets
 gem "rails_layout", group: :development

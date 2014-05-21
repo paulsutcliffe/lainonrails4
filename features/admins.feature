@@ -14,9 +14,9 @@ Feature: Admin create a new admin
   Then I should see "<email>"
 
   Examples:
-    | email              | password  |
-    | paulyoyo@gmail.com | chimpance |
-    | hola@kosmyka.com   | chimpance |
+    | email              | password    |
+    | paulyoyo@gmail.com | chimpance99 |
+    | hola@kosmyka.com   | chimpance99 |
 
 
   Scenario: Willing to edit my admin account

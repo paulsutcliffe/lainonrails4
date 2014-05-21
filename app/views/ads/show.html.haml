@@ -1,0 +1,15 @@
+#region-ads.container
+  .region
+    .region-title
+      %h1= page_title!('ad')
+
+  .region
+    %p
+      %b Ad:
+      = @ad.ad
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_ad_path(@ad), class: 'btn btn-success'
+    = link_to 'Regresar', ads_path, class: 'btn btn-warning'
