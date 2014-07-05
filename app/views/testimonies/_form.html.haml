@@ -1,0 +1,12 @@
+= simple_form_for(@testimony) do |f|
+  = render 'layouts/error_messages', :target => f.object
+
+  .form-inputs
+    = f.input :name
+    = f.input :content
+    = f.input :testimony_type, as: "radio_buttons", :collection => Testimony::TYPES.map{|k, v| [k, v]}, :include_blank=>false
+    = f.input :image
+    = f.input :video_link
+
+  .form-actions
+    = f.button :submit

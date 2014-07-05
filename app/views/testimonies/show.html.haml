@@ -1,0 +1,27 @@
+#section-testimonies.container
+  .section
+    .section-title
+      %h1= page_title!('testimony')
+
+  .section
+    %p
+      %b Name:
+      = @testimony.name
+    %p
+      %b Content:
+      = @testimony.content
+    %p
+      %b Testimony type:
+      = @testimony.testimony_type
+    %p
+      %b Image:
+      = @testimony.image
+    %p
+      %b Video link:
+      = @testimony.video_link
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_testimony_path(@testimony), class: 'btn btn-info'
+    = link_to 'crud.back', testimonies_path, class: 'btn btn-warning'

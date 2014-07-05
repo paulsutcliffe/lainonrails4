@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :articles
+  resources :testimonies, path: "testimonios"
 
-  resources :products
+  resources :articles, path: "blog"
+
+  resources :products, path: "productos"
 
   get 'inicio/index'
 
   devise_for :users
 
-  resources :ads
+  resources :ads, "anuncios"
 
   root "inicio#index"
 

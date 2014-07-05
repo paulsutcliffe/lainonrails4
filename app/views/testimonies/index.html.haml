@@ -1,0 +1,32 @@
+#section-testimonies.container
+  .title
+    %h1= page_title!('testimonies')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th Name
+          %th Content
+          %th Testimony type
+          %th Image
+          %th Video link
+          %th
+          %th
+          %th
+
+        - @testimonies.each do |testimony|
+          %tr
+            %td= testimony.name
+            %td= testimony.content
+            %td= testimony.testimony_type
+            %td= testimony.image
+            %td= testimony.video_link
+            %td= link_to 'crud.show', testimony, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
+              %td= link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
