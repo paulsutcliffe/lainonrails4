@@ -1,0 +1,18 @@
+#section-products.container
+  .section
+    .section-title
+      %h1= page_title!('product')
+
+  .section
+    %p
+      %b Name:
+      = @product.name
+    %p
+      %b Description:
+      = @product.description
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_product_path(@product), class: 'btn btn-info'
+    = link_to 'crud.back', products_path, class: 'btn btn-warning'
