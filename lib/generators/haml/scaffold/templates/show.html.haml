@@ -1,17 +1,17 @@
-#region-<%= plural_table_name.downcase %>.container
-  .region
-    .region-title
+#section-<%= plural_table_name.downcase %>.container
+  .section
+    .section-title
       %h1= page_title!('<%= singular_table_name %>')
 
-  .region
+  .section
 <% for attribute in attributes -%>
     %p
       %b <%= attribute.human_name %>:
       = @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
-  .region
+  .section
     - if current_admin
       .admin-controls
-        = link_to I18n.t('crud.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-info'
-    = link_to I18n.t('crud.back'), <%= index_helper %>_path, class: 'btn btn-warning'
+        = link_to 'crud.edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-info'
+    = link_to 'crud.back', <%= index_helper %>_path, class: 'btn btn-warning'

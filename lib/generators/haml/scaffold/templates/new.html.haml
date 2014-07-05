@@ -1,13 +1,13 @@
-#region-<%= plural_table_name %>.container
+#section-<%= plural_table_name %>.container
 
-  .region
-    .region-title
+  .section
+    .title
       %h1
-        = page_title!(I18n.t('crud.new') + ' ' + '<%= singular_table_name %>')
+        = page_title!('crud.new' + ' ' + '<%= singular_table_name %>')
 
-  .region
+  .section
     = render 'form'
 
-  .region
+  .section
     .admin-controls
-      = link_to I18n.t('crud.back'), 'javascript:history.back(-1)', class: 'btn btn-warning'
+      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'

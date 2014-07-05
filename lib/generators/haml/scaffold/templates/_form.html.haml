@@ -9,8 +9,7 @@
 <% for attribute in attributes -%>
   .form-group
     = f.label '<%= plural_table_name %>.<%= attribute.name %>', class: 'col-sm-2 control-label', placeholder: '<%= plural_table_name %>.<%= attribute.name %>'
-    .col-sm-10
-      = f.<%= attribute.field_type %> :<%= attribute.name %>, class: 'form-control'
+    = f.<%= attribute.field_type %> :<%= attribute.name %>, class: 'form-control'
 <% end -%>
   .actions
     = f.submit 'form.submit', class: 'btn btnprimaryy'

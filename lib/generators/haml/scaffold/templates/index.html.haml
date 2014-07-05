@@ -1,8 +1,8 @@
-#seccion-<%= plural_table_name.downcase %>.container
+#section-<%= plural_table_name.downcase %>.container
   .title
     %h1= page_title!('<%= plural_table_name %>')
 
-  .region
+  .section
     - if current_admin
       .admin-control
         = 'crud.new' + ' ' + '<%= human_name %>', new_<%= singular_table_name %>_path, class: 'btn btn-primary'

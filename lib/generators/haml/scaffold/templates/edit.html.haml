@@ -1,14 +1,14 @@
-#region-<%= plural_table_name.downcase %>.container
+#section-<%= plural_table_name.downcase %>.container
 
-  .region
-    .region-title
+  .section
+    .title
       %h1
-        = page_title!(I18n.t('crud.edit')+ ' ' + '<%= singular_table_name %>')
+        = page_title!('crud.edit'+ ' ' + '<%= singular_table_name %>')
 
-  .region
+  .section
     = render 'form'
 
-  .region
+  .section
     .admin-controls
-      = link_to I18n.t('crud.show'), @<%= singular_table_name %>, class: 'btn btn-info'
-      = link_to I18n.t('crud.back'), 'javascript:history.back(-1)', class: 'btn btn-warning'
+      = link_to 'crud.show', @<%= singular_table_name %>, class: 'btn btn-info'
+      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'
