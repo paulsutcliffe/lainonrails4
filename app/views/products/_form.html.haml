@@ -1,10 +1,11 @@
 = simple_form_for(@product) do |f|
-  = f.error_notification
+  = render 'layouts/error_messages', :target => f.object
 
   .form-inputs
     = f.input :name
     = f.input :description
     = f.input :image
+    = image_tag @product.image.thumb if @product.image.present?
 
   .form-actions
     = f.button :submit
