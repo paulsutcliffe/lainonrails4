@@ -15,3 +15,11 @@ Versions by model:
     thumb
     listing
     detail
+
+COUNTRIES
+=========
+Default values in
+  - config/application.rb (symbols)
+  - app/models/country (hashes) - constant
+    - Values used in migration 20140705124424_countries_initial_data.rb
+
