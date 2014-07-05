@@ -1,0 +1,26 @@
+#section-pages.container
+  .title
+    %h1= page_title!('pages')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Page', new_page_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th Title
+          %th Content
+          %th
+          %th
+          %th
+
+        - @pages.each do |page|
+          %tr
+            %td= page.title
+            %td= truncate(strip_tags(page.content), :length => 150, :separator => " ")
+            %td= link_to 'crud.show', page, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_page_path(page), class: 'btn btn-info'
+              %td= link_to 'crud.delete', page, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'

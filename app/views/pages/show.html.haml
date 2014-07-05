@@ -1,0 +1,13 @@
+#section-pages.container
+  .section
+    .section-title
+      %h1= page_title!(@page.title)
+
+  .section
+    = @page.content.html_safe
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_page_path(@page), class: 'btn btn-info'
+    = link_to 'crud.back', pages_path, class: 'btn btn-warning'

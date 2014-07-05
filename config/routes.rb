@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :pages
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :testimonies, path: "testimonios"
 

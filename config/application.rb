@@ -26,6 +26,7 @@ module Lainonrails4
       controller_specs: true,
       request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
+      g.scaffold_controller "scaffold_controller"
     end
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
