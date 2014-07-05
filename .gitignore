@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+config/database.yml
+/Apuntes
+# Mac finder artifacts
+.DS_Store
