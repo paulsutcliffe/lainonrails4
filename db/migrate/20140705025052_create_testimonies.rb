@@ -10,5 +10,6 @@ class CreateTestimonies < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :testimonies, :slug, unique: true
   end
 end

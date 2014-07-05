@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(version: 20140705025052) do
     t.string   "title"
     t.text     "content"
     t.string   "image"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
 
   create_table "countries", force: true do |t|
     t.string   "name"
@@ -40,9 +43,12 @@ ActiveRecord::Schema.define(version: 20140705025052) do
     t.string   "name"
     t.text     "description"
     t.string   "image"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "products", ["slug"], name: "index_products_on_slug", unique: true, using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -65,6 +71,8 @@ ActiveRecord::Schema.define(version: 20140705025052) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "testimonies", ["slug"], name: "index_testimonies_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

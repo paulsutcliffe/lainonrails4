@@ -4,8 +4,10 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.string :image
+      t.string :slug
 
       t.timestamps
     end
+    add_index :articles, :slug, unique: true
   end
 end

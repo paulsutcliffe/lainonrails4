@@ -4,8 +4,10 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :image
+      t.string :slug
 
       t.timestamps
     end
+    add_index :products, :slug, unique: true
   end
 end
