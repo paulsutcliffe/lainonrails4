@@ -11,13 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704235345) do
+ActiveRecord::Schema.define(version: 20140705022456) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
+  add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,47 +61,14 @@ ActiveRecord::Schema.define(version: 20140704235345) do
     t.datetime "updated_at"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "admins_roles", id: false, force: true do |t|
-    t.integer "admin_id"
+  create_table "users_roles", id: false, force: true do |t|
+    t.integer "user_id"
     t.integer "role_id"
   end
 
-  create_table "ads", force: true do |t|
-    t.string   "ad"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "blogs", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "noticia", force: true do |t|
-    t.string   "titulo"
-    t.string   "subtitlo"
-    t.text     "contenido"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "roles", force: true do |t|
-    t.string "name"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
 end

@@ -5,7 +5,7 @@
   .section
     - if current_admin
       .admin-control
-        = 'crud.new' + ' ' + '<%= human_name %>', new_<%= singular_table_name %>_path, class: 'btn btn-primary'
+        = link_to I18n.t('crud.new') + ' ' + '<%= human_name %>', new_<%= singular_table_name %>_path, class: 'btn btn-primary'
 
     .table-responsive
       %table.table

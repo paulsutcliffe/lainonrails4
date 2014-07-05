@@ -62,6 +62,7 @@ gem 'rolify'
 gem "simple_form"
 gem "ckeditor"
 gem 'kaminari'
+gem 'faker', '~> 1.3.0'
 group :development, :test do
   gem 'thin'
 end
