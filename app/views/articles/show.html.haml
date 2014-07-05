@@ -1,0 +1,21 @@
+#section-articles.container
+  .section
+    .section-title
+      %h1= page_title!('article')
+
+  .section
+    %p
+      %b Title:
+      = @article.title
+    %p
+      %b Content:
+      = @article.content
+    %p
+      %b Image:
+      = @article.image
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_article_path(@article), class: 'btn btn-info'
+    = link_to 'crud.back', articles_path, class: 'btn btn-warning'

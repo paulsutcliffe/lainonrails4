@@ -1,0 +1,28 @@
+#section-articles.container
+  .title
+    %h1= page_title!('articles')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Article', new_article_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th Title
+          %th Content
+          %th Image
+          %th
+          %th
+          %th
+
+        - @articles.each do |article|
+          %tr
+            %td= article.title
+            %td= article.content
+            %td= article.image
+            %td= link_to 'crud.show', article, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'
+              %td= link_to 'crud.delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
