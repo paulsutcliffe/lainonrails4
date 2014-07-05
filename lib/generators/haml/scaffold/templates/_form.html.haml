@@ -1,0 +1,15 @@
+= form_for @<%= singular_table_name %>, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @<%= singular_table_name %>.errors.any?
+    #error_explanation
+      %h2= 'form.errors', :count => @<%= singular_table_name %>.errors.count
+      %ul
+        - @<%= singular_table_name %>.errors.full_messages.each do |msg|
+          %li= msg
+
+<% for attribute in attributes -%>
+  .form-group
+    = f.label '<%= plural_table_name %>.<%= attribute.name %>', class: 'col-sm-2 control-label', placeholder: '<%= plural_table_name %>.<%= attribute.name %>'
+    = f.<%= attribute.field_type %> :<%= attribute.name %>, class: 'form-control'
+<% end -%>
+  .actions
+    = f.submit 'form.submit', class: 'btn btnprimaryy'

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'inicio/index'
+
   devise_for :users
+
   resources :ads
-  root "ads#index"
+
+  root "inicio#index"
 
 end

@@ -1,0 +1,13 @@
+#section-<%= plural_table_name %>.container
+
+  .section
+    .title
+      %h1
+        = page_title!('crud.new' + ' ' + '<%= singular_table_name %>')
+
+  .section
+    = render 'form'
+
+  .section
+    .admin-controls
+      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'

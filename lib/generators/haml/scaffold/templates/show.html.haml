@@ -1,0 +1,17 @@
+#section-<%= plural_table_name.downcase %>.container
+  .section
+    .section-title
+      %h1= page_title!('<%= singular_table_name %>')
+
+  .section
+<% for attribute in attributes -%>
+    %p
+      %b <%= attribute.human_name %>:
+      = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-info'
+    = link_to 'crud.back', <%= index_helper %>_path, class: 'btn btn-warning'
