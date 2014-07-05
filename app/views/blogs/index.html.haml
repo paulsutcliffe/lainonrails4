@@ -1,0 +1,28 @@
+#region-blogs.container
+
+  .region
+    .region-title
+      %h1= page_title!('blogs')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to I18n.t('crud.new') + ' ' + 'Blog', new_blog_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Title
+            %th Content
+            %th
+            %th
+            %th
+
+          - @blogs.each do |blog|
+            %tr
+              %td= blog.title
+              %td= blog.content
+              %td= link_to I18n.t('crud.show'), blog, class: 'btn btn-default'
+              - if current_admin
+                %td= link_to I18n.t('crud.edit'), edit_blog_path(blog), class: 'btn btn-info'
+                %td= link_to I18n.t('crud.delete'), blog, :method => :delete, :data => { :confirm => I18n.t('crud.are-you-sure') }, class: 'btn btn-danger'

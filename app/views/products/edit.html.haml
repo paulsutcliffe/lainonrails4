@@ -1,0 +1,14 @@
+#region-products.container
+
+  .region
+    .region-title
+      %h1
+        = page_title!(I18n.t('crud.edit')+ ' ' + 'product')
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to I18n.t('crud.show'), @product, class: 'btn btn-info'
+      = link_to I18n.t('crud.back'), 'javascript:history.back(-1)', class: 'btn btn-warning'

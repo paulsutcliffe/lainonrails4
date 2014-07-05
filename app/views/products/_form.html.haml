@@ -1,0 +1,22 @@
+= form_for @product, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @product.errors.any?
+    #error_explanation
+      %h2= I18n.t('form.errors', :count => @product.errors.count)
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label I18n.t('products.title'), class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label I18n.t('products.description'), class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :description, class: 'form-control'
+  .form-group
+    = f.label I18n.t('products.sub-title'), class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :sub-title, class: 'form-control'
+  .actions
+    = f.submit I18n.t('form.submit'), class: 'btn btnprimaryy'

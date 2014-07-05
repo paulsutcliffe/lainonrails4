@@ -1,0 +1,21 @@
+#region-products.container
+  .region
+    .region-title
+      %h1= page_title!('product')
+
+  .region
+    %p
+      %b Title:
+      = @product.title
+    %p
+      %b Description:
+      = @product.description
+    %p
+      %b Sub-title:
+      = @product.sub-title
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to I18n.t('crud.edit'), edit_product_path(@product), class: 'btn btn-info'
+    = link_to I18n.t('crud.back'), products_path, class: 'btn btn-warning'

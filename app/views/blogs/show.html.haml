@@ -1,0 +1,18 @@
+#region-blogs.container
+  .region
+    .region-title
+      %h1= page_title!('blog')
+
+  .region
+    %p
+      %b Title:
+      = @blog.title
+    %p
+      %b Content:
+      = @blog.content
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to I18n.t('crud.edit'), edit_blog_path(@blog), class: 'btn btn-info'
+    = link_to I18n.t('crud.back'), blogs_path, class: 'btn btn-warning'
