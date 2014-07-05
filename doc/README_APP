@@ -2,19 +2,16 @@ UPLOADERS
 =========
 Versions by model:
   Article:
-    thumb
-    listing
-    detail
+    [thumb, listing, detail]
 
   Product:
-    thumb
-    listing
-    detail
+    [thumb, listing, detail]
 
   Testimony:
-    thumb
-    listing
-    detail
+    [thumb, listing, detail]
+
+  Office:
+    [thumb, listing, detail]
 
 COUNTRIES
 =========

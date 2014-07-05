@@ -4,6 +4,7 @@ class Country < ActiveRecord::Base
   validates_uniqueness_of :code
   has_many :products
   has_many :testimonies
+  has_many :offices
 
   COUNTRIES = { "Perú"        => "pe",
                 "Costa Rica"  => "cr",

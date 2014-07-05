@@ -17,4 +17,13 @@ class <%= controller_class_name %>Controller < InheritedResources::Base
     params.require(:<%= singular_table_name %>).permit(<%= attributes_names.map { |name| name.to_sym } %>)
   <%- end -%>
   end
+
+  def permitted_params
+  <%- if attributes_names.empty? -%>
+    params[:<%= singular_table_name %>]
+  <%- else -%>
+    params.permit(:<%= singular_table_name %> => <%= attributes_names.map { |name| name.to_sym } %>)
+  <%- end -%>
+  end
+
 end

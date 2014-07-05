@@ -21,4 +21,8 @@ class TestimoniesController < InheritedResources::Base
   def testimony_params
     params.require(:testimony).permit([:name, :content, :testimony_type, :image, :video_link])
   end
+
+  def permitted_params
+    params.permit(:testimony => [:name, :content, :testimony_type, :image, :video_link])
+  end
 end

@@ -15,13 +15,7 @@
       = @office.phone
     %p
       %b Image:
-      = @office.image
-    %p
-      %b Country:
-      = @office.country_id
-    %p
-      %b Slug:
-      = @office.slug
+      = image_tag @office.image.detail
 
   .section
     - if current_admin

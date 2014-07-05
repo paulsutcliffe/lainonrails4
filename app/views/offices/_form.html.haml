@@ -6,8 +6,7 @@
     = f.input :address
     = f.input :phone
     = f.input :image
-    = f.input :country_id
-    = f.input :slug
+    = image_tag @office.image.thumb if @office.image.present?
 
   .form-actions
     = f.button :submit

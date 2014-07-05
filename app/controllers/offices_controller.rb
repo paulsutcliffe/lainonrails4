@@ -15,10 +15,14 @@ class OfficesController < InheritedResources::Base
   private
 
   def set_office
-    @office = Office.find(params[:id])
+    @office = Office.friendly_id.find(params[:id])
   end
 
   def office_params
     params.require(:office).permit([:name, :address, :phone, :image, :country_id])
+  end
+
+  def permitted_params
+    params.permit(:office => [:name, :address, :phone, :image, :country_id])
   end
 end
