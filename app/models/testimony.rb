@@ -1,5 +1,6 @@
 # coding: utf-8
 class Testimony < ActiveRecord::Base
+  include CommonScopes
   validates_presence_of :name, :testimony_type, :image
   validates_presence_of :country_id, message: "No se ha encontrado el país de procedencia."
   mount_uploader :image, TestimonyImageUploader

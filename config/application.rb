@@ -34,6 +34,7 @@ module Lainonrails4
     config.i18n.default_locale = :pe
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.autoload_paths << "#{config.root}/lib/validators"
+    config.autoload_paths << "#{config.root}/lib/modules"
     config.assets.enabled = true
     config.assets.precompile += %w(ckeditor/*)
 
