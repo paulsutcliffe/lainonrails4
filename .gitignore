@@ -16,5 +16,6 @@
 /tmp
 config/database.yml
 /Apuntes
+/public
 # Mac finder artifacts
 .DS_Store

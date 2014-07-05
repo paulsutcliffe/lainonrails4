@@ -63,6 +63,7 @@ gem "simple_form"
 gem "ckeditor"
 gem 'kaminari'
 gem 'faker', '~> 1.3.0'
+gem "binding_of_caller"
 group :development, :test do
   gem 'thin'
 end
