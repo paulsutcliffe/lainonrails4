@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140705072124) do
+ActiveRecord::Schema.define(version: 20140705112849) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -69,8 +69,10 @@ ActiveRecord::Schema.define(version: 20140705072124) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "country_id"
   end
 
+  add_index "products", ["country_id"], name: "index_products_on_country_id", using: :btree
   add_index "products", ["slug"], name: "index_products_on_slug", unique: true, using: :btree
 
   create_table "roles", force: true do |t|
@@ -93,8 +95,10 @@ ActiveRecord::Schema.define(version: 20140705072124) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "country_id"
   end
 
+  add_index "testimonies", ["country_id"], name: "index_testimonies_on_country_id", using: :btree
   add_index "testimonies", ["slug"], name: "index_testimonies_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|

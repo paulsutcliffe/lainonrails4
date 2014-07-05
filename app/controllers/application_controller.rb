@@ -21,6 +21,9 @@ class ApplicationController < ActionController::Base
       logger.error flash.now[:notice]
       params[:locale] = I18n.default_locale
     end
+
+    @locale  = params[:locale]
+    @country = Country.code_available?( @locale )
   end
 
   def default_url_options(options={})

@@ -45,6 +45,11 @@
 
   %body
     %header{:role => "navigation"}
+      = link_to "ads", ads_path
+      = link_to "Articles", articles_path
+      = link_to "Page", pages_path
+      = link_to "products", products_path
+      = link_to "testimony", testimonies_path
       =# render 'layouts/navigation'
     %main{:role => "main"}
       =# render 'layouts/messages'

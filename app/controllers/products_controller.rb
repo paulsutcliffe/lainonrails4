@@ -1,6 +1,17 @@
 class ProductsController < InheritedResources::Base
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  def create
+    @product = Product.new(permitted_params)
+    @product.country_id = @country.try(:id)
+    create!(notice: "Producto guardado correctamente.")
+  end
+
+  def update
+    @product.country_id = @country.try(:id)
+    update!(:notice => "Producto actualizado correctamente.")
+  end
+
   private
 
   def set_product
@@ -8,6 +19,6 @@ class ProductsController < InheritedResources::Base
   end
 
   def permitted_params
-    params.permit(:product => [:name, :description, :image])
+    params.require(:product).permit([:name, :description, :image, :country_id])
   end
 end
