@@ -12,6 +12,7 @@
         %tr
           %th Name
           %th Description
+          %th Image
           %th
           %th
           %th
@@ -20,6 +21,7 @@
           %tr
             %td= product.name
             %td= product.description
+            %td= product.image
             %td= link_to 'crud.show', product, class: 'btn btn-default'
             - if current_admin
               %td= link_to 'crud.edit', edit_product_path(product), class: 'btn btn-info'
