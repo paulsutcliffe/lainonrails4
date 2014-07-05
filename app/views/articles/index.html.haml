@@ -21,7 +21,7 @@
           %tr
             %td= article.title
             %td= article.content
-            %td= article.image
+            %td= image_tag article.image.listing
             %td= link_to 'crud.show', article, class: 'btn btn-default'
             - if current_admin
               %td= link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'

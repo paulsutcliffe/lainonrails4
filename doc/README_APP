@@ -1,0 +1,13 @@
+UPLOADERS
+=========
+Versions by model:
+  Article:
+    thumb
+    listing
+    detail
+
+  Product:
+    thumb
+    listing
+    detail
+
