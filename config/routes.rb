@@ -1,20 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :pages
-
   mount Ckeditor::Engine => '/ckeditor'
-  resources :testimonies, path: "testimonios"
+  get "/countries" => "countries#index", path: "paises"
+  root "countries#index"
 
-  resources :articles, path: "blog"
-
-  resources :products, path: "productos"
-
-  get 'inicio/index'
-
-  devise_for :users
-
-  resources :ads, "anuncios"
-
-  root "inicio#index"
-
+  scope "(:locale)", :locale => /#{I18n.available_locales.join("|")}/ do
+    get "/" => "inicio#index"
+    resources :pages, path: "lain"
+    resources :testimonies, path: "testimonios"
+    resources :articles, path: "blog"
+    resources :products, path: "productos"
+    get 'inicio/index'
+    devise_for :users
+    resources :ads, "anuncios"
+  end
 end

@@ -64,6 +64,7 @@ gem "ckeditor"
 gem 'kaminari'
 gem 'faker', '~> 1.3.0'
 gem "binding_of_caller"
+gem "geocoder"
 group :development, :test do
   gem 'thin'
 end
