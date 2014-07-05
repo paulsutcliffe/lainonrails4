@@ -1,0 +1,27 @@
+#section-subscribers.container
+  .section
+    .section-title
+      %h1= page_title!('subscriber')
+
+  .section
+    %p
+      %b First name:
+      = @subscriber.first_name
+    %p
+      %b Last name:
+      = @subscriber.last_name
+    %p
+      %b Email:
+      = @subscriber.email
+    %p
+      %b Phone:
+      = @subscriber.phone
+    %p
+      %b Country:
+      = @subscriber.country_id
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_subscriber_path(@subscriber), class: 'btn btn-info'
+    = link_to 'crud.back', subscribers_path, class: 'btn btn-warning'

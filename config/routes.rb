@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :articles, path: "blog"
     resources :products, path: "productos"
     resources :offices, path: "sucursales"
+    resources :subscribers
     get 'inicio/index'
     devise_for :users
     resources :ads, "anuncios"

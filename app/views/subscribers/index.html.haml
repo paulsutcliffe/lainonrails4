@@ -1,0 +1,32 @@
+#section-subscribers.container
+  .title
+    %h1= page_title!('subscribers')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Subscriber', new_subscriber_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th First name
+          %th Last name
+          %th Email
+          %th Phone
+          %th Country
+          %th
+          %th
+          %th
+
+        - @subscribers.each do |subscriber|
+          %tr
+            %td= subscriber.first_name
+            %td= subscriber.last_name
+            %td= subscriber.email
+            %td= subscriber.phone
+            %td= subscriber.country_id
+            %td= link_to 'crud.show', subscriber, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_subscriber_path(subscriber), class: 'btn btn-info'
+              %td= link_to 'crud.delete', subscriber, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
