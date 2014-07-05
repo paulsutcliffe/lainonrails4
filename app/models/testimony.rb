@@ -3,6 +3,8 @@ class Testimony < ActiveRecord::Base
 
   validates_presence_of :name, :testimony_type, :image
 
+  mount_uploader :image, ProductImageUploader
+
   extend FriendlyId
   friendly_id :name, use: :slugged
 

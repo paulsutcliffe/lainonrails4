@@ -24,7 +24,7 @@
             %td= testimony.name
             %td= testimony.content
             %td= testimony.testimony_type
-            %td= testimony.image
+            %td= image_tag testimony.image.listing
             %td= testimony.video_link
             %td= link_to 'crud.show', testimony, class: 'btn btn-default'
             - if current_admin
