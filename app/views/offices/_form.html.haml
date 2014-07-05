@@ -1,0 +1,13 @@
+= simple_form_for(@office) do |f|
+  = render 'layouts/error_messages', :target => f.object
+
+  .form-inputs
+    = f.input :name
+    = f.input :address
+    = f.input :phone
+    = f.input :image
+    = f.input :country_id
+    = f.input :slug
+
+  .form-actions
+    = f.button :submit

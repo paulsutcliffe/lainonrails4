@@ -1,0 +1,30 @@
+#section-offices.container
+  .section
+    .section-title
+      %h1= page_title!('office')
+
+  .section
+    %p
+      %b Name:
+      = @office.name
+    %p
+      %b Address:
+      = @office.address
+    %p
+      %b Phone:
+      = @office.phone
+    %p
+      %b Image:
+      = @office.image
+    %p
+      %b Country:
+      = @office.country_id
+    %p
+      %b Slug:
+      = @office.slug
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_office_path(@office), class: 'btn btn-info'
+    = link_to 'crud.back', offices_path, class: 'btn btn-warning'

@@ -2,7 +2,7 @@ class TestimoniesController < InheritedResources::Base
   before_action :set_testimony, only: [:show, :edit, :update, :destroy]
 
   def create
-    @testimony = Testimony.new(permitted_params)
+    @testimony = Testimony.new(testimony_params)
     @testimony.country_id = @country.try(:id)
     create!(notice: "Testimonio guardado correctamente.")
   end
@@ -18,7 +18,7 @@ class TestimoniesController < InheritedResources::Base
     @testimony  = Testimony.friendly.find(params[:id])
   end
 
-  def permitted_params
+  def testimony_params
     params.require(:testimony).permit([:name, :content, :testimony_type, :image, :video_link])
   end
 end

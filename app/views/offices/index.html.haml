@@ -1,0 +1,34 @@
+#section-offices.container
+  .title
+    %h1= page_title!('offices')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Office', new_office_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th Name
+          %th Address
+          %th Phone
+          %th Image
+          %th Country
+          %th Slug
+          %th
+          %th
+          %th
+
+        - @offices.each do |office|
+          %tr
+            %td= office.name
+            %td= office.address
+            %td= office.phone
+            %td= office.image
+            %td= office.country_id
+            %td= office.slug
+            %td= link_to 'crud.show', office, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_office_path(office), class: 'btn btn-info'
+              %td= link_to 'crud.delete', office, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
