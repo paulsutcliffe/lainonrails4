@@ -9,4 +9,7 @@ class Office < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
+  def slug_candidates
+    [ :name, [:name, :id]]
+  end
 end

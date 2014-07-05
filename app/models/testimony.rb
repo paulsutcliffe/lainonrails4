@@ -9,5 +9,9 @@ class Testimony < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  def slug_candidates
+    [ :name, [:name, :id]]
+  end
+
   TYPES = { "Antes y después" => "antesydespues", "Video" => "video" }
 end

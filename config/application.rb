@@ -33,6 +33,7 @@ module Lainonrails4
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :pe
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    config.autoload_paths << "#{config.root}/lib/validators"
     config.assets.enabled = true
     config.assets.precompile += %w(ckeditor/*)
 

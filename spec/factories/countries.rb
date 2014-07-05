@@ -1,8 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
+require "faker"
 
 FactoryGirl.define do
   factory :country do
-    name "MyString"
-    code "MyString"
+    name { Faker::Name.name }
+    code { [:pe, :cr] }
   end
 end
