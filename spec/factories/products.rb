@@ -1,9 +1,9 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
+require "faker"
 
 FactoryGirl.define do
   factory :product do
-    name "MyString"
-    description "MyText"
-    image "MyString"
+    name        { Faker::Name.name }
+    description { Faker::Lorem.paragraph }
+    image       { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
   end
 end

@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :subscriber do
-    first_name "MyString"
-    last_name "MyString"
-    email "MyString"
-    phone "MyString"
-    country_id 1
+    first_name  { Faker::Name.name }
+    last_name   { Faker::Name.name }
+    email       { Faker::Internet.email }
+    phone       { Faker::PhoneNumber }
+    country     { association :country }
   end
 end
