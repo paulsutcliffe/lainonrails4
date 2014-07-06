@@ -8,6 +8,7 @@ class Country < ActiveRecord::Base
   has_many :offices
   has_many :subscribers
   has_many :computests
+  has_many :contacts
 
   COUNTRIES = { "Perú"        => "pe",
                 "Costa Rica"  => "cr",

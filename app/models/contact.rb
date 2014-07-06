@@ -8,4 +8,6 @@ class Contact < ActiveRecord::Base
   validates :email, :length => { :maximum => 100 }
   validates :phone, :length => { :maximum => 12 },
     :format => PHONE_REGEX
+
+  belongs_to :country
 end
