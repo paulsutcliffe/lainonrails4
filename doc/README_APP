@@ -53,3 +53,4 @@ TESTIMONY
 =========
 A testimony have a field called "testimony_type", the list will be displayed depending to this field.
 The values are available in Testimony::TYPES
+  [antesydespues, video]

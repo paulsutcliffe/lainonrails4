@@ -23,10 +23,10 @@ class ProductsController < InheritedResources::Base
   end
 
   def product_params
-    params.require(:product).permit([:name, :description, :image, :country_id])
+    params.require(:product).permit([:name, :description, :image, :country_i, :video1, :video2, :video3])
   end
 
   def permitted_params
-    params.permit(:product => [:name, :description, :image, :country_id])
+    params.permit(:product => [:name, :description, :image, :country_id, :video1, :video2, :video3])
   end
 end

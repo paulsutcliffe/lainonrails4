@@ -12,6 +12,9 @@
         %tr
           %th Name
           %th Description
+          %th Video1
+          %th Video2
+          %th Video3
           %th Image
           %th
           %th
@@ -21,6 +24,9 @@
           %tr
             %td= product.name
             %td= product.description
+            %td= product.video1
+            %td= product.video2
+            %td= product.video3
             %td= image_tag product.image.listing
             %td= link_to 'crud.show', product, class: 'btn btn-default'
             - if current_admin

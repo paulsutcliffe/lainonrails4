@@ -6,6 +6,9 @@
     = f.input :description
     = f.input :image
     = image_tag @product.image.thumb if @product.image.present?
+    = f.input :video1
+    = f.input :video2
+    = f.input :video3
 
   .form-actions
     = f.button :submit
