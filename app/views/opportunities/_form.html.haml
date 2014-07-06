@@ -1,0 +1,12 @@
+= simple_form_for(@opportunity) do |f|
+  = render 'layouts/error_messages', :target => f.object
+
+  .form-inputs
+    = f.input :title
+    = f.input :description
+    = f.input :image
+    = f.input :active
+    = f.input :country_id
+
+  .form-actions
+    = f.button :submit
