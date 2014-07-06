@@ -115,9 +115,12 @@ ActiveRecord::Schema.define(version: 20140706194508) do
     t.string   "image"
     t.boolean  "active"
     t.integer  "country_id"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "opportunities", ["slug"], name: "index_opportunities_on_slug", unique: true, using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "title"

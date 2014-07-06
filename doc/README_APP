@@ -22,6 +22,9 @@ Versions by model:
   Testimony:
     [thumb, listing, detail]
 
+  Opportunity:
+    [small, thumb]
+
 
 COUNTRIES
 =========
@@ -34,6 +37,7 @@ Relationships:
   - Banner
   - Contact
   - Office
+  - Opportunity
   - Product
   - Suscriber
   - Testimony
@@ -54,3 +58,8 @@ TESTIMONY
 A testimony have a field called "testimony_type", the list will be displayed depending to this field.
 The values are available in Testimony::TYPES
   [antesydespues, video]
+
+OPPORTUNITIES
+=============
+Scope: actives -> list active opportunities
+If current user is admin then @opportunities list all opportunities, otherwise list only active opportunities.
