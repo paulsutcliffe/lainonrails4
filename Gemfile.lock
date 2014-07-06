@@ -123,6 +123,9 @@ GEM
       activesupport (>= 3.2, < 5)
     highline (1.6.21)
     hike (1.2.3)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -150,6 +153,7 @@ GEM
     minitest (5.3.4)
     multi_json (1.10.1)
     multi_test (0.0.3)
+    multi_xml (0.5.5)
     mysql2 (0.3.16)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -289,6 +293,7 @@ DEPENDENCIES
   friendly_id (~> 5.0.0)
   geocoder
   haml
+  httparty
   inherited_resources
   jbuilder (~> 2.0)
   jquery-rails

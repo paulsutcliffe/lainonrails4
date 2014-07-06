@@ -8,6 +8,8 @@
         = link_to I18n.t('crud.new') + ' ' + 'Computest', new_computest_path, class: 'btn btn-primary'
 
     .table-responsive
+      Download:
+      = link_to "XLS", computests_path(format: "xls")
       %table.table
         %tr
           %th First name

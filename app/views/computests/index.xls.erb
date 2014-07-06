@@ -1,0 +1,30 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Email</th>
+    <th>Teléfono</th>
+    <th>Género</th>
+    <th>Altura</th>
+    <th>Peso</th>
+    <th>IMC</th>
+    <th>Estado</th>
+    <th>País</th>
+  </tr>
+  <% @computests.each do |computest| %>
+  <tr>
+    <td><%= computest.id %></td>
+    <td><%= computest.first_name %></td>
+    <td><%= computest.last_name %></td>
+    <td><%= computest.email %></td>
+    <td><%= computest.phone %></td>
+    <td><%= computest.gender %></td>
+    <td><%= computest.height %></td>
+    <td><%= computest.weight %></td>
+    <td><%= computest.bmi %></td>
+    <td><%= computest.state %></td>
+    <td><%= computest.country || computest.country_id %></td>
+  </tr>
+  <% end %>
+</table>

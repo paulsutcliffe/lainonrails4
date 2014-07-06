@@ -20,6 +20,8 @@ class Computest < ActiveRecord::Base
 
   belongs_to :country
 
+  scope :ordered,   -> { order(:created_at => :desc) }
+
   def process_information
     self.bmi          = calculate_bmi.round
     self.state        = calculate_state calculate_bmi
@@ -51,6 +53,15 @@ class Computest < ActiveRecord::Base
       "Estás #{prcnt.round}% sobre tu peso ideal."
     else
       "Tienes un peso ideal."
+    end
+  end
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |computest|
+        csv << computest.attributes.values_at(*column_names)
+      end
     end
   end
 end
