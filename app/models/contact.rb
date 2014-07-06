@@ -8,6 +8,7 @@ class Contact < ActiveRecord::Base
   validates :email, :length => { :maximum => 100 }
   validates :phone, :length => { :maximum => 12 },
     :format => PHONE_REGEX
+  validates_presence_of :country_id, message: "No se ha encontrado el país de procedencia."
 
   belongs_to :country
 end

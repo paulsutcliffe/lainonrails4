@@ -1,0 +1,11 @@
+Hola, #{@contact.first_name} ha enviado el siguiente mensaje por la web de LAIN:
+= @contact.message
+
+Puedes contactar a #{@contact.first_name} con los siguientes datos:
+
+= @contact.first_name
+= @contact.last_name
+= @contact.email
+= @contact.phone
+
+LAIN #{@country_name}.
