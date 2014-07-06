@@ -1,6 +1,15 @@
-#section-index.section-total.container
-  .title
-    %h1= page_title!('index')
-
-  .region
-    %p Aquí va el contenido...
+#section-index.section-total.container-fluid
+  .container
+    #carousel-principal.carousel.slide{"data-ride" => "carousel"}
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel-principal"}
+          
+      .carousel-inner
+        .item.active
+          .carousel-caption
+      
+      .carousel-caption
+        %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-principal", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-left
+        %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-principal", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-right
