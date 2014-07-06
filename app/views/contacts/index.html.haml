@@ -1,0 +1,42 @@
+#section-contacts.container
+  .title
+    %h1= page_title!('contacts')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Contact', new_contact_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th First name
+          %th Last name
+          %th Email
+          %th Phone
+          %th Address
+          %th District
+          %th Province
+          %th City
+          %th Message
+          %th Country
+          %th
+          %th
+          %th
+
+        - @contacts.each do |contact|
+          %tr
+            %td= contact.first_name
+            %td= contact.last_name
+            %td= contact.email
+            %td= contact.phone
+            %td= contact.address
+            %td= contact.district
+            %td= contact.province
+            %td= contact.city
+            %td= contact.message
+            %td= contact.country_id
+            %td= link_to 'crud.show', contact, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_contact_path(contact), class: 'btn btn-info'
+              %td= link_to 'crud.delete', contact, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'

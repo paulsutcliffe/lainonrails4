@@ -43,12 +43,14 @@ class Computest < ActiveRecord::Base
 
   def calculate_ideal_weight
     prime = (calculate_bmi / 25).round(2)
-    if prime <= 1
+    if prime < 1
       prcnt = (1 - prime) * 100
       "Estás #{prcnt.round}% debajo de tu peso ideal."
-    elsif prime > 0
+    elsif prime > 1
       prcnt = (prime - 1) * 100
       "Estás #{prcnt.round}% sobre tu peso ideal."
+    else
+      "Tienes un peso ideal."
     end
   end
 end

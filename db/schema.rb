@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706083657) do
+ActiveRecord::Schema.define(version: 20140706122351) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -57,6 +57,21 @@ ActiveRecord::Schema.define(version: 20140706083657) do
     t.integer  "bmi"
     t.string   "state"
     t.string   "ideal_weight"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "district"
+    t.string   "province"
+    t.string   "city"
+    t.text     "message"
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"

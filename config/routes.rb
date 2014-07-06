@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :offices, path: "sucursales"
     resources :subscribers
     resources :computests
+    resources :contacts
     get 'inicio/index'
     devise_for :users, :path => "usuarios", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
     resources :ads, "anuncios"

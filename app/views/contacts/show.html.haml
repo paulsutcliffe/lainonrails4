@@ -1,0 +1,42 @@
+#section-contacts.container
+  .section
+    .section-title
+      %h1= page_title!('contact')
+
+  .section
+    %p
+      %b First name:
+      = @contact.first_name
+    %p
+      %b Last name:
+      = @contact.last_name
+    %p
+      %b Email:
+      = @contact.email
+    %p
+      %b Phone:
+      = @contact.phone
+    %p
+      %b Address:
+      = @contact.address
+    %p
+      %b District:
+      = @contact.district
+    %p
+      %b Province:
+      = @contact.province
+    %p
+      %b City:
+      = @contact.city
+    %p
+      %b Message:
+      = @contact.message
+    %p
+      %b Country:
+      = @contact.country_id
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_contact_path(@contact), class: 'btn btn-info'
+    = link_to 'crud.back', contacts_path, class: 'btn btn-warning'
