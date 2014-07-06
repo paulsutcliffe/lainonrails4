@@ -15,4 +15,14 @@ puts " "
   puts 'Role: ' << role
 end
 
+puts " "
+puts "-------------------------------------"
+puts "###         LOADING PAGES         ###"
+puts "-------------------------------------"
 
+privacy_policy  = FactoryGirl.create(:page, :privacy_policy)
+puts " --> #{privacy_policy}"
+lain_page       = FactoryGirl.create(:page, :lain)
+puts " --> #{lain_page}"
+method_page     = FactoryGirl.create(:page, :metodo)
+puts " --> #{method_page}"

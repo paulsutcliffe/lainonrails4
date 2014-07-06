@@ -7,12 +7,12 @@ FactoryGirl.define do
     password_confirmation { "12345678" }
 
     trait :admin do
-      email "admin@example.com"
+      email "admin@lain.net"
       after(:create) {|user| user.add_role(:admin)}
     end
 
     trait :user do
-      email "user@example.com"
+      email "user@lain.net"
       after(:create) {|user| user.add_role(:user)}
     end
   end
