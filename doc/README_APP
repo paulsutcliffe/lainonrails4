@@ -30,6 +30,14 @@ Default values in
   - app/models/country (hashes) - constant
     - Values used in migration 20140705124424_countries_initial_data.rb
 
+Relationships:
+  - Banner
+  - Contact
+  - Office
+  - Product
+  - Suscriber
+  - Testimony
+
 PRIVACY POLICY
 ==============
 The fields privacy_policy in contact and subscriber forms not saved in the database, but are validated.
@@ -37,6 +45,11 @@ The fields privacy_policy in contact and subscriber forms not saved in the datab
 BANNERS
 =======
 The banners may have a link.
-Several banners may have the same location, so slides are possible.
-  locations are available in app/models/banner.rb
+Several banners may have the same location, in this way is possible to make slides.
+  locations are available in Banner::LOCATIONS
   [home_main, home_medium, home_small]
+
+TESTIMONY
+=========
+A testimony have a field called "testimony_type", the list will be displayed depending to this field.
+The values are available in Testimony::TYPES

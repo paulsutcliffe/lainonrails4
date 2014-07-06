@@ -1,6 +1,10 @@
 class SubscribersController < InheritedResources::Base
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @subscribers = @country.subscribers.ordered if @country
+  end
+
   def create
     @subscriber = Subscriber.new(subscriber_params)
     @subscriber.country_id = @country.try(:id)

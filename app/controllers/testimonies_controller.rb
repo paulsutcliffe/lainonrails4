@@ -1,6 +1,10 @@
 class TestimoniesController < InheritedResources::Base
   before_action :set_testimony, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @testimonies = @country.testimonies.ordered if @country
+  end
+
   def create
     @testimony = Testimony.new(testimony_params)
     @testimony.country_id = @country.try(:id)

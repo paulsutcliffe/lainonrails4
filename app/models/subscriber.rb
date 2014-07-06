@@ -10,6 +10,8 @@ class Subscriber < ActiveRecord::Base
 
   belongs_to :country
 
+  scope :ordered,   -> { order(:created_at => :desc) }
+
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end

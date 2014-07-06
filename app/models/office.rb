@@ -13,4 +13,6 @@ class Office < ActiveRecord::Base
   def slug_candidates
     [ :name, [:name, :id]]
   end
+
+  scope :ordered,   -> { order(:created_at => :desc) }
 end

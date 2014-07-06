@@ -14,4 +14,6 @@ class Contact < ActiveRecord::Base
   validates_presence_of :country_id, message: "No se ha encontrado el país de procedencia."
 
   belongs_to :country
+
+  scope :ordered,   -> { order(:created_at => :desc) }
 end

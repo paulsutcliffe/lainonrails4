@@ -1,6 +1,10 @@
 class ProductsController < InheritedResources::Base
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @products = @country.products.ordered if @country
+  end
+
   def create
     @product = Product.new(product_params)
     @product.country_id = @country.try(:id)

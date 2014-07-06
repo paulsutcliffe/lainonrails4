@@ -2,12 +2,10 @@ class ComputestsController < InheritedResources::Base
   before_action :set_computest, only: [:show, :edit, :update, :destroy]
 
   def index
-    if @country
-      @computests = @country.computests.ordered
-      respond_to do |format|
-        format.html
-        format.xls
-      end
+    @computests = @country.computests.ordered if @country
+    respond_to do |format|
+      format.html
+      format.xls
     end
   end
 

@@ -10,4 +10,6 @@ class Banner < ActiveRecord::Base
   LOCATIONS = { "Home - principal" => "home_main",
                 "Home - medianas"  => "home_medium",
                 "Home - pequeñas"  => "home_small"}
+
+  scope :ordered,   -> { order(:created_at => :desc) }
 end

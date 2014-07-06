@@ -2,6 +2,10 @@ class ContactsController < InheritedResources::Base
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   after_filter :send_emails, :only => :create
 
+  def index
+    @contacts = @country.contacts.ordered if @country
+  end
+
   def create
     @contact = Contact.new(contact_params)
     @contact.country_id = @country.try(:id)

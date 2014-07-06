@@ -7,6 +7,8 @@ class Product < ActiveRecord::Base
 
   belongs_to :country
 
+  scope :ordered,   -> { order(:created_at => :desc) }
+
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 

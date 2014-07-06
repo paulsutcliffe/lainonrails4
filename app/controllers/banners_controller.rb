@@ -1,6 +1,10 @@
 class BannersController < InheritedResources::Base
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @banners = @country.banners.ordered if @country
+  end
+
   def create
     @banner = Banner.new(banner_params)
     @banner.country_id = @country.try(:id)
@@ -11,7 +15,6 @@ class BannersController < InheritedResources::Base
     @banner.country_id = @country.try(:id)
     update!(:notice => "Banner actualizado correctamente.")
   end
-
 
   private
 

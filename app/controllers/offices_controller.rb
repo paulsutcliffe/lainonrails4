@@ -1,6 +1,10 @@
 class OfficesController < InheritedResources::Base
   before_action :set_office, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @offices = @country.offices.ordered if @country
+  end
+
   def create
     @office = Office.new(office_params)
     @office.country_id = @country.try(:id)
