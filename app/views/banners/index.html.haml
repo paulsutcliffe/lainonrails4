@@ -23,7 +23,7 @@
           %tr
             %td= banner.name
             %td= banner.location
-            %td= banner.image
+            %td= image_tag banner.image.thumb
             %td= banner.link
             %td= banner.country_id
             %td= link_to 'crud.show', banner, class: 'btn btn-default'

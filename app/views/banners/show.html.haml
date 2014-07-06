@@ -11,14 +11,16 @@
       %b Location:
       = @banner.location
     %p
-      %b Image:
-      = @banner.image
-    %p
       %b Link:
       = @banner.link
     %p
       %b Country:
-      = @banner.country_id
+      = @banner.country
+    %p
+      %b Image:
+      = image_tag @banner.image.larger
+      = image_tag @banner.image.medium
+      = image_tag @banner.image.small
 
   .section
     - if current_admin

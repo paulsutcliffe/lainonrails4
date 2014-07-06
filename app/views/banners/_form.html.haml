@@ -3,8 +3,9 @@
 
   .form-inputs
     = f.input :name
-    = f.input :location
+    = f.input :location, :collection => Banner::LOCATIONS.map{|k, v| [k, v]}
     = f.input :image
+    = image_tag @banner.image.thumb if @banner.image.present?
     = f.input :link
 
   .form-actions

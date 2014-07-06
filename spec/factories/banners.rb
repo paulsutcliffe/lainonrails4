@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :banner do
-    name "MyString"
-    location "MyString"
-    image "MyString"
-    link "MyString"
-    country_id 1
+    name      { Faker::Name.name }
+    location  { Faker::Name.name }
+    image     { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
+    link      { Faker::Internet.url('example.com') }
+    country   { association :country }
   end
 end
