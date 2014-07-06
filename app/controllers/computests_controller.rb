@@ -1,6 +1,17 @@
 class ComputestsController < InheritedResources::Base
   before_action :set_computest, only: [:show, :edit, :update, :destroy]
-  
+
+  def create
+    @computest = Computest.new(computest_params)
+    @computest.country_id = @country.try(:id)
+    create!(notice: "Computest guardado correctamente.")
+  end
+
+  def update
+    @computest.country_id = @country.try(:id)
+    update!(:notice => "Computest actualizado correctamente.")
+  end
+
   private
 
   def set_computest

@@ -2,16 +2,16 @@
 
 FactoryGirl.define do
   factory :computest do
-    first_name "MyString"
-    last_name "MyString"
-    email "MyString"
-    phone "MyString"
-    gender "MyString"
-    height 1.5
-    weight 1.5
-    bmi 1
-    state "MyString"
-    ideal_weight "MyString"
-    country_id 1
+    first_name    { Faker::Name.first_name }
+    last_name     { Faker::Name.last_name }
+    email         { Faker::Internet.email }
+    phone         { Faker::PhoneNumber.phone_number }
+    gender        "Masculino"
+    height        1.8
+    weight        65
+    bmi           20
+    state         { Faker::Lorem.sentence }
+    ideal_weight  { Faker::Lorem.sentence }
+    country       { association :country }
   end
 end
