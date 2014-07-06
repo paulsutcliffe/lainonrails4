@@ -1,7 +1,16 @@
+SETUP
+=====
+rake db:create
+rake db:migrate
+rake db:seed
+
 UPLOADERS
 =========
 Versions by model:
   Article:
+    [thumb, listing, detail]
+
+  Office:
     [thumb, listing, detail]
 
   Product:
@@ -10,13 +19,14 @@ Versions by model:
   Testimony:
     [thumb, listing, detail]
 
-  Office:
-    [thumb, listing, detail]
-
 COUNTRIES
 =========
 Default values in
   - config/application.rb (symbols)
   - app/models/country (hashes) - constant
     - Values used in migration 20140705124424_countries_initial_data.rb
+
+PRIVACY POLICY
+==============
+The fields privacy_policy in contact and subscriber forms not saved in the database, but are validated.
 

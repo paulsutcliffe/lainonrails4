@@ -22,11 +22,11 @@ class ContactsController < InheritedResources::Base
   end
 
   def contact_params
-    params.require(:contact).permit([:first_name, :last_name, :email, :phone, :address, :district, :province, :city, :message, :country_id])
+    params.require(:contact).permit([:first_name, :last_name, :email, :phone, :address, :district, :province, :city, :message, :country_id, :privacy_policy])
   end
 
   def permitted_params
-    params.permit(:contact => [:first_name, :last_name, :email, :phone, :address, :district, :province, :city, :message, :country_id])
+    params.permit(:contact => [:first_name, :last_name, :email, :phone, :address, :district, :province, :city, :message, :country_id, :privacy_policy])
   end
 
 end

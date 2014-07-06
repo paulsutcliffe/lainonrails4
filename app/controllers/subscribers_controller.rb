@@ -19,11 +19,11 @@ class SubscribersController < InheritedResources::Base
   end
 
   def subscriber_params
-    params.require(:subscriber).permit([:first_name, :last_name, :email, :phone, :country_id])
+    params.require(:subscriber).permit([:first_name, :last_name, :email, :phone, :country_id, :privacy_policy])
   end
 
   def permitted_params
-    params.permit(:subscriber => [:first_name, :last_name, :email, :phone, :country_id])
+    params.permit(:subscriber => [:first_name, :last_name, :email, :phone, :country_id, :privacy_policy])
   end
 
 end

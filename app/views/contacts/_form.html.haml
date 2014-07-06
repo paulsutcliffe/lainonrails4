@@ -11,6 +11,12 @@
     = f.input :province
     = f.input :city
     = f.input :message
+    = content_tag :label, class: 'check_box' do
+      = f.check_box :privacy_policy
+      He leído y estoy de acuerdo con las
+      = link_to page_path(1), target: "_blank", class: ''  do
+        Políticas de Privacidad de LAIN
+        %i.icon-external-link
 
   .form-actions
     = f.button :submit
