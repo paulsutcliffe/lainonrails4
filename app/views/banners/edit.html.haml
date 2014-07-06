@@ -1,0 +1,14 @@
+#section-banners.container
+
+  .section
+    .title
+      %h1
+        = page_title!('crud.edit'+ ' ' + 'banner')
+
+  .section
+    = render 'form'
+
+  .section
+    .admin-controls
+      = link_to 'crud.show', @banner, class: 'btn btn-info'
+      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'

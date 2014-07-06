@@ -1,0 +1,27 @@
+#section-banners.container
+  .section
+    .section-title
+      %h1= page_title!('banner')
+
+  .section
+    %p
+      %b Name:
+      = @banner.name
+    %p
+      %b Location:
+      = @banner.location
+    %p
+      %b Image:
+      = @banner.image
+    %p
+      %b Link:
+      = @banner.link
+    %p
+      %b Country:
+      = @banner.country_id
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_banner_path(@banner), class: 'btn btn-info'
+    = link_to 'crud.back', banners_path, class: 'btn btn-warning'

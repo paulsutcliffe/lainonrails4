@@ -11,9 +11,10 @@ Rails.application.routes.draw do
     resources :articles, path: "blog"
     resources :products, path: "productos"
     resources :offices, path: "sucursales"
-    resources :subscribers
+    resources :subscribers, path: "suscripciones"
     resources :computests
-    resources :contacts
+    resources :contacts, path: "contactos"
+    resources :banners
     get 'inicio/index'
     devise_for :users, :path => "usuarios", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
     resources :ads, "anuncios"

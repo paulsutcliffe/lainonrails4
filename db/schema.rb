@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706155011) do
+ActiveRecord::Schema.define(version: 20140706160833) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20140706155011) do
   end
 
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
+
+  create_table "banners", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "image"
+    t.string   "link"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
