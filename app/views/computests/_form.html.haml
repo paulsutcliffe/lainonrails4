@@ -1,0 +1,14 @@
+= simple_form_for(@computest) do |f|
+  = render 'layouts/error_messages', :target => f.object
+
+  .form-inputs
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email
+    = f.input :phone
+    = f.input :gender, collection: ["Masculino", "Femenino"]
+    = f.input :height
+    = f.input :weight
+
+  .form-actions
+    = f.button :submit

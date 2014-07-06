@@ -1,0 +1,45 @@
+#section-computests.container
+  .section
+    .section-title
+      %h1= page_title!('computest')
+
+  .section
+    %p
+      %b First name:
+      = @computest.first_name
+    %p
+      %b Last name:
+      = @computest.last_name
+    %p
+      %b Email:
+      = @computest.email
+    %p
+      %b Phone:
+      = @computest.phone
+    %p
+      %b Gender:
+      = @computest.gender
+    %p
+      %b Height:
+      = @computest.height
+    %p
+      %b Weight:
+      = @computest.weight
+    %p
+      %b Bmi:
+      = @computest.bmi
+    %p
+      %b State:
+      = @computest.state
+    %p
+      %b Ideal weight:
+      = @computest.ideal_weight
+    %p
+      %b Country:
+      = @computest.country_id
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_computest_path(@computest), class: 'btn btn-info'
+    = link_to 'crud.back', computests_path, class: 'btn btn-warning'

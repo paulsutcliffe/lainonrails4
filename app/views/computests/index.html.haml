@@ -1,0 +1,42 @@
+#section-computests.container
+  .title
+    %h1= page_title!('computests')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Computest', new_computest_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th First name
+          %th Last name
+          %th Email
+          %th Phone
+          %th Gender
+          %th Height
+          %th Weight
+          %th Bmi
+          %th State
+          %th Ideal weight
+          %th
+          %th
+          %th
+
+        - @computests.each do |computest|
+          %tr
+            %td= computest.first_name
+            %td= computest.last_name
+            %td= computest.email
+            %td= computest.phone
+            %td= computest.gender
+            %td= computest.height
+            %td= computest.weight
+            %td= computest.bmi
+            %td= computest.state
+            %td= computest.ideal_weight
+            %td= link_to 'crud.show', computest, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_computest_path(computest), class: 'btn btn-info'
+              %td= link_to 'crud.delete', computest, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
