@@ -1,9 +1,45 @@
 #footer
   .container-fluid.aqua
     .container
-      .call
-        = image_tag(image_path('phone.png'))
-        %h2.llama ¡Llama YA!
-        %h1.telefono
-          %i 206 3400
-        %h4.txt Tenemos un mundo de beneficios esperando por tí.
+      .section-test-sus
+        .section-testi
+          %h4.title-head
+            Testimonios
+
+          %ul
+            %li
+              .test-img
+                =image_tag(image_path('test1.png'))
+              .test-info
+                .title
+                  Lorena Pena
+                .description
+                  Lorem ipsum dolor sit amet consectateur nonummy...
+            %li
+              .test-img
+                =image_tag(image_path('test1.png'))
+              .test-info
+                .title
+                  Lorena Pena
+                .description
+                  Lorem ipsum dolor sit amet consectateur nonummy...
+        .section-suscribete
+          %h4.title-head
+            Suscríbete
+
+            .img
+              =image_tag(image_path('pink-mail.png'))
+          %p.txt
+            Ingresa tus datos y entérate primero de nuestras ofertas, lanzamiento de productos y promociones exclusivas.
+
+          = render :partial => "subscribers/form"
+
+  .container-fluid
+    .container
+      .footer-titles
+        %p.txt-footer
+          Copyright ©2014. Lain Internacional, todos los derechos reservados.
+        %p.txt-footer.center
+          Políticas de Privacidad
+        %p.txt-footer.right
+          Desarrollo web: Kosmyka e| Diseño web: La Post-Aa

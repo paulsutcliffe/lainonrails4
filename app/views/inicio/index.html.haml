@@ -3,11 +3,10 @@
     .container
 
       .social
-
         = link_to image_tag(image_path('peru.png'), width: "22px;"), "http://www.facebook.com"
         = link_to image_tag(image_path('youtube.png'), width: "22px;"), "http://www.youtube.com"
         = link_to image_tag(image_path('facebook.png'), width: "12px;"), "http://www.facebook.com"
-
+      .clear
       #carousel-principal.carousel.slide{"data-ride" => "carousel"}
         -#%ol.carousel-indicators
           %li.active{"data-slide-to" => "0", "data-target" => "#carousel-principal"}
@@ -101,47 +100,4 @@
 
         <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Flain.adelgaza.peru%3Ffref%3Dts&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
 
-  .container-fluid.aqua
-    .container
-      .section-test-sus
-        .section-testi
-          %h4.title-head
-            Testimonios
 
-          %ul
-            %li
-              .test-img
-                =image_tag(image_path('test1.png'))
-              .test-info
-                .title
-                  Lorena Pena
-                .description
-                  Lorem ipsum dolor sit amet consectateur nonummy...
-            %li
-              .test-img
-                =image_tag(image_path('test1.png'))
-              .test-info
-                .title
-                  Lorena Pena
-                .description
-                  Lorem ipsum dolor sit amet consectateur nonummy...
-        .section-suscribete
-          %h4.title-head
-            Suscríbete
-
-            .img
-              =image_tag(image_path('pink-mail.png'))
-          %p.txt
-            Ingresa tus datos y entérate primero de nuestras ofertas, lanzamiento de productos y promociones exclusivas.
-
-          = render :partial => "subscribers/form"
-
-  .container-fluid
-    .container
-      .footer-titles
-        %p.txt-footer
-          Copyright ©2014. Lain Internacional, todos los derechos reservados.
-        %p.txt-footer.center
-          Políticas de Privacidad
-        %p.txt-footer.right
-          Desarrollo web: Kosmyka e| Diseño web: La Post-Aa
