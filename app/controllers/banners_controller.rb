@@ -3,7 +3,7 @@ class BannersController < InheritedResources::Base
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
   def index
-    @banners = @country.banners.ordered if @country
+    @banners = @country.banners.ordered.page(params[:page] || 1).per(20) if @country
   end
 
   def create

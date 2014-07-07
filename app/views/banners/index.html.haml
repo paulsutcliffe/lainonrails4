@@ -30,3 +30,7 @@
             - if current_admin
               %td= link_to 'crud.edit', edit_banner_path(banner), class: 'btn btn-info'
               %td= link_to 'crud.delete', banner, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+
+      %br
+      = paginate @banners
+      %br

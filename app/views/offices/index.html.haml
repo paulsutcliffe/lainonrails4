@@ -28,3 +28,6 @@
             - if current_admin
               %td= link_to 'crud.edit', edit_office_path(office), class: 'btn btn-info'
               %td= link_to 'crud.delete', office, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+      %br
+      = paginate @offices
+      %br

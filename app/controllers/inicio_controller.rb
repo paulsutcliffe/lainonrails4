@@ -3,6 +3,12 @@ class InicioController < ApplicationController
   require 'net/http'
 
   def index
+    if @country
+      @larger_banners = @country.banners.larger
+      @medium_banners = @country.banners.medium
+      @small_banners  = @country.banners.small
+    end
+
     if params[:dest]
       HTTParty.get('http://proxy.lemmor.com/VSServices/callback.aspx?source=00001825&dest=' + params[:dest] + '&login=012365&password=1653$&type=1')
       flash[:notice] = "Estamos llamándote, atento a tu teléfono."

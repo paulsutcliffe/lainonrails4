@@ -3,6 +3,10 @@ class ArticlesController < InheritedResources::Base
   skip_load_resource :only => [:create]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @articles = Article.ordered.page(params[:page] || 1).per(20) if @country
+  end
+
   private
 
   def set_article

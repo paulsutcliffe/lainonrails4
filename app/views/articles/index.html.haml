@@ -26,3 +26,6 @@
             - if current_admin
               %td= link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'
               %td= link_to 'crud.delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+      %br
+      = paginate @articles
+      %br

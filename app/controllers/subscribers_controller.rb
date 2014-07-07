@@ -4,7 +4,7 @@ class SubscribersController < InheritedResources::Base
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
 
   def index
-    @subscribers = @country.subscribers.ordered if @country
+    @subscribers = @country.subscribers.ordered.page(params[:page] || 1).per(20) if @country
   end
 
   def create

@@ -25,3 +25,6 @@
             = render user
           - if current_user.has_role? :admin
             %td= link_to("Eliminar usuario", user_path(user), :data => { :confirm => "¿Está seguro?" }, :method => :delete, :class => 'btn btn-mini btn-danger') unless user == current_user
+  %br
+  = paginate @users
+  %br

@@ -3,7 +3,7 @@ class OfficesController < InheritedResources::Base
   before_action :set_office, only: [:show, :edit, :update, :destroy]
 
   def index
-    @offices = @country.offices.ordered if @country
+    @offices = @country.offices.ordered.page(params[:page] || 1).per(20) if @country
   end
 
   def create

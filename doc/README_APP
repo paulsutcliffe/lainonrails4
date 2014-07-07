@@ -6,12 +6,17 @@ rake db:seed
 
 VARIABLES
 =========
-@locale   = params[:locale]
-@country  = Country with locale code.
-  # @locale == "pe"
-  # @country.name = "Perú"
-  # @opportunity.country = "Perú"
-  # @opportunity.country_id = 1
+Globals:
+  @locale   = params[:locale]
+  @country  = Country with locale code.
+    # @locale == "pe"
+    # @country.name = "Perú"
+    # @opportunity.country = "Perú"
+    # @opportunity.country_id = 1
+Home:
+    @larger_banners
+    @medium_banners
+    @small_banners
 
 UPLOADERS
 =========

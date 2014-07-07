@@ -9,6 +9,7 @@ class OpportunitiesController < InheritedResources::Base
       else
         @opportunities = @country.opportunities.actives.ordered
       end
+      @opportunities.page(params[:page] || 1).per(20)
     end
   end
 
