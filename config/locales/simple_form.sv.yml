@@ -1,0 +1,58 @@
+pe:
+  simple_form:
+    "yes": 'Si'
+    "no": 'No'
+    required:
+      text: 'Requerido'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+
+    # Fields
+    labels:
+      defaults:
+        title: "Título"
+        content: "Contenido"
+        image: "Imagen"
+        location: "Ubicación"
+        first_name: "Nombres"
+        last_name: "Apellidos"
+        email: "Email"
+        phone: "Teléfono"
+        gender: "Género"
+        height: "Altura"
+        weight: "Peso"
+        message: "Mensaje"
+        privacy_policy: "Políticas de Privacidad"
+        name: "Nombre"
+        address: "Dirección"
+        description: "Descripción"
+        testimony_type: "Tipo de testimonio"
+        district: "Distrito"
+        province: "Provincia"
+        city: "Ciudad"
+        active: "¿Activo?"
+        age: "Edad"
+        smoker: "¿Fuma?"
+        hobbies: "Pasatiempos"
+        dieted: "¿Hizo dieta antes?"
+        place_of_diet: "¿Dónde hizo la dieta?"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de contraseña"
+        country: "País"
