@@ -11,6 +11,11 @@ FactoryGirl.define do
       after(:create) {|user| user.add_role(:admin)}
     end
 
+    trait :blogger do
+      email "blogger@lain.net"
+      after(:create) {|user| user.add_role(:blogger)}
+    end
+
     trait :user do
       email "user@lain.net"
       after(:create) {|user| user.add_role(:user)}

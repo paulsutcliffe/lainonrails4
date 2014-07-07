@@ -10,7 +10,7 @@ class Testimony < ActiveRecord::Base
   scope :ordered,   -> { order(:created_at => :desc) }
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   def slug_candidates
     [ :name, [:name, :id]]

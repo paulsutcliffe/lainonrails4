@@ -1,0 +1,30 @@
+#section-opportunities.container
+  .title
+    %h1= page_title!('opportunities')
+
+  .section
+    - if current_admin
+      .admin-control
+        = link_to I18n.t('crud.new') + ' ' + 'Opportunity', new_opportunity_path, class: 'btn btn-primary'
+
+    .table-responsive
+      %table.table
+        %tr
+          %th Title
+          %th Description
+          %th Image
+          %th Active
+          %th
+          %th
+          %th
+
+        - @opportunities.each do |opportunity|
+          %tr
+            %td= opportunity.title
+            %td= opportunity.description
+            %td= opportunity.image
+            %td= opportunity.active
+            %td= link_to 'crud.show', opportunity, class: 'btn btn-default'
+            - if current_admin
+              %td= link_to 'crud.edit', edit_opportunity_path(opportunity), class: 'btn btn-info'
+              %td= link_to 'crud.delete', opportunity, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
