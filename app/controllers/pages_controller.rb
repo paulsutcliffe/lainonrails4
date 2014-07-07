@@ -1,6 +1,7 @@
 class PagesController < InheritedResources::Base
+  load_and_authorize_resource
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-  
+
   private
 
   def set_page

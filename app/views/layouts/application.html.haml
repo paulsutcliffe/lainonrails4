@@ -47,16 +47,19 @@
     %header{:role => "navigation"}
       = link_to "ads", ads_path
       = link_to "Articles", articles_path
-      = link_to "Page", pages_path
-      = link_to "products", products_path
-      = link_to "testimony", testimonies_path
-      = link_to "sucursal", offices_path
-      = link_to "suscripción", subscribers_path
+      = link_to "banners", banners_path
       = link_to "computest", computests_path
       = link_to "contact", contacts_path
-      = link_to "banners", banners_path
+      = link_to "sucursal", offices_path
       = link_to "oportunidades", opportunities_path
+      = link_to "Page", pages_path
+      = link_to "products", products_path
+      = link_to "suscripción", subscribers_path
+      = link_to "testimony", testimonies_path
       = link_to "root", root_path(:only_path=>false)
+      = link_to "Registrarse", new_user_registration_path
+      = link_to "Iniciar sesión", new_user_session_path
+      = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
       =# render 'layouts/navigation'
     %main{:role => "main"}
       =# render 'layouts/messages'

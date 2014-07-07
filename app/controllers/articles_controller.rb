@@ -1,4 +1,6 @@
 class ArticlesController < InheritedResources::Base
+  load_and_authorize_resource
+  skip_load_resource :only => [:create]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   private
