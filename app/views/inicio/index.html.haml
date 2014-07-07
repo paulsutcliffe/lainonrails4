@@ -1,6 +1,102 @@
-#section-index.section-total.container
-  .title
-    %h1= page_title!('index')
+#section-index.section-total
+  .container-fluid
+    .container
+    
+      .social 
+      
+        = link_to image_tag(image_path('peru.png'), width: "13px;"), 'http://www.facebook.com'
+        = link_to image_tag(image_path('youtube.png'), width: "13px;"), 'http://www.youtube.com'
+        = link_to image_tag(image_path('facebook.png'), width: "10px;"), 'http://www.facebook.com'
 
-  .region
-    %p Aquí va el contenido...
+      #carousel-principal.carousel.slide{"data-ride" => "carousel"}
+        -#%ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#carousel-principal"}
+            
+        .carousel-inner
+          .item.active
+            = image_tag(image_path("slider-img.png"), class: 'img-responsive')
+            .carousel-caption
+        
+        -#.carousel-caption
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-principal", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left
+          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-principal", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right
+
+      .section-info
+        .section-contact
+          = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
+            
+        .section-contact
+          = image_tag(image_path('telefono.png'), class:'img-responsive')
+
+      .section
+        .section-images
+          = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+          = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+          = image_tag(image_path('sec-img5.png'), class:'img-responsive')
+          = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+          = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+      
+      .section
+        %p.pink-text
+          LAIN es un Centro Médico que realiza tratamientos contra la obesidad. Nuestros profesionales
+          en adelgazamiento, utilizando avanzados y exclusivos tratamientos para bajar de peso,
+          trabajan de manera muy estrecha con el paciente, disminuyendo las posibilidades de fracaso.
+
+  .container-fluid.aqua
+    .container
+      .section-us
+        .section-segments
+          %p
+            Oportunidades
+          = image_tag(image_path('oportunidades.png'), class: 'img-responsive')
+          %p
+            Lorem ipsum dolor sit amet consectateur nonummy.
+        .section-segments
+          %p
+            Método
+          = image_tag(image_path('metodo.png'), class: 'img-responsive')
+          %p
+            Lorem ipsum dolor sit amet consectateur nonummy.
+        .section-segments
+          %p
+            Nuestra Empresa
+          = image_tag(image_path('empresa.png'), class: 'img-responsive')
+          %p
+            Lorem ipsum dolor sit amet consectateur nonummy.
+        .section-segments
+          %p
+            LAIN para provincias
+          = image_tag(image_path('provincia.png'), class: 'img-responsive')
+          %p
+            Lorem ipsum dolor sit amet consectateur nonummy.
+  
+  .container-fluid
+    .container.section-blog-fb
+      .section-blog
+        %h4.title-head
+          Blog - Últimas publicaciones
+        %ul
+          %li.blog-data
+            .blog-img
+              = image_tag(image_path('blog1.png'))
+            .blog-info
+              %p.title
+                Frutas y verduras
+              %p.description
+                Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor...
+
+          %li.blog-data
+            .blog-img
+              = image_tag(image_path('blog2.png'))
+            .blog-info
+              %p.title
+                Frutas y verduras
+              %p.description
+                Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor...
+      .section-fb
+        %h4.title-head
+          Nuestros Seguidores
+
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Flain.adelgaza.peru%3Ffref%3Dts&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>

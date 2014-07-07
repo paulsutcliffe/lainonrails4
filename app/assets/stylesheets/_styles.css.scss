@@ -1,0 +1,31 @@
+header{background-color: $aqua; height: 100%;
+  ul li a{padding: 5px 10p; }
+  ul li a:hover{background-color: $green;}
+}
+
+.aqua{background-color: $aqua;}
+.border{width: 100%; border: 1px solid black; height: 50px;}
+ul li {list-style: none;}
+
+#section-index{
+  .section-images img{display: inline-block; padding: 0px; margin: 0px -3px 50px 0px; width: 20%;}
+
+  .pink-text{color: $pink; text-align: center; margin-bottom: 50px; padding: 0px 20%;}
+
+  .section-segments{text-align: center; img{margin: auto;}}
+
+  .section-contact img{ width: 100%;}
+  .section-contact{margin: 25px 0px;}
+
+  #carousel-principal{
+    padding: 0px 15px;
+    img{min-width: 100%;}
+  }
+
+  .section-blog-fb{.title-head{background-color: $green; color: white; padding: 20px;} ul{padding:0px;} }
+  .section-blog{
+  .blog-data{height: 112px; margin-bottom: 15px;}
+  .blog-info{.title{color: $dark-green;} .description{color: $green;}}
+  }
+ iframe{min-width: 100%;}
+}

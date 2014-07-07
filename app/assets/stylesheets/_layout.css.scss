@@ -1,0 +1,52 @@
+.section-contact{
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .col-ld-6;
+  @extend .col-xs-12;
+}
+
+
+.section-images{
+  @extend .col-md-12;
+  @extend .col-sm-12;
+  @extend .col-ld-12;
+  @extend .col-xs-12;
+}
+
+
+.section-segments{
+  @extend .col-md-3;
+  @extend .col-sm-3;
+  @extend .col-ld-3;
+  @extend .col-xs-12;
+}
+
+.section-blog{
+  .blog-img{
+  @extend .col-md-3;
+  @extend .col-sm-3;
+  @extend .col-ld-3;
+  @extend .col-xs-12;
+  }
+  .blog-info{
+  @extend .col-md-9;
+  @extend .col-sm-9;
+  @extend .col-ld-9;
+  @extend .col-xs-12;
+  }
+}
+
+.section-blog-fb{
+  .section-blog{ 
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .col-ld-6;
+  @extend .col-xs-12;
+  }
+  .section-fb{
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .col-ld-6;
+  @extend .col-xs-12;
+  }
+}
