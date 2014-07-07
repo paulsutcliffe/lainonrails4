@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_admin
   before_filter :set_locale
 
+  before_filter :set_subscriber
+
+  def set_subscriber
+    @subscriber = @country.subscribers.new
+  end
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to home_path, :alert => exception.message
   end
