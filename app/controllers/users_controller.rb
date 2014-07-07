@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @users = User.all
+    @users = User.all.page(params[:page] || 1).per(20)
   end
 
   def show

@@ -4,7 +4,7 @@ class ComputestsController < InheritedResources::Base
   before_action :set_computest, only: [:show, :edit, :update, :destroy]
 
   def index
-    @computests = @country.computests.ordered if @country
+    @computests = @country.computests.ordered.page(params[:page] || 1).per(20) if @country
     respond_to do |format|
       format.html
       format.xls

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   scope( path_names: {new: "nuevo", edit: "editar"}) do
     scope "(:locale)", :locale => /#{I18n.available_locales.join("|")}/ do
       get "/" => "inicio#index", as: "home"
+      post "/free_call" => "inicio#free_call_post", as: "free_call_post"
       resources :pages, path: "lain"
       resources :testimonies, path: "testimonios"
       resources :articles, path: "blog"

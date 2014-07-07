@@ -1,0 +1,5 @@
+%h3 Llamada Gratuita
+= form_tag(home_path, :method => 'get') do
+  = text_field_tag 'dest', nil , {:class => 'text-box', :size => '15', :placeholder => "número"}
+  -# = image_submit_tag 'boton_llamar.png', :class => 'call-button'
+  = submit_tag("¡Llame Ahora!")

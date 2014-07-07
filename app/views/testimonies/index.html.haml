@@ -30,3 +30,6 @@
             - if current_admin
               %td= link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
               %td= link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+      %br
+      = paginate @testimonies
+      %br

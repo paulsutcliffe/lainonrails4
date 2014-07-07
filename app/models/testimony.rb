@@ -8,6 +8,7 @@ class Testimony < ActiveRecord::Base
   belongs_to :country
 
   scope :ordered,   -> { order(:created_at => :desc) }
+  scope :with_type, -> (bt) { where(:testimony_type => bt) }
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]

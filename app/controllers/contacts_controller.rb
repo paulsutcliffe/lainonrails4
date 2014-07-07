@@ -5,7 +5,7 @@ class ContactsController < InheritedResources::Base
   after_filter :send_emails, :only => :create
 
   def index
-    @contacts = @country.contacts.ordered if @country
+    @contacts = @country.contacts.ordered.page(params[:page] || 1).per(20) if @country
   end
 
   def create

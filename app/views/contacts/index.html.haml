@@ -40,3 +40,6 @@
             - if current_admin
               %td= link_to 'crud.edit', edit_contact_path(contact), class: 'btn btn-info'
               %td= link_to 'crud.delete', contact, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+      %br
+      = paginate @contacts
+      %br

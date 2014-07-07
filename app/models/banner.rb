@@ -12,4 +12,7 @@ class Banner < ActiveRecord::Base
                 "Home - pequeñas"  => "home_small"}
 
   scope :ordered,   -> { order(:created_at => :desc) }
+  scope :larger,    -> { where(:location => LOCATIONS["Home - principal"]) }
+  scope :medium,    -> { where(:location => LOCATIONS["Home - medianas"]) }
+  scope :small,     -> { where(:location => LOCATIONS["Home - pequeñas"]) }
 end
