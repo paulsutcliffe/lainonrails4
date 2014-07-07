@@ -4,6 +4,15 @@ rake db:create
 rake db:migrate
 rake db:seed
 
+VARIABLES
+=========
+@locale   = params[:locale]
+@country  = Country with locale code.
+  # @locale == "pe"
+  # @country.name = "Perú"
+  # @opportunity.country = "Perú"
+  # @opportunity.country_id = 1
+
 UPLOADERS
 =========
 Versions by model:

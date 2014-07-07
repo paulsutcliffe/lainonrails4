@@ -62,6 +62,8 @@
       = link_to "Iniciar sesión", new_user_session_path
       = link_to "Editar usuario", edit_user_registration_path
       = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
+      = render :partial => "inicio/free_call_form"  # post
+      = render :partial => "inicio/free_call"       # get
       =# render 'layouts/navigation'
     %main{:role => "main"}
       =# render 'layouts/messages'
