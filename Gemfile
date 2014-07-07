@@ -58,9 +58,18 @@ gem "httparty"
 group :development, :test do
   gem 'thin'
 end
+
+gem 'capistrano', '~> 3.2.1', require: false, group: :development
+gem 'rake'
+gem 'capistrano-maintenance', github: "capistrano/capistrano-maintenance", require: false
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-rvm',   '~> 0.1.1', require: false
+  gem 'capistrano-rails',   '~> 1.1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1.2', require: false
 end
 
 group :test do
