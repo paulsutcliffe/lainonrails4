@@ -1,0 +1,25 @@
+.authform
+  %h2
+    Editar #{@user.first_name.try(:humanize)} #{@user.last_name.try(:humanize)}
+  = simple_form_for(@user, :html => { :method => :put, :class => 'form-vertical', :role => 'form' }) do |f|
+    = f.error_notification
+    -# = display_base_errors @user
+    = f.input :first_name, :autofocus => true
+    = f.input :last_name
+    = f.input :email, :required => true
+    = f.input :gender, collection: ["Masculino", "Femenino"]
+    = f.input :age
+    = f.input :phone
+    = f.input :country_id, collection: Country.all.map{|c| [c.name, c.id]}
+    = f.input :height
+    = f.input :weight
+    = f.input :smoker, wrapper_html: {class: "col-md-12"}
+    = f.input :hobbies
+    = f.input :dieted, wrapper_html: {class: "col-md-12"}
+    = f.input :place_of_diet
+
+    %br
+    %fieldset
+      = f.input :password, :autocomplete => "off" #, :hint => "Dejar en blanco si no busca cambiarla.", :required => false
+      = f.input :password_confirmation, :required => false
+    = f.button :submit, 'Actualizar', :class => 'btn-primary right'

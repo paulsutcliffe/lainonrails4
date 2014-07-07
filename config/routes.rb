@@ -17,8 +17,11 @@ Rails.application.routes.draw do
       resources :contacts, path: "contactos"
       resources :banners
       resources :opportunities, path: "oportunidades"
-      devise_for :users, :path => "usuarios", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
-      resources :ads, "anuncios"
+      devise_for :users, :path => "usuarios",
+        :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' },
+        :controllers => {:registrations => "users/registrations"}
+      resources :users, :path => "usuarios"
+      # resources :ads, "anuncios"
     end
   end
 end
