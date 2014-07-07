@@ -3,11 +3,10 @@ class InicioController < ApplicationController
   require 'net/http'
 
   def index
-    if @country
-      @larger_banners = @country.banners.larger
-      @medium_banners = @country.banners.medium
-      @small_banners  = @country.banners.small
-    end
+    @larger_banners = @country.banners.larger
+    @medium_banners = @country.banners.medium
+    @small_banners  = @country.banners.small
+    @subscriber     = @country.subscribers.new
 
     if params[:dest]
       HTTParty.get('http://proxy.lemmor.com/VSServices/callback.aspx?source=00001825&dest=' + params[:dest] + '&login=012365&password=1653$&type=1')

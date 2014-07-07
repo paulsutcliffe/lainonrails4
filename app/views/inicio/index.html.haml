@@ -1,9 +1,9 @@
 #section-index.section-total
   .container-fluid
     .container
-    
-      .social 
-      
+
+      .social
+
         = link_to image_tag(image_path('peru.png'), width: "22px;"), "http://www.facebook.com"
         = link_to image_tag(image_path('youtube.png'), width: "22px;"), "http://www.youtube.com"
         = link_to image_tag(image_path('facebook.png'), width: "12px;"), "http://www.facebook.com"
@@ -11,12 +11,12 @@
       #carousel-principal.carousel.slide{"data-ride" => "carousel"}
         -#%ol.carousel-indicators
           %li.active{"data-slide-to" => "0", "data-target" => "#carousel-principal"}
-            
+
         .carousel-inner
           .item.active
             = image_tag(image_path("slider-img.png"), class: 'img-responsive')
             .carousel-caption
-        
+
         -#.carousel-caption
           %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-principal", :role => "button"}
             %span.glyphicon.glyphicon-chevron-left
@@ -26,7 +26,7 @@
       .section-info
         .section-contact
           = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
-            
+
         .section-contact
           = image_tag(image_path('telefono.png'), class:'img-responsive')
 
@@ -37,7 +37,7 @@
           = image_tag(image_path('sec-img5.png'), class:'img-responsive')
           = image_tag(image_path('sec-img3.png'), class:'img-responsive')
           = image_tag(image_path('sec-img4.png'), class:'img-responsive')
-      
+
       .section
         %p.pink-text
           LAIN es un Centro Médico que realiza tratamientos contra la obesidad. Nuestros profesionales
@@ -71,7 +71,7 @@
           = image_tag(image_path('provincia.png'), class: 'img-responsive')
           %p
             Lorem ipsum dolor sit amet consectateur nonummy.
-  
+
   .container-fluid
     .container.section-blog-fb
       .section-blog
@@ -107,7 +107,7 @@
         .section-testi
           %h4.title-head
             Testimonios
-          
+
           %ul
             %li
               .test-img
@@ -128,18 +128,13 @@
         .section-suscribete
           %h4.title-head
             Suscríbete
-        
+
             .img
-              =image_tag(image_path('pink-mail.png')) 
+              =image_tag(image_path('pink-mail.png'))
           %p.txt
             Ingresa tus datos y entérate primero de nuestras ofertas, lanzamiento de productos y promociones exclusivas.
-          
-          %form
-            %input
-            %br
-            %input
-            %br
-            %input
+
+          = render :partial => "subscribers/form"
 
   .container-fluid
     .container
