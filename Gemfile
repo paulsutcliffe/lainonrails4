@@ -39,7 +39,6 @@ gem "friendly_id", "~> 5.0.0"
 gem "devise"
 gem "mini_magick"
 gem "carrierwave"
-gem "fake", group: :test
 gem "capybara", "~> 2.2.1", group: :test
 gem "launchy", "~> 2.4.2", group: :test
 gem "rspec-rails", "~> 3.0.0.beta", group: [:test, :development]

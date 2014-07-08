@@ -1,5 +1,3 @@
-require "faker"
-
 FactoryGirl.define do
   factory :office do
     name        { Faker::Name.name }
