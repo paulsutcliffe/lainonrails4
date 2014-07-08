@@ -6,12 +6,15 @@
     = f.input :last_name, label: false, placeholder: "Apellidos"
     = f.input :email, label: false, placeholder: "Correo electrónico"
     = f.input :phone, label: false, placeholder: "Teléfono"
-    = content_tag :label, class: 'check_box' do
-      = f.check_box :privacy_policy
-      He leído y estoy de acuerdo con las
-      = link_to page_path("politicas-de-privacidad"), target: "_blank", class: ''  do
-        Políticas de Privacidad de LAIN
-        %i.icon-external-link
+    .privacy
+      = content_tag :label, class: 'check_box' do
+        = f.check_box :privacy_policy
+      
+        He leído y estoy de acuerdo con las
+        %br
+        = link_to page_path("politicas-de-privacidad"), target: "_blank", class: ''  do
+          Políticas de Privacidad de LAIN
+          %i.icon-external-link
 
-  .form-actions
-    = f.button :submit
+      .form-actions
+        = f.button :submit,'Enviar' , class: 'btn-green'

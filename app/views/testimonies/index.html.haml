@@ -1,35 +1,45 @@
 #section-testimonies.container
-  .title
-    %h1= page_title!('testimonies')
+  .title-page
+    %h3= page_title!('Testimonios')
 
-  .section
+  .section-testimonies
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
 
-    .table-responsive
-      %table.table
-        %tr
-          %th Name
-          %th Content
-          %th Testimony type
-          %th Image
-          %th Video link
-          %th
-          %th
-          %th
+    -#.testi-img
+      = link_to  {style: "background-image: url(image_path('test.png'));" }, '#', class: 'test-foto'
+    -# if "foto"
+      .testi{style: "background-image: url(image_path(play.png)); background-repeat: no-repeat; "}
+    -# if "video"
+      .testi-video
 
-        - @testimonies.each do |testimony|
-          %tr
-            %td= testimony.name
-            %td= testimony.content
-            %td= testimony.testimony_type
-            %td= image_tag testimony.image.listing
-            %td= testimony.video_link
-            %td= link_to 'crud.show', testimony, class: 'btn btn-default'
-            - if current_admin
-              %td= link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
-              %td= link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-      %br
-      = paginate @testimonies
-      %br
+      = link_to  image_tag(image_path('test.png')), '#'
+
+    -# @testimonies.each do |testimony|
+      =# testimony.content
+      = testimony.testimony_type
+      
+      
+
+
+    -#testimony.image.listing
+      = testimony.video_link
+      = link_to 'crud.show', testimony, class: 'btn btn-default'
+      - if current_admin
+        %td= link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
+        %td= link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+    %br
+    = paginate @testimonies
+    %br
+
+= render 'layouts/llama_ya' 
+
+.container
+  .section
+    .section-images
+      = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img5.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img4.png'), class:'img-responsive')

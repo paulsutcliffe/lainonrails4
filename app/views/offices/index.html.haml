@@ -1,33 +1,70 @@
 #section-offices.container
-  .title
-    %h1= page_title!('offices')
+  .title-page
+    %h3= page_title!('LAIN - Sucursales')
 
-  .section
+  .section-offices
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Office', new_office_path, class: 'btn btn-primary'
 
-    .table-responsive
-      %table.table
-        %tr
-          %th Name
-          %th Address
-          %th Phone
-          %th Image
-          %th
-          %th
-          %th
+      -# @offices.each do |office|
+    .section-sedes
+      .section-sed-img
+        = image_tag(image_path('sede-central.png'))
+      .section-sed-info
+        %h3
+          -#offce.name
+          SEDE CENTRAL
+        %p
+          -#office.address
+          Av. Javier Prado
+        %p
+          -#office.phone
+          Teléfono: 206-3400
+    .section-sedes
+      .section-sed-img
+        = image_tag(image_path('sede-central.png'))
+      .section-sed-info
+        %h3
+          -#offce.name
+          SEDE CENTRAL
+        %p
+          -#office.address
+          Av. Javier Prado
+        %p
+          -#office.phone
+          Teléfono: 206-3400
+    .section-sedes
+      .section-sed-img
+        = image_tag(image_path('sede-central.png'))
+      .section-sed-info
+        %h3
+          -#offce.name
+          SEDE CENTRAL
+        %p
+          -#office.address
+          Av. Javier Prado
+        %p
+          -#office.phone
+          Teléfono: 206-3400
+        -#
+          %td= image_tag office.image.listing
+          %td= link_to 'crud.show', office, class: 'btn btn-default'
+          - if current_admin
+            %td= link_to 'crud.edit', edit_office_path(office), class: 'btn btn-info'
+            %td= link_to 'crud.delete', office, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+    %br
+    = paginate @offices
+    %br
 
-        - @offices.each do |office|
-          %tr
-            %td= office.name
-            %td= office.address
-            %td= office.phone
-            %td= image_tag office.image.listing
-            %td= link_to 'crud.show', office, class: 'btn btn-default'
-            - if current_admin
-              %td= link_to 'crud.edit', edit_office_path(office), class: 'btn btn-info'
-              %td= link_to 'crud.delete', office, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-      %br
-      = paginate @offices
-      %br
+= render 'layouts/llama_ya' 
+
+.container
+  .section
+    .section-images
+      = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img5.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+

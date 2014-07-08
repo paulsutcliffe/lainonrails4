@@ -1,4 +1,4 @@
-.section-contact{
+.section-contact, .section-sedes{
   @extend .col-md-6;
   @extend .col-sm-6;
   @extend .col-ld-6;
@@ -28,7 +28,8 @@
   @extend .col-ld-3;
   @extend .col-xs-12;
   }
-  .blog-info, .test-info{
+
+  .blog-info, .test-info, .sectioa-sed-info {
   @extend .col-md-9;
   @extend .col-sm-9;
   @extend .col-ld-9;
@@ -36,16 +37,24 @@
   }
 
 
-.section-blog, .section-fb, .section-suscribete, .section-testi{ 
+.section-blog, .section-fb, .section-suscribete, .section-testi, .section-imagen, .section-descrip{ 
   @extend .col-md-6;
   @extend .col-sm-6;
   @extend .col-ld-6;
   @extend .col-xs-12;
   }
 
-.footer-titles .txt-footer{
+.footer-titles .txt-footer, .section-sed-img{
   @extend .col-md-4;
   @extend .col-sm-4;
   @extend .col-ld-4;
+  @extend .col-xs-12;
+}
+
+.section-sed-info{
+
+  @extend .col-md-8;
+  @extend .col-sm-8;
+  @extend .col-ld-8;
   @extend .col-xs-12;
 }

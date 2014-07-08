@@ -1,23 +1,21 @@
 #section-products.container
   .section
     .section-title
-      %h1= page_title!('product')
+      .title-page
+        %h3= page_title!('Products - ' +  @product.name)
 
-  .section
-    %p
-      %b Name:
-      = @product.name
-    %p
-      %b Description:
+  .section-show
+    .section-imagen
+      = image_taga @product.image.detail
+    
+    .section-descrip
       = @product.description
-    %p
+      %button  type: 'submit', class:'btn-green'
+    -#%p
       %b Videos:
       = @product.video1
       = @product.video2
       = @product.video3
-    %p
-      %b Image:
-      = image_tag @product.image.detail
 
   .section
     - if current_admin
