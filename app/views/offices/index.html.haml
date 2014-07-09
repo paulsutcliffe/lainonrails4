@@ -7,7 +7,7 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Office', new_office_path, class: 'btn btn-primary'
 
-      -# @offices.each do |office|
+    -# @offices.each do |office|
     .section-sedes
       .section-sed-img
         = image_tag(image_path('sede-central.png'))
@@ -68,3 +68,4 @@
       = image_tag(image_path('sec-img3.png'), class:'img-responsive')
       = image_tag(image_path('sec-img4.png'), class:'img-responsive')
 
+= render 'layouts/footer'

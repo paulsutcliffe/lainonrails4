@@ -1,21 +1,34 @@
 #section-articles.container
-  .section
-    .section-title
-      %h1= page_title!('article')
+  .title-page
+    %h3= page_title!('Blog - ' + @article.title)
 
-  .section
-    %p
-      %b Title:
-      = @article.title
-    %p
-      %b Content:
-      = @article.content
-    %p
-      %b Image:
-      = image_tag @article.image.detail
+  .section-articles
+    .section-art-image
+      %p
+        = image_tag @article.image.detail
+    .section-art-info
+      %p
+        = @article.content
 
   .section
     - if current_admin
       .admin-controls
         = link_to 'crud.edit', edit_article_path(@article), class: 'btn btn-info'
-    = link_to 'crud.back', articles_path, class: 'btn btn-warning'
+    =# link_to 'crud.back', articles_path, class: 'btn btn-warning'
+
+
+  .title-page
+    %h3= page_title!('Comentar')
+  
+= render 'layouts/llama_ya' 
+
+.container
+  .section
+    .section-images
+      = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+      = image_tag(image_path('blog-img6.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+
+= render 'layouts/footer'

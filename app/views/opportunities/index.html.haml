@@ -1,22 +1,12 @@
 #section-opportunities.container
-  .title
-    %h1= page_title!('opportunities')
+  .title-page
+    %h3= page_title!('LAIN - Oportunidades')
 
   .section
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Opportunity', new_opportunity_path, class: 'btn btn-primary'
 
-    .table-responsive
-      %table.table
-        %tr
-          %th Title
-          %th Description
-          %th Image
-          %th Active
-          %th
-          %th
-          %th
 
         - @opportunities.each do |opportunity|
           %tr

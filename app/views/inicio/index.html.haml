@@ -79,7 +79,7 @@
         %ul
           %li.blog-data
             .blog-img
-              = image_tag(image_path('blog1.png'))
+              = image_tag(image_path('blog1.png'), class:'img-responsive')
             .blog-info
               %p.title
                 Frutas y verduras
@@ -88,7 +88,7 @@
 
           %li.blog-data
             .blog-img
-              = image_tag(image_path('blog2.png'))
+              = image_tag(image_path('blog2.png'), class:'img-responsive')
             .blog-info
               %p.title
                 Frutas y verduras
@@ -100,4 +100,4 @@
 
         <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Flain.adelgaza.peru%3Ffref%3Dts&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
 
-
+= render 'layouts/footer'

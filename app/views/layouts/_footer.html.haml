@@ -1,4 +1,4 @@
-#footer
+%footer#footer{:role => "footer"}
   .container-fluid.aqua
     .container
       .section-test-sus
@@ -7,7 +7,7 @@
             Testimonios
 
           %ul
-            %li
+            %li.test-section
               .test-img
                 =image_tag(image_path('test1.png'))
               .test-info
@@ -15,7 +15,8 @@
                   Lorena Pena
                 .description
                   Lorem ipsum dolor sit amet consectateur nonummy...
-            %li
+            
+            %li.test-section
               .test-img
                 =image_tag(image_path('test1.png'))
               .test-info

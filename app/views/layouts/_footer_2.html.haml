@@ -1,0 +1,44 @@
+%footer#footer{:role => "footer"}
+  .container-fluid.aqua
+    .container.section-blog-fb
+      .section-blog
+        %h4.title-head
+          Blog - Últimas publicaciones
+        %ul
+          %li.blog-data
+            .blog-img
+              = image_tag(image_path('blog1.png'), class:'img-responsive')
+            .blog-info
+              %p.title
+                Frutas y verduras
+              %p.description
+                Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor...
+
+          %li.blog-data
+            .blog-img
+              = image_tag(image_path('blog2.png'), class:'img-responsive')
+            .blog-info
+              %p.title
+                Frutas y verduras
+              %p.description
+                Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor sit amet consectateur nonummy. Lorem ipsum dolor...
+      .section-suscribete
+        %h4.title-head
+          Suscríbete
+
+          .img
+            =image_tag(image_path('pink-mail.png'))
+        %p.txt
+          Ingresa tus datos y entérate primero de nuestras ofertas, lanzamiento de productos y promociones exclusivas.
+
+        = render :partial => "subscribers/form"
+
+  .container-fluid
+    .container
+      .footer-titles
+        %p.txt-footer
+          Copyright ©2014. Lain Internacional, todos los derechos reservados.
+        %p.txt-footer.center
+          Políticas de Privacidad
+        %p.txt-footer.right
+          Desarrollo web: Kosmyka e| Diseño web: La Post-Aa

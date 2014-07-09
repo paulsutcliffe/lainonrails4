@@ -1,31 +1,67 @@
 #section-articles.container
-  .title
-    %h1= page_title!('articles')
+  .title-page
+    %h3= page_title!('LAIN-Blog')
 
   .section
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Article', new_article_path, class: 'btn btn-primary'
+  
+    -# @articles.each do |article|
+    .section-articles
+      .section-article-img
+        = image_tag(image_path('blog-imagen.png'),class: 'img-responsive')
+        =# image_tag article.image.listing
+      .section-article-info
+        %p 
+          Tratamiento
+          =# article.title
+        %p 
+          Descripcion
+          =# article.content
+        .btn-verde-2
+          = link_to 'Leer más', "#"
+          =# link_to 'Leer más', article, class: 'btn btn-default'
+    .section-articles
+      .section-article-img
+        = image_tag(image_path('blog-imagen.png'), class:'img-responsive')
+        =# image_tag article.image.listing
+      .section-article-info
+        %p Tratamiento
+        =# article.title
+        %p Descripcion
+        =# article.content
+        %p.btn-verde
+        =# link_to 'crud.show', article, class: 'btn btn-default'
 
-    .table-responsive
-      %table.table
-        %tr
-          %th Title
-          %th Content
-          %th Image
-          %th
-          %th
-          %th
+    .section-articles
+      .section-article-img
+        = image_tag(image_path('blog-imagen.png'), class:'img-responsive')
+        =# image_tag article.image.listing
+      .section-article-info
+        %p Tratamiento
+        =# article.title
+        %p Descripcion
+        =# article.content
+        %p.btn-verde
+        =# link_to 'crud.show', article, class: 'btn btn-default'
+      - if current_admin
+        =# link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'
+        =# link_to 'crud.delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+    %br
+    = paginate @articles
+    %br
 
-        - @articles.each do |article|
-          %tr
-            %td= article.title
-            %td= article.content
-            %td= image_tag article.image.listing
-            %td= link_to 'crud.show', article, class: 'btn btn-default'
-            - if current_admin
-              %td= link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'
-              %td= link_to 'crud.delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-      %br
-      = paginate @articles
-      %br
+
+= render 'layouts/llama_ya' 
+
+.container
+  .section
+    .section-images
+      = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+      = image_tag(image_path('blog-img6.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+      = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+
+= render 'layouts/footer'

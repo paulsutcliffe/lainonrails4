@@ -1,4 +1,7 @@
-.section-contact, .section-sedes{
+.section-contact, .section-sedes, .section-articles,
+.section-blog, .section-fb, .section-suscribete, 
+.section-testi, .section-imagen, .section-descrip,
+.section-art-image, .section-art-info{ 
   @extend .col-md-6;
   @extend .col-sm-6;
   @extend .col-ld-6;
@@ -6,55 +9,66 @@
 }
 
 
-.section-images{
+.section-images, .test-section{
   @extend .col-md-12;
   @extend .col-sm-12;
   @extend .col-ld-12;
   @extend .col-xs-12;
 }
 
-
-.section-segments{
+.test-img, .blog-img{
   @extend .col-md-3;
   @extend .col-sm-3;
   @extend .col-ld-3;
   @extend .col-xs-12;
 }
 
-
-  .blog-img, .test-img{
+.test-info, .blog-info{
+  @extend .col-md-9;
+  @extend .col-sm-9;
+  @extend .col-ld-9;
+  @extend .col-xs-12;
+}
+ .section-segments{
   @extend .col-md-3;
   @extend .col-sm-3;
   @extend .col-ld-3;
   @extend .col-xs-12;
   }
 
-  .blog-info, .test-info, .sectioa-sed-info {
-  @extend .col-md-9;
-  @extend .col-sm-9;
-  @extend .col-ld-9;
-  @extend .col-xs-12;
-  }
 
 
-.section-blog, .section-fb, .section-suscribete, .section-testi, .section-imagen, .section-descrip{ 
-  @extend .col-md-6;
-  @extend .col-sm-6;
-  @extend .col-ld-6;
-  @extend .col-xs-12;
-  }
 
-.footer-titles .txt-footer, .section-sed-img{
+.footer-titles .txt-footer{
   @extend .col-md-4;
   @extend .col-sm-4;
   @extend .col-ld-4;
   @extend .col-xs-12;
 }
 
-.section-sed-info{
+.section-sed-img, .section-article-img{
+  @extend .col-md-4;
+  @extend .col-sm-4;
+  @extend .col-ld-4;
+  @extend .col-xs-4;
+}
+
+.section-sed-info, .section-article-info{
 
   @extend .col-md-8;
   @extend .col-sm-8;
   @extend .col-ld-8;
+  @extend .col-xs-8;
+}
+.section-suscribete{
+  .txt{
+  
+  @extend .col-md-10;
+  @extend .col-sm-10;
+  @extend .col-ld-10;
+  @extend .col-md-offset-1;
+  @extend .col-sm-offset-1;
+  @extend .col-ld-offset-1;
   @extend .col-xs-12;
+  }
 }
