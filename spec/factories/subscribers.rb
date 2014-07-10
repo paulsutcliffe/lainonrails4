@@ -6,6 +6,6 @@ FactoryGirl.define do
     last_name   { Faker::Name.name }
     email       { Faker::Internet.email }
     phone       { Faker::PhoneNumber }
-    country     { association :country }
+    country_id  { 1 }
   end
 end

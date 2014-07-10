@@ -39,7 +39,7 @@ module Lainonrails4
     config.assets.precompile += %w(ckeditor/*)
 
     config.i18n.default_locale = :pe
-    config.i18n.available_locales = [:pe, :cr, :uy, :bo, :sv, :gt]
+    config.i18n.available_locales = [:pe, :cr, :uy, :bo, :sv, :gt, :en]
     config.i18n.fallbacks = true
   end
 end

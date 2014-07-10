@@ -6,6 +6,6 @@ FactoryGirl.define do
     location  { Faker::Name.name }
     image     { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
     link      { Faker::Internet.url('example.com') }
-    country   { association :country }
+    country_id{ 1 }
   end
 end

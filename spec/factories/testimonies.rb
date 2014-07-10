@@ -7,7 +7,7 @@ FactoryGirl.define do
     testimony_type  { Faker::Name.name }
     image           { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
     video_link      { "https://www.youtube.com/watch?v=Sb5aq5HcS1A" }
-    country         { association :country }
+    country_id      { 1 }
     slug            { name ? name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') : Faker::Internet.slug('foo bar', '-')}
   end
 end

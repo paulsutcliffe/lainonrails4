@@ -13,6 +13,9 @@ Globals:
     # @country.name = "Perú"
     # @opportunity.country = "Perú"
     # @opportunity.country_id = 1
+  @subscriber
+  @articles
+  @testimonies
 Home:
     @larger_banners
     @medium_banners
@@ -49,6 +52,7 @@ Default values in
 
 Relationships:
   - Banner
+  - Computest
   - Contact
   - Office
   - Opportunity

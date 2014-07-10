@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :opportunity do
-    title "MyString"
-    description "MyText"
-    image "MyString"
-    active false
-    country_id 1
+    title       { Faker::Lorem.sentence }
+    description { Faker::Lorem.paragraph }
+    image       { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
+    active      true
+    country_id  { 1 }
   end
 end

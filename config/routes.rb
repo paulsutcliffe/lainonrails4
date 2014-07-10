@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root "countries#index"
 
   scope( path_names: {new: "nuevo", edit: "editar"}) do
-    scope "(:locale)", :locale => /#{I18n.available_locales.join("|")}/ do
+    # scope "(:locale)", :locale => /#{I18n.available_locales.join("|")}/ do
+    scope "(:locale)", :locale => /bo|cr|gt|pe|sv|uy/ do
       get "/" => "inicio#index", as: "home"
       post "/free_call" => "inicio#free_call_post", as: "free_call_post"
       resources :pages, path: "lain"

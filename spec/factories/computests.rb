@@ -12,6 +12,6 @@ FactoryGirl.define do
     bmi           20
     state         { Faker::Lorem.sentence }
     ideal_weight  { Faker::Lorem.sentence }
-    country       { association :country }
+    country_id    { 1 }
   end
 end

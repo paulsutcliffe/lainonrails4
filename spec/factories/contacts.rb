@@ -11,6 +11,6 @@ FactoryGirl.define do
     province      { Faker::Address.city }
     city          { Faker::Address.city }
     message       { Faker::Lorem.paragraph }
-    country       { association :country }
+    country_id    { 1 }
   end
 end

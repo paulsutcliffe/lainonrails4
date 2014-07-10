@@ -5,10 +5,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_admin
   before_filter :set_locale
 
-  before_filter :set_subscriber
+  before_filter :set_variables
 
-  def set_subscriber
-    @subscriber = @country.subscribers.new
+  def set_variables
+    @subscriber   = @country.subscribers.new
+    @articles     = Article.all.limit(2)
+    @testimonies  = Testimony.all.limit(2)
   end
 
   rescue_from CanCan::AccessDenied do |exception|
