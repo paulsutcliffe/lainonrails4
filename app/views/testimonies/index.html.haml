@@ -7,8 +7,24 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
 
-    -#.testi-img
-      = link_to  {style: "background-image: url(image_path('test.png'));" }, '#', class: 'test-foto'
+    .testi-img
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+      = link_to '#', class: 'test-foto' do
+        = image_tag(image_path('test.png'))
+    
     -# if "foto"
       .testi{style: "background-image: url(image_path(play.png)); background-repeat: no-repeat; "}
     -# if "video"
@@ -18,9 +34,7 @@
 
     -# @testimonies.each do |testimony|
       =# testimony.content
-      = testimony.testimony_type
-      
-      
+      =# testimony.testimony_type
 
 
     -#testimony.image.listing

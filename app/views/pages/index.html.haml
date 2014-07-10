@@ -1,28 +1,21 @@
 #section-pages.container
-  .title
-    %h1= page_title!('pages')
-  .section
+  .title-pages
+    %h3= page_title!(@page.title)
+
+  .section-pages
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Page', new_page_path, class: 'btn btn-primary'
-
-    .table-responsive
-      %table.table
-        %tr
-          %th Title
-          %th Content
-          %th
-          %th
-          %th
-
-        - @pages.each do |page|
-          %tr
-            %td= page.title
-            %td= truncate(strip_tags(page.content), :length => 150, :separator => " ")
-            %td= link_to 'crud.show', page, class: 'btn btn-default'
-            - if current_admin
-              %td= link_to 'crud.edit', edit_page_path(page), class: 'btn btn-info'
-              %td= link_to 'crud.delete', page, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+    .section-lain
+    - @pages.each do |page|
+      .section-lain-img
+        = image_tag(image_path('ejemplo.jpg'))
+      .section-lain-content
+        = truncate(strip_tags(page.content), :length => 150, :separator => " ")
+      = link_to 'crud.show', page, class: 'btn btn-default'
+      - if current_admin
+        = link_to 'crud.edit', edit_page_path(page), class: 'btn btn-info'
+        = link_to 'crud.delete', page, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
       %br
       = paginate @pages
       %br

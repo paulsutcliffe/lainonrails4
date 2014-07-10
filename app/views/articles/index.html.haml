@@ -7,21 +7,21 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Article', new_article_path, class: 'btn btn-primary'
   
-    - @articles.each do |article|
-      .section-articles
-        .section-article-img
-          = image_tag(image_path('blog-imagen.png'),class: 'img-responsive')
-          =# image_tag article.image.listing
-        .section-article-info
-          %p 
-            -#Tratamiento
-            = article.title
-          %p 
-            -#Descripcion
-            = article.content
-          .btn-verde-2
-            =# link_to 'Leer más', "#"
-            = link_to 'Leer más', article, class: 'btn btn-default'
+      -# @articles.each do |article|
+    .section-articles
+      .section-article-img
+        = image_tag(image_path('blog-imagen.png'),class: 'img-responsive')
+        =# image_tag article.image.listing
+      .section-article-info
+        %p 
+          Tratamiento
+          =# article.title
+        %p 
+          Descripcion
+          =# article.content
+        .btn-verde-2
+          = link_to 'Leer más', "#"
+          =# link_to 'Leer más', article, class: 'btn btn-default'
     -#.section-articles
       .section-article-img
         =# image_tag(image_path('blog-imagen.png'), class:'img-responsive')
