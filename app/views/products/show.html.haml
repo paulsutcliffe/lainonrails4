@@ -4,11 +4,12 @@
 
   .section-show
     .section-imagen
-      = image_taga @product.image.detail
+      = image_tag @product.image.detail
 
     .section-descrip
       = @product.description
-      =link_to products_path, "Volver", class:'btn-green'
+
+    =link_to "Volver", products_path, class:'btn-back'
     -#%p
       %b Videos:
       = @product.video1

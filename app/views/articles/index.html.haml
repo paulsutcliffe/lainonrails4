@@ -7,50 +7,23 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Article', new_article_path, class: 'btn btn-primary'
   
-      -# @articles.each do |article|
+  - @articles.each do |article|
     .section-articles
       .section-article-img
-        = image_tag(image_path('blog-imagen.png'),class: 'img-responsive')
-        =# image_tag article.image.listing
+        = image_tag article.image.listing, class: 'img-responsive'
       .section-article-info
         %p 
-          Tratamiento
-          =# article.title
+          = article.title
         %p 
-          Descripcion
-          =# article.content
+          = article.content
         .btn-verde-2
-          = link_to 'Leer más', "#"
-          =# link_to 'Leer más', article, class: 'btn btn-default'
-    -#.section-articles
-      .section-article-img
-        =# image_tag(image_path('blog-imagen.png'), class:'img-responsive')
-        = image_tag article.image.listing
-      .section-article-info
-        %p Tratamiento
-        =# article.title
-        %p Descripcion
-        =# article.content
-        %p.btn-verde
-        =# link_to 'crud.show', article, class: 'btn btn-default'
-
-    -#.section-articles
-      .section-article-img
-        = image_tag(image_path('blog-imagen.png'), class:'img-responsive')
-        =# image_tag article.image.listing
-      .section-article-info
-        %p Tratamiento
-        =# article.title
-        %p Descripcion
-        =# article.content
-        %p.btn-verde
-        =# link_to 'crud.show', article, class: 'btn btn-default'
+          = link_to 'Leer más', article
     - if current_admin
       = link_to 'crud.edit', edit_article_path(article), class: 'btn btn-info'
       =# link_to 'crud.delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-    %br
-    = paginate @articles
-    %br
+  %br
+  = paginate @articles
+  %br
 
 
 = render 'layouts/llama_ya' 

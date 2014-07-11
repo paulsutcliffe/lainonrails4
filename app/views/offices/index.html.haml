@@ -7,48 +7,19 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Office', new_office_path, class: 'btn btn-primary'
 
-    -# @offices.each do |office|
-    .section-sedes
-      .section-sed-img
-        = image_tag(image_path('sede-central.png'))
-      .section-sed-info
-        %h3
-          -#offce.name
-          SEDE CENTRAL
-        %p
-          -#office.address
-          Av. Javier Prado
-        %p
-          -#office.phone
-          Teléfono: 206-3400
-    .section-sedes
-      .section-sed-img
-        = image_tag(image_path('sede-central.png'))
-      .section-sed-info
-        %h3
-          -#offce.name
-          SEDE CENTRAL
-        %p
-          -#office.address
-          Av. Javier Prado
-        %p
-          -#office.phone
-          Teléfono: 206-3400
-    .section-sedes
-      .section-sed-img
-        = image_tag(image_path('sede-central.png'))
-      .section-sed-info
-        %h3
-          -#offce.name
-          SEDE CENTRAL
-        %p
-          -#office.address
-          Av. Javier Prado
-        %p
-          -#office.phone
-          Teléfono: 206-3400
+    - @offices.each do |office|
+      .section-sedes
+        .section-sed-img
+          = image_tag office.image.listing
+        .section-sed-info
+          %h3
+            = office.name
+          %p
+            = office.address
+          %p
+            Teléfono
+            = office.phone
         -#
-          %td= image_tag office.image.listing
           %td= link_to 'crud.show', office, class: 'btn btn-default'
           - if current_admin
             %td= link_to 'crud.edit', edit_office_path(office), class: 'btn btn-info'

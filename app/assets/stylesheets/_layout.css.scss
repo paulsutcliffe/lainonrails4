@@ -8,6 +8,12 @@
   @extend .col-xs-12;
 }
 
+.section-art-show-info, .section-art-show-image{
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .col-ld-6;
+  @extend .col-xs-6;
+}
 
 .section-images, .test-section{
   @extend .col-md-12;

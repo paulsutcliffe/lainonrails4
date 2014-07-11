@@ -2,24 +2,22 @@
   .title-page
     %h3= page_title!('Blog - ' + @article.title)
 
-  .section-articles
-    .section-art-image
+  .section-articles-show
+    .section-art-show-image
       %p
         = image_tag @article.image.detail
-    .section-art-info
+    .section-art-show-info
       %p
         = @article.content
 
-  .section
-    - if current_admin
-      .admin-controls
-        = link_to 'crud.edit', edit_article_path(@article), class: 'btn btn-info'
-    =# link_to 'crud.back', articles_path, class: 'btn btn-warning'
-
-
+    .section
+      - if current_admin
+        .admin-controls
+          = link_to 'crud.edit', edit_article_path(@article), class: 'btn btn-info'
+  .clear
   .title-page
     %h3= page_title!('Comentar')
-  
+    = link_to 'Volver', articles_path, class: 'btn-back'
 = render 'layouts/llama_ya' 
 
 .container
