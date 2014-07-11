@@ -3,7 +3,7 @@ class TestimoniesController < InheritedResources::Base
   before_action :set_testimony, only: [:show, :edit, :update, :destroy]
 
   def index
-    @testimonies = @country.testimonies.with_type(params[:type] || "video").ordered.page(params[:page] || 1).per(18) if @country
+    @testimonies = params[:type] ? @country.testimonies.with_type(params[:type] || "video").ordered.page(params[:page] || 1).per(18) : Testimony.ordered.page(params[:page] || 1).per(18)
   end
 
   def create

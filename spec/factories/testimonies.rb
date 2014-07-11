@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :testimony do
     name            { Faker::Name.name }
     content         { Faker::Lorem.paragraph }
-    testimony_type  { Faker::Name.name }
+    testimony_type  "testimonio"
     image           { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','image.png'))}
     video_link      { "https://www.youtube.com/watch?v=Sb5aq5HcS1A" }
     country_id      { 1 }
