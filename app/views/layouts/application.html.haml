@@ -45,43 +45,43 @@
 
   %body
     %header{:role => "navigation"}
-      -#= link_to "Articles", articles_path
-        = link_to "Banners", banners_path
-        = link_to "Computest", computests_path
-        = link_to "Contacts", contacts_path
-        = link_to "Offices", offices_path
-        = link_to "Opportunities", opportunities_path
-        = link_to "Pages", pages_path
-        = link_to "Products", products_path
-        = link_to "Subscribers", subscribers_path
-        = link_to "Testimonies", testimonies_path
-        = link_to "Users", users_path
-        = link_to "root", root_path(:only_path=>false)
-        = link_to "home", home_path(:only_path=>false)
-        = link_to "Registrarse", new_user_registration_path
-        = link_to "Iniciar sesión", new_user_session_path
-        = link_to "Editar usuario", edit_user_registration_path
-        = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
+      = link_to "Articles", articles_path
+      = link_to "Banners", banners_path
+      = link_to "Computest", computests_path
+      = link_to "Contacts", contacts_path
+      = link_to "Offices", offices_path
+      = link_to "Opportunities", opportunities_path
+      = link_to "Pages", pages_path
+      = link_to "Products", products_path
+      = link_to "Subscribers", subscribers_path
+      = link_to "Testimonies", testimonies_path
+      = link_to "Users", users_path
+      = link_to "root", root_path(:only_path=>false)
+      = link_to "home", home_path(:only_path=>false)
+      = link_to "Registrarse", new_user_registration_path
+      = link_to "Iniciar sesión", new_user_session_path
+      = link_to "Editar usuario", edit_user_registration_path
+      = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
       = render 'layouts/navigation'
-      -#= link_to "Articles", articles_path
-        = link_to "Banners", banners_path
-        = link_to "Computest", computests_path
-        = link_to "Contacts", contacts_path
-        = link_to "Offices", offices_path
-        = link_to "Opportunities", opportunities_path
-        = link_to "Pages", pages_path
-        = link_to "Products", products_path
-        = link_to "Subscribers", subscribers_path
-        = link_to "Testimonies", testimonies_path
-        = link_to "Users", users_path
-        = link_to "root", root_path(:only_path=>false)
-        = link_to "home", home_path(:only_path=>false)
-        = link_to "Registrarse", new_user_registration_path
-        = link_to "Iniciar sesión", new_user_session_path
-        = link_to "Editar usuario", edit_user_registration_path
-        = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
-        = render :partial => "inicio/free_call_form"  # post
-        = render :partial => "inicio/free_call"       # get
+      = link_to "Articles", articles_path
+      = link_to "Banners", banners_path
+      = link_to "Computest", computests_path
+      = link_to "Contacts", contacts_path
+      = link_to "Offices", offices_path
+      = link_to "Opportunities", opportunities_path
+      = link_to "Pages", pages_path
+      = link_to "Products", products_path
+      = link_to "Subscribers", subscribers_path
+      = link_to "Testimonies", testimonies_path
+      = link_to "Users", users_path
+      = link_to "root", root_path(:only_path=>false)
+      = link_to "home", home_path(:only_path=>false)
+      = link_to "Registrarse", new_user_registration_path
+      = link_to "Iniciar sesión", new_user_session_path
+      = link_to "Editar usuario", edit_user_registration_path
+      = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
+      = render :partial => "inicio/free_call_form"  # post
+      = render :partial => "inicio/free_call"       # get
       =# render 'layouts/navigation'
     %main{:role => "main"}
       =# render 'layouts/messages'

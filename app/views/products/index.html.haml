@@ -8,7 +8,7 @@
         = link_to I18n.t('crud.new') + ' ' + 'Product', new_product_path, class: 'btn btn-primary'
     - @products.each do |product|
       = link_to product do 
-        .product-img{style: "background-image: url(" + 'product.image.listing' + "); width: 160px; height: 170px; background-repeat: no-repeat;" }
+        .product-img{style: "background-image: url(#{product.image.listing}); width: 160px; height: 170px; background-repeat: no-repeat;" }
           .product-txt
             = product.name
       -#%td= product.video1
