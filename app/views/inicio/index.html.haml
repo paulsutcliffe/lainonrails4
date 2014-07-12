@@ -3,9 +3,9 @@
     .container
 
       .social
-        = link_to image_tag(image_path('peru.png'), width: "22px;"), "http://www.facebook.com"
-        = link_to image_tag(image_path('facebook.png'), width: "12px;"), "http://www.facebook.com"
-        = link_to image_tag(image_path('youtube.png'), width: "22px;"), "http://www.youtube.com"
+        = image_tag(image_path('flag_' + params[:locale] + '.png'), width: "22px;")
+        = link_to image_tag(image_path('facebook.png'), width: "12px;"), "https://www.facebook.com/lain.adelgaza.peru"
+        = link_to image_tag(image_path('youtube.png'), width: "22px;"), "https://www.youtube.com/channel/UCYgIEivJ2H5N4sQH2WY5i-g"
       .clear
       #carousel-principal.carousel.slide{"data-ride" => "carousel"}
         %ol.carousel-indicators
@@ -57,29 +57,33 @@
     .container
       .section-us
         .section-segments
-          %p
-            Oportunidades
-          = image_tag(image_path('oportunidades.png'), class: 'img-responsive')
-          %p
-            Lorem ipsum dolor sit amet consectateur nonummy.
+          = link_to opportunities_path do
+            %p
+              Oportunidades
+            = image_tag(image_path('oportunidades.png'), class: 'img-responsive')
+            %p
+              Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
-          %p
-            Método
-          = image_tag(image_path('metodo.png'), class: 'img-responsive')
-          %p
-            Lorem ipsum dolor sit amet consectateur nonummy.
+          = link_to metodo_path do
+            %p
+              Método
+            = image_tag(image_path('metodo.png'), class: 'img-responsive')
+            %p
+              Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
-          %p
-            Nuestra Empresa
-          = image_tag(image_path('empresa.png'), class: 'img-responsive')
-          %p
-            Lorem ipsum dolor sit amet consectateur nonummy.
+          = link_to lain_path do
+            %p
+              Nuestra Empresa
+            = image_tag(image_path('empresa.png'), class: 'img-responsive')
+            %p
+              Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
-          %p
-            LAIN para provincias
-          = image_tag(image_path('provincia.png'), class: 'img-responsive')
-          %p
-            Lorem ipsum dolor sit amet consectateur nonummy.
+          = link_to '#' do
+            %p
+              LAIN para provincias
+            = image_tag(image_path('provincia.png'), class: 'img-responsive')
+            %p
+              Lorem ipsum dolor sit amet consectateur nonummy.
 
   .container-fluid
     .container.section-blog-fb
