@@ -9,7 +9,10 @@ Rails.application.routes.draw do
     scope "(:locale)", :locale => /bo|cr|gt|pe|sv|uy/ do
       get "/" => "inicio#index", as: "home"
       post "/free_call" => "inicio#free_call_post", as: "free_call_post"
-      resources :pages, path: "lain"
+      resources :pages, path: "paginas"
+      get '/lain' => 'pages#show', :defaults => { :id => 'lain' }
+      get '/metodo' => 'pages#show', :defaults => { :id => 'metodo' }
+      get '/politicas' => 'pages#show', :defaults => { :id => 'politicas' }
       resources :testimonies, path: "testimonios"
       resources :articles, path: "blog"
       resources :products, path: "productos"

@@ -4,6 +4,7 @@
       %h1= page_title!(@page.title)
 
   .section
+    = image_tag @page.imagen.regular if @page.imagen.present?
     = @page.content.html_safe
 
   .section

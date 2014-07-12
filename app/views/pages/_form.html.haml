@@ -4,6 +4,8 @@
   .form-inputs
     = f.input :title
     = f.input :content, as: "ckeditor"
+    = f.input :imagen
+    = image_tag @page.imagen.thumb if @page.imagen.present?
 
   .form-actions
     = f.button :submit

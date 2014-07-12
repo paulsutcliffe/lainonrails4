@@ -5,9 +5,9 @@ class OpportunitiesController < InheritedResources::Base
   def index
     if @country
       if current_admin
-        @opportunities = @country.opportunities.ordered
+        @opportunities = @country.opportunities.ordered.page(params[:page] || 1).per(20)
       else
-        @opportunities = @country.opportunities.actives.ordered
+        @opportunities = @country.opportunities.actives.ordered.page(params[:page] || 1).per(20)
       end
       @opportunities.page(params[:page] || 1).per(20)
     end

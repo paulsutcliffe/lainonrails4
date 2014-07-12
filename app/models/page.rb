@@ -2,6 +2,8 @@ class Page < ActiveRecord::Base
   include CommonScopes
   validates_presence_of :title, :content
 
+  mount_uploader :imagen, ImagenUploader
+
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 

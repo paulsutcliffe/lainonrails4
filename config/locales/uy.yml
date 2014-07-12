@@ -122,4 +122,9 @@ pe:
   address: "Dirección"
   description: "Descripción"
   testimony_type: "Tipo de testimonio"
-
+  crud:
+    show: "Ver"
+    edit: "Editar"
+    delete: "Eliminar"
+    back: "Volver"
+    new: "Nuevo(a)"
