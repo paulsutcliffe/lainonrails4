@@ -59,28 +59,28 @@
           = link_to opportunities_path do
             %p
               Oportunidades
-            = image_tag(image_path('oportunidades.png'), class: 'img-responsive')
+            .oportunidad
             %p
               Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
           = link_to metodo_path do
             %p
               Método
-            = image_tag(image_path('metodo.png'), class: 'img-responsive')
+            .metodo
             %p
               Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
           = link_to lain_path do
             %p
               Nuestra Empresa
-            = image_tag(image_path('empresa.png'), class: 'img-responsive')
+            .empresa
             %p
               Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
           = link_to '#' do
             %p
               LAIN para provincias
-            = image_tag(image_path('provincia.png'), class: 'img-responsive')
+            .provincia
             %p
               Lorem ipsum dolor sit amet consectateur nonummy.
 
@@ -92,13 +92,14 @@
         %ul
           - @articles.each do |article|
             %li.blog-data
-              .blog-img
-                = image_tag article.image.listing, class: 'img-responsive'
-              .blog-info
-                %p.title
-                  = article.title
-                %p.description
-                  = article.content
+              = link_to article do
+                .blog-img
+                  = image_tag article.image.listing, class: 'img-responsive'
+                .blog-info
+                  %p.title
+                    = article.title
+                  %p.description
+                    = article.content
       .section-fb
         %h4.title-head
           Nuestros Seguidores

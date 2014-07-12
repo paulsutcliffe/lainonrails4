@@ -1,14 +1,27 @@
 #section-pages.container
-  .section
-    .section-title
-      %h1= page_title!(@page.title)
+  .title-page
+    %h3= page_title!(@page.title)
 
-  .section
-    = image_tag @page.imagen.regular if @page.imagen.present?
-    = @page.content.html_safe
+  .section-page
+    .section-page-img
+      = image_tag @page.imagen.regular if @page.imagen.present?
+    .section-page-info
+      = @page.content.html_safe
 
-  .section
-    - if current_admin
-      .admin-controls
-        = link_to 'crud.edit', edit_page_path(@page), class: 'btn btn-info'
-    = link_to 'crud.back', pages_path, class: 'btn btn-warning'
+    .section
+      - if current_admin
+        .admin-controls
+          = link_to 'edit', edit_page_path(@page), class: 'btn btn-info'
+      =# link_to 'crud.back', pages_path, class: 'btn btn-warning'
+
+= render 'layouts/llama_ya' 
+
+.container
+  .section-images
+    = image_tag(image_path('sec-img1.png'), class:'img-responsive')
+    = image_tag(image_path('sec-img2.png'), class:'img-responsive')
+    = image_tag(image_path('sec-img5.png'), class:'img-responsive')
+    = image_tag(image_path('sec-img3.png'), class:'img-responsive')
+    = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+
+= render 'layouts/footer'

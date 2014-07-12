@@ -6,12 +6,15 @@
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
-    .section-test-images
-      - @testimonies.each do |testimony|
-        - if testimony_type == 'video'
+      %br
+      %br
+    - @testimonies.each do |testimony|
+      = link_to '#' do
+        .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
+          
+        -# if testimony_type == 'video'
         =# testimony.content
         =# testimony.testimony_type
-        = image_tag testimony.image.listing
         =# testimony.video_link
         =# link_to 'crud.show', testimony, class: 'btn btn-default'
         - if current_admin

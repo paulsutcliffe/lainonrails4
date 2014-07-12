@@ -1,8 +1,10 @@
-%h3 Usuario
-%p
-  Nombres: #{@user.first_name}
-%p
-  Apellidos: #{@user.last_name}
-%p
-  Email: #{@user.email if @user.email}
-= link_to 'Editar cuenta', edit_user_path
+#usuarios.container
+  .container
+    %h3 Usuario
+    %p
+      Nombres: #{@user.first_name}
+    %p
+      Apellidos: #{@user.last_name}
+    %p
+      Email: #{@user.email if @user.email}
+    = link_to 'Editar cuenta', edit_user_path
