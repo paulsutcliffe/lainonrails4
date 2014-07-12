@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707005645) do
+ActiveRecord::Schema.define(version: 20140712040757) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 20140707005645) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "imagen"
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree

@@ -13,6 +13,6 @@ class PagesController < InheritedResources::Base
   end
 
   def permitted_params
-    params.permit(:page => [:title, :content])
+    params.permit(:page => [:title, :content, :imagen])
   end
 end
