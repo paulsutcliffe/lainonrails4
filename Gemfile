@@ -44,6 +44,7 @@ gem "launchy", "~> 2.4.2", group: :test
 gem "rspec-rails", "~> 3.0.0.beta", group: [:test, :development]
 gem "factory_girl_rails", "~> 4.3.0", group: [:test, :development]
 gem 'selenium-webdriver'
+gem 'magnific-popup-rails'
 
 gem 'rolify'
 gem "simple_form"
