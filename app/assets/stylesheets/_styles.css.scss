@@ -5,6 +5,8 @@ header{background-color: $aqua; height: 100%; margin-bottom: 20px;
   .navbar.navbar-default{margin-bottom: 0px;}
   .nav.navbar-nav li a{ color: $green; padding: 10px 25px; font-size: 14.5px;}
   .nav.navbar-nav li{margin: 35px 0px;}
+  .nav.navbar-nav .active{background-color: $green; color: white;}
+
   .nav.navbar-nav li:hover{background-color: $green; a{color: white !important;}}
   .navbar-default .navbar-collapse, .navbar-default .navbar-form{margin-left: 15em;}
   .navbar-default{background-color: $aqua; }
