@@ -1,3 +1,10 @@
+:javascript 
+  $(document).ready(function(){
+    $('.lightbox').lightbox();
+  });
+
+
+
 #section-testimonies.container
   .title-page
     %h3= page_title!('Testimonios')
@@ -8,10 +15,19 @@
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
       %br
       %br
+
     - @testimonies.each do |testimony|
-      = link_to '#' do
-        .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
-          
+      - if testimony.testimony_type == 'video'
+        = link_to testimony.video_link, class: 'lightbox' do
+          .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
+            .test-video
+              = image_tag(image_path('play-hover.png'))
+      - else 
+        - if testimony.testimony_type == 'antesydespues'
+          = link_to image_path(testimony.image.listing), class: 'lightbox' do
+            .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
+              .test-img
+                = image_tag(image_path('camera-hover.png'))
         -# if testimony_type == 'video'
         =# testimony.content
         =# testimony.testimony_type

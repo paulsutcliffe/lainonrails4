@@ -137,9 +137,11 @@ ul li {list-style: none;}
 .section-article-info{min-height: 220px; }
 .section-article-info p:first-child{margin-top: 20px; color: $dark-green; }
 .section-article-info p:nth-child(2){color: $green;
-overflow: hidden;
-text-overflow: ellipsis;
-height: 58px;}
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 58px;
+}
+
 .section-article-img img{border-radius: 150px; width: 100%; height: 140px;}
 
 .section-articles-show{
@@ -160,9 +162,22 @@ height: 58px;}
   margin-bottom: 40px;
 .section-testimonies{padding: 0px 15px;
   a{float: left;}
+.test-video, .test-img{
+ background: #FFF;
+  opacity: 0;
+}
+.test-video img, .test-img img{
+margin-top: -20%;
+margin-left: 25%;
 }
 
-.testi-foto img:hover{background-image: url( image_path('play.png')); background-repeat: no-repeat; background-color: rgba(0, 133, 126, 1);  }
+.section-test-images:hover .test-video, .section-test-images:hover .test-img{
+      opacity:0.9; 
+      background-color: rgba(0, 133, 126, 1);width: 100%;
+      background-size: contain; height: 106px; color:white; 
+      padding-top: 50px;
+    }
+  }
 }
 
 #section-products{
@@ -191,9 +206,10 @@ height: 58px;}
   margin-top: 50px;
   img{float: left; padding: 0px; margin: 0px 0px 50px 0px; width: 20%;}
 }
+
 #section-index{
 .section-images{ 
-margin-top: 0px !important;
+  margin-top: 0px !important;
   img{display: inline-block; padding: 0px; margin: 0px -3px 50px 0px; width: 20%;}
 }
 }
