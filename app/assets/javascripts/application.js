@@ -16,6 +16,5 @@
 //= require bootstrap
 //= require ckeditor/override
 //= require ckeditor/init
-//= require jquery.min.js
 //= require jquery.lightbox.js
-//= require_tree .
+// require_tree .
