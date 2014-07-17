@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += ['jquery.lightbox.js', 'carbono/jquery.lightbox.css', 'ckeditor/*']
+Rails.application.config.assets.precompile += ['jquery.lightbox.js', 'jquery.lightbox.css', 'ckeditor/*']
