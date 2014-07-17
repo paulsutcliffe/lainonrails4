@@ -133,7 +133,7 @@
 .jquery-lightbox-loading,
 .jquery-lightbox-mode-html .jquery-lightbox-loading
 {
-  background:#FFFFFF url(image_path(loading.gif)) no-repeat center center;
+  background:#FFFFFF url(loading.gif) no-repeat center center;
 }
 
 .jquery-lightbox-button-close
