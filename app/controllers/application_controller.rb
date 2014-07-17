@@ -43,5 +43,15 @@ class ApplicationController < ActionController::Base
     { :locale => I18n.locale }
   end
 
+  def body_id
+    @body_id = params[:controller].parameterize
+  end
+
+  def body_class
+    @body_class = params[:action].parameterize
+  end
+
+  helper_method :body_id
+  helper_method :body_class
 
 end
