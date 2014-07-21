@@ -9,8 +9,8 @@
 
   - @articles.each do |article|
     .section-articles
-      .section-article-img
-        = image_tag article.image.listing, class: 'img-responsive'
+      .section-article-img{style: "background: url(#{article.image.listing}) no-repeat center center"}
+        =# image_tag article.image.listing, class: 'img-responsive'
       .section-article-info
         %p
           = article.title

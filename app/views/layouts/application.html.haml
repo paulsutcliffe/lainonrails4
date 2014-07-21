@@ -44,7 +44,7 @@
     = favicon_link_tag '/images/favicon.png', :rel => 'shortcut icon'
 
   %body
-    %header{:role => "navigation"}
+    %header{:role => "navigation", :id => "#{body_id} #{body_class}" }
       -#= link_to "Articles", articles_path
         = link_to "Banners", banners_path
         = link_to "Computest", computests_path
@@ -62,6 +62,7 @@
         = link_to "Iniciar sesión", new_user_session_path
         = link_to "Editar usuario", edit_user_registration_path
         = link_to "Cerrar sesión", destroy_user_session_path, :method=>"delete"
+      
       = render 'layouts/navigation'
       -#= link_to "Articles", articles_path
         = link_to "Banners", banners_path
@@ -86,7 +87,7 @@
       =# render :partial => "inicio/free_call_form"  # post
       =# render :partial => "inicio/free_call"       # get
       =# render 'layouts/navigation'
-    %main{:role => "main", :id => "#{body_id} #{body_class}"}
+    %main#main{:role => "main"}
       = render 'layouts/messages'
       = yield
     =# render 'shared/google_analytics'

@@ -40,7 +40,7 @@ ul li {list-style: none;}
     //.metodo:hover{background-image: url('metodo.png');}
     //.oportunidad:hover{background-image: url('oportunidades.png');}
     //.provincia:hover{background-image: url('provincia.png');}
-    .empresa:hover{background-image: url('empresa-2.png');}
+    .empresa:hover{background-image: url(image_path('empresa-2.png'));}
     .metodo, .oportunidad, .provincia, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;} 
   }
   
