@@ -9,8 +9,8 @@
     = f.input :email
     = f.input :phone
     = f.input :gender, collection: ["Masculino", "Femenino"]
-    = f.input :height
-    = f.input :weight
+    = f.input :height, as: :string
+    = f.input :weight, as: :string
 
   .form-actions
     = f.button :submit, 'Calcular', class: 'btn-submit'

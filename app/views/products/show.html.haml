@@ -7,7 +7,7 @@
       = image_tag @product.image.detail
 
     .section-descrip
-      = @product.description
+      = raw(@product.description)
 
     =link_to "Volver", products_path, class:'btn-back'
     -#%p
@@ -22,7 +22,7 @@
         = link_to 'crud.edit', edit_product_path(@product), class: 'btn btn-info'
     =# link_to 'crud.back', products_path, class: 'btn btn-warning'
 
-= render 'layouts/llama_ya' 
+= render 'layouts/llama_ya'
 
 .container
   .section

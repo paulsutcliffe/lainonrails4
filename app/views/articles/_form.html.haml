@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :title
-    = f.input :content
+    = f.input :content, as: "ckeditor"
     = f.input :image
     = image_tag @article.image.thumb if @article.image.present?
 
