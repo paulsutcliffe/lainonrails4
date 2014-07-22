@@ -14,7 +14,7 @@
                   %p.title
                     = article.title
                   %p.description
-                    = article.content
+                    = truncate(article.content, length: 120)
 
       .section-suscribete
         %h4.title-head

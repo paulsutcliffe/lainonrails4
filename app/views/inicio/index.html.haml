@@ -63,7 +63,7 @@
           = link_to '',new_computest_path, class: 'section-img-compu'
           = link_to '',testimonies_path(type: 'video'), class: 'section-img-vid'
           = link_to '',testimonies_path(type: 'antesydespues'), class: 'section-img-foto'
-      
+
       .section
         %p.pink-text
           LAIN es un Centro Médico que realiza tratamientos contra la obesidad. Nuestros profesionales
@@ -118,7 +118,7 @@
                   %p.title
                     = article.title
                   %p.description
-                    = article.content
+                    = truncate(article.content, length: 120)
       .section-fb
         %h4.title-head
           Nuestros Seguidores
