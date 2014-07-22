@@ -36,15 +36,47 @@
           = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
 
         .section-contact
-          = image_tag(image_path('telefono.png'), class:'img-responsive')
+          #carousel-llamada.carousel.slide{"data-ride" => "carousel"}
+            .carousel-inner
+              - @telefonos.each_with_index do |telefono, index|
+                - if index == 0
+                  .item.active
+                    = image_tag(image_path('telefono.png'), class:'img-responsive')
+                    .carousel-caption
+                      %h3
+                        = telefono.name
+                      %p
+                        = telefono.phone
+                - else
+                  .item
+                    = image_tag(image_path('telefono.png'), class:'img-responsive')
+                    .carousel-caption
+                      %h3
+                        = telefono.name
+                      %p
+                        = telefono.phone
 
       .section
         .section-images
+<<<<<<< HEAD
           = link_to '',lain_path, class: 'section-img-lain'
           = link_to '',products_path, class: 'section-img-prod'
           = link_to '',new_computest_path, class: 'section-img-compu'
           = link_to '',testimonies_path(type: 'video'), class: 'section-img-vid'
           = link_to '',testimonies_path(type: 'antesydespues'), class: 'section-img-foto'
+=======
+
+          .section-img-lain
+            = link_to '',lain_path
+          .section-img-prod
+            = link_to '',products_path
+          .section-img-compu
+            = link_to '',new_computest_path
+          .section-img-vid
+            = link_to '',testimonies_path(type: 'video')
+          .section-img-foto
+            = link_to '',testimonies_path(type: 'antesydespues')
+>>>>>>> 04bf80d7c90a0594def2328f9ba2b20daa5e6bce
 
       .section
         %p.pink-text
@@ -95,6 +127,7 @@
               = link_to article do
                 .blog-img
                   = image_tag article.image.listing, class: 'img-responsive'
+                  = article.created_at.strftime('%m.%^b.%y')
                 .blog-info
                   %p.title
                     = article.title

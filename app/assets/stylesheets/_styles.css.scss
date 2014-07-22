@@ -34,31 +34,39 @@ ul li {list-style: none;}
   .social{float: right; margin-right: 15px; margin-bottom: 10px;}
   .social a{margin-left: 15px;}
   .section-segments{margin: 70px 0px;text-align: center; img{margin: 15px auto;} p:first-child{font-size: 18px; color: $dark-green; } p:last-child{font-size: 14px; color: $green;}}
-  .section-segments{ 
+  .section-segments{
     .metodo{background-image: url(image_path('metodo.png'));}
     .oportunidad{background-image: url(image_path('oportunidades.png'));}
     .provincia{background-image: url(image_path('provincia.png'));}
     .empresa{background-image: url(image_path('empresa.png'));}
-    
-    //.metodo:hover{background-image: url('metodo.png');}
-    //.oportunidad:hover{background-image: url('oportunidades.png');}
-    //.provincia:hover{background-image: url('provincia.png');}
-    .empresa:hover{background-image: url(image_path('empresa-2.png'));}
-    .metodo, .oportunidad, .provincia, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;} 
+
+    .metodo:hover{background-image: url('hover-2-metodo.png');}
+    .oportunidad:hover{background-image: url('hover-1-oportunidades.png');}
+    .provincia:hover{background-image: url('hover-4-lain-para-provincias.png');}
+    .empresa:hover{background-image: url(image_path('hover-3-nuestra-empresa.png'));}
+    .metodo, .oportunidad, .provincia, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;}
   }
-  
+
 
   .section-contact img{ width: 100%;}
-  
+
   .section-contact{margin: 15px 0px;}
   .section-contact:first-child{padding-right: 7.5px;}
   .section-contact:nth-child(2){padding-left: 7.5px; }
-  
-  
+
+
   .section-us{float: right;}
   #carousel-principal{
     padding: 0px 15px;
    img{min-width: 100%;}
+  }
+  #carousel-llamada{
+    h3 { font-size: 24px;
+    font-weight: 700;
+    text-shadow: none;}
+    p { font-size: 48px;
+    font-style: italic;
+    text-shadow: none;}
   }
  iframe{max-width: 100%; min-width: 100%;
  }
@@ -68,16 +76,16 @@ ul li {list-style: none;}
 
 .section-test-sus{
   margin-top: 30px;
-  
+
   .section-testi{
     padding-right: 50px;
     margin-bottom: 30px;
-    .test-info{background: url( image_path('globo-text.png')) no-repeat center; 
+    .test-info{background: url( image_path('globo-text.png')) no-repeat center;
                background-size: contain; height: 115px; margin-bottom: 20px;}
       .title{  margin-left: 5%; margin-top: 20px; color: $dark-green; }
       .description{ margin-left: 5%;  margin-top: 10px; color: $green;}
-  
-    .test-section{padding: 0px;} 
+
+    .test-section{padding: 0px;}
     .test-img{padding-left: 0px;}
   }
 }
@@ -89,7 +97,7 @@ ul li {list-style: none;}
     margin-bottom: 30px;
   .section-page-img{float:left; padding-right: 15px;}
   .section-page-info{}
-  
+
   }
 }
 
@@ -97,7 +105,7 @@ ul li {list-style: none;}
   padding-left: 50px;
   .img img{position: absolute; right: 0px; margin-top: -50px;}
   .txt{color: $green; padding-left: 15px; padding-right: 40px;}
-  input[type=text], input[type=email], input[type=tel]{padding: 5px 0px 5px 15px; width: 100%; margin-bottom: 5px;} 
+  input[type=text], input[type=email], input[type=tel]{padding: 5px 0px 5px 15px; width: 100%; margin-bottom: 5px;}
   .btn-green{background: url(image_path('btn-green.png')) no-repeat center center ; color: white;width: 86px; }
   .btn-green:hover{color: white;}
   #subscriber_privacy_policy{width: 5%;}
@@ -123,7 +131,7 @@ ul li {list-style: none;}
 
 
 .section-blog-fb{
-  margin-top: 40px; 
+  margin-top: 40px;
   margin-bottom: 40px;
   .section-fb{ padding-left: 50px;}
   .section-blog{
@@ -139,7 +147,7 @@ ul li {list-style: none;}
 #section-offices{
 .section-offices{padding: 0px 15px; }
 .section-sedes{ margin-bottom: 40px; padding-left: 0px;}
-  .section-sed-img{padding-left: 0px; display: inline-block; 
+  .section-sed-img{padding-left: 0px; display: inline-block;
   img{width: 150px; height: 150px; border-radius: 150px; }
   }
   .section-sed-info{display: inline-block; min-height: 170px;}
@@ -189,9 +197,9 @@ margin-left: 25%;
 }
 
 .section-test-images:hover .test-video, .section-test-images:hover .test-img{
-      opacity:0.9; 
+      opacity:0.9;
       background-color: rgba(0, 133, 126, 1);width: 100%;
-      background-size: contain; height: 106px; color:white; 
+      background-size: contain; height: 106px; color:white;
       padding-top: 50px;
     }
   }
@@ -202,10 +210,10 @@ margin-left: 25%;
 .section-products{padding: 0px 15px;}
 .product-txt{background:#FFF; opacity:0;}
 .product-img{float:left;}
-.product-img:hover .product-txt { 
-      opacity:0.9; 
+.product-img:hover .product-txt {
+      opacity:0.9;
       background-color: rgba(0, 133, 126, 1);width: 100%;
-      background-size: contain; height: 126px; color:white; 
+      background-size: contain; height: 126px; color:white;
       padding-top: 50px;
       font-size: 17px;
     word-break: break-all;
@@ -219,8 +227,13 @@ margin-left: 25%;
   }
 }
 
+<<<<<<< HEAD
 .section-images > a{ display:inline-block; width: 20%; height: 150px; margin-right: -4px;}
 .section-images{ 
+=======
+.section-images > div{ display:inline-block; width: 20%; height: 150px;}
+.section-images{
+>>>>>>> 04bf80d7c90a0594def2328f9ba2b20daa5e6bce
   margin-top: 50px;
   margin-bottom: 50px;
   .section-img-lain{
@@ -269,7 +282,7 @@ margin-left: 25%;
 }
 
 #section-index{
-.section-images{ 
+.section-images{
   margin-top: 0px !important;
   img{display: inline-block; padding: 0px; margin: 0px -3px 50px 0px; width: 20%;}
 }
@@ -290,6 +303,6 @@ margin-left: 25%;
   .footer-titles{
     .center{text-align: center; }
     margin-top: 20px;
-    font-size: 11px; 
+    font-size: 11px;
     .right{text-align: right;}
   }
