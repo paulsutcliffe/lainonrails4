@@ -1,9 +1,10 @@
-= simple_form_for(@computest)  do |f|
+= simple_form_for @computest, html: { class: "form-horizontal"}  do |f|
   = render 'layouts/error_messages', :target => f.object
 
-  .form-inline
-    .form-group
-      = f.input :first_name
+  .compu-form
+    %p
+      Ingresa tus datos y calcula tu índice de masa corporal
+    = f.input :first_name
     = f.input :last_name
     = f.input :email
     = f.input :phone

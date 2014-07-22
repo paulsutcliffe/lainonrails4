@@ -66,3 +66,11 @@
   @extend .col-ld-8;
   @extend .col-xs-8;
 }
+
+.section-compu-img, .section-compu-form{
+
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .col-ld-6;
+  @extend .col-xs-12;
+}

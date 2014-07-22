@@ -6,14 +6,15 @@
 #section-testimonies.container
   .title-page
     %h3= page_title!('Testimonios')
-
+    .links
+      = link_to 'Videos y Spots', testimonies_path(type: 'video')
+      = link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
+  
   .section-testimonies
     - if current_admin
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
       %br
-    = link_to 'Videos y Spots', testimonies_path(type: 'video')
-    = link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
     %br
 
     - @testimonies.each do |testimony|
