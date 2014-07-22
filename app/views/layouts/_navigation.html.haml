@@ -7,7 +7,10 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to image_tag(image_path('logo-lain-2.png')), root_path, class: 'navbar-brand'
+      - if params[:locale] == 'gt'
+        = link_to image_tag(image_path('logo-less.png')), root_path, class: 'navbar-brand'
+      - else
+        = link_to image_tag(image_path('logo-lain-2.png')), root_path, class: 'navbar-brand'
 
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
