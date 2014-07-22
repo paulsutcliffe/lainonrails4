@@ -24,15 +24,15 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process :resize_to_fit => [510, nil]
+  # process :resize_to_fit => [510, nil]
   version :thumb do
     process :resize_to_fill => [110, 110]
   end
   version :listing do
-    process :resize_to_fit => [150, nil]
+    process :resize_to_fill => [150, 150]
   end
   version :detail do
-    process :resize_to_fit => [510, 287]
+    process :resize_to_fill => [510, 287]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
