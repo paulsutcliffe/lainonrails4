@@ -24,7 +24,7 @@ class TestimonyImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process :resize_to_fit => [510, nil]
+  # process :resize_to_fit => [510, nil]
   version :thumb do
     process :resize_to_fill => [90, 90]
   end
@@ -32,7 +32,7 @@ class TestimonyImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [160, 160]
   end
   version :detail do
-    process :resize_to_fit => [510, 287]
+    process :resize_to_fit => [800, 800]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

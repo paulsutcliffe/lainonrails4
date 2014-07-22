@@ -1,9 +1,7 @@
-:javascript 
+:javascript
   $(document).ready(function(){
     $('.lightbox').lightbox();
   });
-
-
 
 #section-testimonies.container
   .title-page
@@ -14,34 +12,31 @@
       .admin-control
         = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
       %br
-      %br
+    = link_to 'Videos y Spots', testimonies_path(type: 'video')
+    = link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
+    %br
 
     - @testimonies.each do |testimony|
       - if testimony.testimony_type == 'video'
         = link_to testimony.video_link, class: 'lightbox' do
-          .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
+          .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 160px; background-repeat: no-repeat;"}
             .test-video
               = image_tag(image_path('play-hover.png'))
-      - else 
+      - else
         - if testimony.testimony_type == 'antesydespues'
-          = link_to image_path(testimony.image.listing), class: 'lightbox' do
-            .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 105px; background-repeat: no-repeat;"}
+          = link_to image_path(testimony.image.detail), class: 'lightbox' do
+            .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 160px; background-repeat: no-repeat;"}
               .test-img
                 = image_tag(image_path('camera-hover.png'))
-        -# if testimony_type == 'video'
-        =# testimony.content
-        =# testimony.testimony_type
-        =# testimony.video_link
-        =# link_to 'crud.show', testimony, class: 'btn btn-default'
-        - if current_admin
-          = link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
-          = link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-    
+      - if current_admin
+        = link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
+        = link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+
     %br
     = paginate @testimonies
     %br
 
-= render 'layouts/llama_ya' 
+= render 'layouts/llama_ya'
 
 .container
   .section
