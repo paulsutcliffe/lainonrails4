@@ -219,9 +219,10 @@ margin-left: 25%;
   }
 }
 
-.section-images > div{ display:inline-block; width: 20%; height: 150px;}
+.section-images > a{ display:inline-block; width: 20%; height: 150px; margin-right: -4px;}
 .section-images{ 
   margin-top: 50px;
+  margin-bottom: 50px;
   .section-img-lain{
     background: url(image_path('sec-img1.png')) no-repeat center center;
     background-size: cover;
@@ -240,6 +241,26 @@ margin-left: 25%;
   }
   .section-img-foto{
     background: url(image_path('sec-img4.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-lain:hover{ 
+    background: url(image_path('sec-img1-hover.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-prod:hover{ 
+    background: url(image_path('sec-img2-hover.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-compu:hover{ 
+    background: url(image_path('sec-img5-hover.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-vid:hover{ 
+    background: url(image_path('sec-img3-hover.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-foto:hover{ 
+    background: url(image_path('sec-img4-hover.png')) no-repeat center center;
     background-size: cover;
   }
   .section-img-hover{
