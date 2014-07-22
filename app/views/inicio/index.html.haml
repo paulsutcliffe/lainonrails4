@@ -24,13 +24,6 @@
               .item
                 = image_tag banner.image.larger, class: 'img-responsive'
 
-
-        -#.carousel-caption
-          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-principal", :role => "button"}
-            %span.glyphicon.glyphicon-chevron-left
-          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-principal", :role => "button"}
-            %span.glyphicon.glyphicon-chevron-right
-
       .section-info
         .section-contact
           = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
