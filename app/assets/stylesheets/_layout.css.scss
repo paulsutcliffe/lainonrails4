@@ -74,3 +74,12 @@
   @extend .col-ld-6;
   @extend .col-xs-12;
 }
+
+.section-images > a{
+
+  @extend .col-md-3;
+  @extend .col-sm-3;
+  @extend .col-ld-3;
+  @extend .col-xs-6;
+
+}
