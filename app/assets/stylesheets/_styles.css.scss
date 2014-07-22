@@ -6,7 +6,7 @@ header{background-color: $aqua; height: 100%; margin-bottom: 20px;
   .nav.navbar-nav li { color: $green; padding: 10px 25px; font-size: 14.5px; color: white;}
   .inactive {padding: 0px !important; margin: 0px; }
   .active{padding: 0px !important;}
-  .active:hover{ padding:0px;}
+  .active:hover{ padding:0p x;}
   .nav.navbar-nav li{margin: 35px 0px;}
   .nav.navbar-nav .active{background-color: $green; color: white;}
 
@@ -219,9 +219,32 @@ margin-left: 25%;
   }
 }
 
+.section-images > div{ display:inline-block; width: 20%; height: 150px;}
 .section-images{ 
   margin-top: 50px;
-  img{float: left; padding: 0px; margin: 0px 0px 50px 0px; width: 20%;}
+  .section-img-lain{
+    background: url(image_path('sec-img1.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-prod{
+    background: url(image_path('sec-img2.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-compu{
+    background: url(image_path('sec-img5.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-vid{
+    background: url(image_path('sec-img3.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-foto{
+    background: url(image_path('sec-img4.png')) no-repeat center center;
+    background-size: cover;
+  }
+  .section-img-hover{
+  background:$green; opacity:0;
+  }
 }
 
 #section-index{
