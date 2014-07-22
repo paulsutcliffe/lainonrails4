@@ -9,8 +9,8 @@
 
   - @articles.each do |article|
     .section-articles
-      .section-article-img{style: "background: url(#{article.image.listing}) no-repeat center center"}
-        =# image_tag article.image.listing, class: 'img-responsive'
+      .section-article-img
+        = image_tag article.image.listing, class: 'img-responsive img-circle'
       .section-article-info
         %p
           = article.title
@@ -21,7 +21,7 @@
       - if current_admin
         = link_to 'edit', edit_article_path(article), class: 'btn btn-info'
         = link_to 'delete', article, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-  
+
 %br
 = paginate @articles
 %br
