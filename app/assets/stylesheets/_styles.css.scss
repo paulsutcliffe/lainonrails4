@@ -182,13 +182,14 @@ padding-left: 15px;}
   margin-bottom: 40px;
   .section-computest{
     padding: 0px 15px;
+  .compu-form p{color:$dark-green;}
   .section-compu-form{padding: 0px 0px 0px 15px;}
   .section-compu-img{padding: 0px 15px 0px 0px; }
   color: $green;
   input{border: 1px solid $aqua;}
   .controls{display: inline-block;}
-
-  label{text-align: left; width: 30%;}  
+  .btn-submit{margin-top: 21px;}
+  label{text-align: left; width: 30%; font-weight: normal;}  
 }
 
 }
