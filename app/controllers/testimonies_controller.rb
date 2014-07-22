@@ -9,12 +9,12 @@ class TestimoniesController < InheritedResources::Base
   def create
     @testimony = Testimony.new(testimony_params)
     @testimony.country_id = @country.try(:id)
-    create!(notice: "Testimonio guardado correctamente.")
+    create!(notice: "Testimonio guardado correctamente.") { testimonies_path }
   end
 
   def update
     @testimony.country_id = @country.try(:id)
-    update!(:notice => "Producto actualizado correctamente.")
+    update!(:notice => "Producto actualizado correctamente.") { testimonies_path }
   end
 
   private

@@ -9,7 +9,7 @@
         = image_tag @article.image.detail
     .section-art-show-info
       %p
-        = @article.content
+        = raw(@article.content)
 
     .section
       - if current_admin
@@ -21,7 +21,7 @@
     = link_to 'Volver', articles_path, class: 'btn-back'
   .fb-coments
     == <div class="fb-comments" data-href="#{request.original_url}" data-numposts="5" data-colorscheme="light" data-width="100%" style="max-width: 100%; padding-left: 15px; padding-right: 30px !important;"></div>
-= render 'layouts/llama_ya' 
+= render 'layouts/llama_ya'
 
 = render 'layouts/categories'
 
