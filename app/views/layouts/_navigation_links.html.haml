@@ -1,8 +1,8 @@
-%li= link_to_unless_current 'Inicio', home_path, class: menu_status('inicio')
-%li= link_to_unless_current 'LAIN', lain_path, class: menu_status('lain')
-%li= link_to_unless_current 'Método', metodo_path, class: menu_status('metodo')
-%li= link_to_unless_current 'Testimonios', testimonies_path, class: menu_status('testimonies')
-%li= link_to_unless_current 'Productos', products_path, class: menu_status('products')
-%li= link_to_unless_current 'Sucursales', offices_path, class: menu_status('offices')
-%li= link_to_unless_current 'Blog', articles_path, class: menu_status('articles')
-%li= link_to_unless_current 'Oportunidades', opportunities_path, class: menu_status('oportunities')
+%li{:class => menu_status('inicio')}= link_to_unless_current 'Inicio', home_path
+%li{:class => menu_status('lain')}= link_to_unless_current 'LAIN', lain_path
+%li{:class => menu_status('metodo')}= link_to_unless_current 'Método', metodo_path
+%li{:class => menu_status('testimonies')}= link_to_unless_current 'Testimonios', testimonies_path
+%li{:class => menu_status('products')}= link_to_unless_current 'Productos', products_path
+%li{:class => menu_status('offices')}= link_to_unless_current 'Sucursales', offices_path
+%li{:class => menu_status('articles')}= link_to_unless_current 'Blog', articles_path
+%li{:class => menu_status('oportunities')}= link_to_unless_current 'Oportunidades', opportunities_path
