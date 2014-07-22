@@ -36,19 +36,37 @@
           = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
 
         .section-contact
-          = image_tag(image_path('telefono.png'), class:'img-responsive')
+          #carousel-llamada.carousel.slide{"data-ride" => "carousel"}
+            .carousel-inner
+              - @telefonos.each_with_index do |telefono, index|
+                - if index == 0
+                  .item.active
+                    = image_tag(image_path('telefono.png'), class:'img-responsive')
+                    .carousel-caption
+                      %h3
+                        = telefono.name
+                      %p
+                        = telefono.phone
+                - else
+                  .item
+                    = image_tag(image_path('telefono.png'), class:'img-responsive')
+                    .carousel-caption
+                      %h3
+                        = telefono.name
+                      %p
+                        = telefono.phone
 
       .section
         .section-images
           %a{:href => '#'}
             = image_tag(image_path('sec-img1.png'), class:'img-responsive')
-          %a 
+          %a
             = image_tag(image_path('sec-img2.png'), class:'img-responsive')
-          %a 
+          %a
             = image_tag(image_path('sec-img5.png'), class:'img-responsive')
-          %a 
+          %a
             = image_tag(image_path('sec-img3.png'), class:'img-responsive')
-          %a 
+          %a
             = image_tag(image_path('sec-img4.png'), class:'img-responsive')
 
       .section
@@ -100,6 +118,7 @@
               = link_to article do
                 .blog-img
                   = image_tag article.image.listing, class: 'img-responsive'
+                  = article.created_at.strftime('%m.%^b.%y')
                 .blog-info
                   %p.title
                     = article.title
