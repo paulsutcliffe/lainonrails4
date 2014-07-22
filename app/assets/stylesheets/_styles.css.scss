@@ -137,9 +137,23 @@ ul li {list-style: none;}
   .section-blog{
   ul{margin-top: 30px;}
     padding-right: 50px;
-  .blog-img{padding-left: 0px; img{ border: 1px solid $green; }}
+  .blog-img{padding-left: 0px; border: 1px solid $green; }
   .blog-data{height: 112px; margin-bottom: 15px;}
   .blog-info{.title{color: $dark-green;} .description{color: $green;}}
+  .blog-date{ background:$pink; opacity:0; }
+  .blog-img:hover .blog-date{opacity: 1; color: white;width: 90px; height: 90px; 
+  padding-top: 30px;
+padding-left: 15px;}
+}
+}
+
+
+#section-computests{
+  .section-computest{
+    padding: 0px 15px;
+    .section-compu-form{
+  
+    }
   }
 }
 

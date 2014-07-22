@@ -1,8 +1,9 @@
-= simple_form_for(@computest) do |f|
+= simple_form_for(@computest)  do |f|
   = render 'layouts/error_messages', :target => f.object
 
-  .form-inputs
-    = f.input :first_name
+  .form-inline
+    .form-group
+      = f.input :first_name
     = f.input :last_name
     = f.input :email
     = f.input :phone

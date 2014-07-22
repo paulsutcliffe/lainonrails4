@@ -1,13 +1,21 @@
 #section-computests.container
 
-  .section
-    .title
-      %h1
-        = page_title!('crud.new' + ' ' + 'computest')
+  .title-page
+    %h3= page_title!('Computest')
 
-  .section
-    = render 'form'
+  .section-computest
+    .section-compu-img
+      = image_tag(image_path('img-compu.png'), class: 'img-responsive')
+    .section-compu-form
+      = render 'form'
 
   .section
     .admin-controls
-      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'
+      =# link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'
+
+
+= render 'layouts/llama_ya'
+
+= render 'layouts/categories'
+
+= render 'layouts/footer'
