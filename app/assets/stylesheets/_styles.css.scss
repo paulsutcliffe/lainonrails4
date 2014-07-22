@@ -149,12 +149,18 @@ padding-left: 15px;}
 
 
 #section-computests{
+  margin-bottom: 40px;
   .section-computest{
     padding: 0px 15px;
-    .section-compu-form{
-  
-    }
-  }
+  .section-compu-form{padding: 0px 0px 0px 15px;}
+  .section-compu-img{padding: 0px 15px 0px 0px; }
+  color: $green;
+  input{border: 1px solid $aqua;}
+  .controls{display: inline-block;}
+
+  label{text-align: left; width: 40%;}  
+}
+
 }
 
 
@@ -199,6 +205,7 @@ padding-left: 15px;}
 
 #section-testimonies{
   margin-bottom: 40px;
+.links{float: right; margin-top: 25px; margin-right: 42px;}
 .section-testimonies{padding: 0px 15px;
   a{float: left;}
 .test-video, .test-img{
@@ -209,12 +216,11 @@ padding-left: 15px;}
 margin-top: -20%;
 margin-left: 25%;
 }
-
 .section-test-images:hover .test-video, .section-test-images:hover .test-img{
       opacity:0.9;
       background-color: rgba(0, 133, 126, 1);width: 100%;
-      background-size: contain; height: 106px; color:white;
-      padding-top: 50px;
+      background-size: contain; height: 160px; color:white;
+      padding-top: 75px;
     }
   }
 }
