@@ -90,19 +90,31 @@ ul li {list-style: none;}
   }
 }
 
-
 .section-suscribete{
   padding-left: 50px;
   .img img{position: absolute; right: 0px; margin-top: -50px;}
-  .txt{color: $green;}
-  input[type=text], input[type=email], input[type=tel]{padding-left: 15px; width: 100%; margin-bottom: 5px;} 
+  .txt{color: $green; padding-left: 15px; padding-right: 40px;}
+  input[type=text], input[type=email], input[type=tel]{padding: 5px 0px 5px 15px; width: 100%; margin-bottom: 5px;} 
   .btn-green{background: url(image_path('btn-green.png')) no-repeat center center ; color: white;width: 86px; }
   .btn-green:hover{color: white;}
   #subscriber_privacy_policy{width: 5%;}
   .privacy{margin-top: 10px; margin-bottom: 10px;}
-  .check_box, .form-actions{width: 50%; float: left;}
-  .form-actions{float: right; text-align: right;}
+  .privacy input[type="checkbox"]{ vertical-align: top; display: inline-block;}
+  .privacy p{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0px;}
+  .check_box{
+    width: 70%;
+    display: inline-block;
+    margin: 0px;
+    p{ color:$green;  font-size: 12px;}
+    a{color: $dark-green;}
+  }
+  .form-actions{float: right; width: 24%;}
 }
+
+
 
 
 

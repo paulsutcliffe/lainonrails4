@@ -16,18 +16,8 @@
             = link_to 'edit', edit_product_path(product), class: 'btn btn-info'
             = link_to 'delete', product, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
 
-      -#%td= product.video1
-        %td= product.description
-        %td= product.video2
-        %td= product.video3
 = render 'layouts/llama_ya' 
 
-.container
-  .section-images
-    = image_tag(image_path('sec-img1.png'), class:'img-responsive')
-    = image_tag(image_path('sec-img2.png'), class:'img-responsive')
-    = image_tag(image_path('sec-img5.png'), class:'img-responsive')
-    = image_tag(image_path('sec-img3.png'), class:'img-responsive')
-    = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+= render 'layouts/categories' 
 
 = render 'layouts/footer'
