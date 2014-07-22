@@ -1,14 +1,18 @@
 .container
   .section
     .section-images
-      %a
+      = link_to lain_path do
         = image_tag(image_path('sec-img1.png'), class:'img-responsive')
-      %a
+        LAIN
+      = link_to products_path do
         = image_tag(image_path('sec-img2.png'), class:'img-responsive')
-      %a
+        Productos
+      = link_to new_computest_path do
         = image_tag(image_path('sec-img5.png'), class:'img-responsive')
-      %a
+        Computest
+      = link_to testimonies_path(type: 'video') do
         = image_tag(image_path('sec-img3.png'), class:'img-responsive')
-      %a
+        Videos
+      = link_to testimonies_path(type: 'antesydespues') do
         = image_tag(image_path('sec-img4.png'), class:'img-responsive')
-
+        Antes y Después
