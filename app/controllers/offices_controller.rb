@@ -9,12 +9,12 @@ class OfficesController < InheritedResources::Base
   def create
     @office = Office.new(office_params)
     @office.country_id = @country.try(:id)
-    create!(notice: "Sucursal guardada correctamente.")
+    create!(notice: "Sucursal guardada correctamente.") { offices_path }
   end
 
   def update
     @office.country_id = @country.try(:id)
-    update!(:notice => "Sucursal actualizada correctamente.")
+    update!(:notice => "Sucursal actualizada correctamente.") { offices_path }
   end
 
   private

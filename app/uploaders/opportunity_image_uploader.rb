@@ -17,10 +17,10 @@ class OpportunityImageUploader < CarrierWave::Uploader::Base
   end
 
   version :small do
-    process :resize_to_fit => [190, 190]
+    process :resize_to_fill => [190, 190]
   end
   version :thumb do
-    process :resize_to_fit => [90, 90]
+    process :resize_to_fill => [90, 90]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

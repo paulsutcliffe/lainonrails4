@@ -14,5 +14,5 @@ class Office < ActiveRecord::Base
     [ :name, [:name, :id]]
   end
 
-  scope :ordered,   -> { order(:created_at => :desc) }
+  scope :ordered,   -> { order(:created_at => :asc) }
 end

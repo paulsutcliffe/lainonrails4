@@ -95,7 +95,7 @@
             %p
               Lorem ipsum dolor sit amet consectateur nonummy.
         .section-segments
-          = link_to '#' do
+          = link_to 'http://www.summerkit.net/' do
             %p
               LAIN para provincias
             .provincia
@@ -108,7 +108,7 @@
         %h4.title-head
           Blog - Últimas publicaciones
         %ul
-          - @articles.each do |article|
+          - @last_articles.each do |article|
             %li.blog-data
               = link_to article do
                 .blog-img{:style => "background:url('#{article.image.listing}') no-repeat center center; background-size: contain; width: 90px; height: 90px;"}

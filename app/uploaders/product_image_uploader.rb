@@ -24,12 +24,12 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process :resize_to_fit => [510, nil]
+  #process :resize_to_fit => [510, nil]
   version :thumb do
     process :resize_to_fill => [90, 90]
   end
   version :listing do
-    process :resize_to_fit => [190, 190]
+    process :resize_to_fill => [190, 190]
   end
   version :detail do
     process :resize_to_fit => [510, 287]

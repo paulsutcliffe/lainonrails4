@@ -24,12 +24,12 @@ class OfficeImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process :resize_to_fit => [510, nil]
+  #process :resize_to_fit => [510, nil]
   version :thumb do
     process :resize_to_fill => [110, 110]
   end
   version :listing do
-    process :resize_to_fit => [150, 150]
+    process :resize_to_fill => [150, 150]
   end
   version :detail do
     process :resize_to_fit => [510, 287]
