@@ -58,16 +58,17 @@
 
       .section
         .section-images
-          %a{:href => '#'}
-            = image_tag(image_path('sec-img1.png'), class:'img-responsive')
-          %a
-            = image_tag(image_path('sec-img2.png'), class:'img-responsive')
-          %a
-            = image_tag(image_path('sec-img5.png'), class:'img-responsive')
-          %a
-            = image_tag(image_path('sec-img3.png'), class:'img-responsive')
-          %a
-            = image_tag(image_path('sec-img4.png'), class:'img-responsive')
+
+          .section-img-lain
+            = link_to '',lain_path
+          .section-img-prod
+            = link_to '',products_path
+          .section-img-compu
+            = link_to '',new_computest_path
+          .section-img-vid
+            = link_to '',testimonies_path(type: 'video')
+          .section-img-foto
+            = link_to '',testimonies_path(type: 'antesydespues')
 
       .section
         %p.pink-text
