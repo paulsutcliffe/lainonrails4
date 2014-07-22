@@ -29,7 +29,7 @@ class OfficeImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [110, 110]
   end
   version :listing do
-    process :resize_to_fit => [150, nil]
+    process :resize_to_fit => [150, 150]
   end
   version :detail do
     process :resize_to_fit => [510, 287]

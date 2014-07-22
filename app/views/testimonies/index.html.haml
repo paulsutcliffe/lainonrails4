@@ -36,31 +36,6 @@
         - if current_admin
           = link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
           = link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-    -#.testi-img
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-      = link_to '#', class: 'test-foto' do
-        = image_tag(image_path('test.png'))
-    
-    -# if "foto"
-      .testi{style: "background-image: url(image_path(play.png)); background-repeat: no-repeat; "}
-    -# if "video"
-      .testi-video
-
-      = link_to  image_tag(image_path('test.png')), '#'
-
     
     %br
     = paginate @testimonies

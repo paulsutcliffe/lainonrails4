@@ -7,9 +7,12 @@
     margin: 0px 15px 0px 0px;
     text-align: center;
   }
+  header .nav.navbar-nav li a{
+    padding-right: 15px;
+  }
 
   header .nav.navbar-nav li:first-child{ 
-    margin: 40px;
+    margin-top: 8em;
   }
   #main{
     margin-top: 5em;
@@ -31,5 +34,34 @@
   .footer-titles p{
    text-align: center !important;
   }
+   .section-segments{
+   width: 50%;
+   }
+   .class-responsive{
+     display: block;
+     height: auto;
+     max-width: 100%;
+   }
+
+
+   .cont-responsive{
+    margin-top: 8em;
+    padding: 0px 15px;
+   }
+}
+
+@media(min-width: 768px){
+  .cont-responsive{
+    width: 746px;
+  }
+}
+
+
+@media(max-width: 460px){
+.section-segments{
+ width:100%;
+ margin-top: 25px !important;
+}
+
 
 }
