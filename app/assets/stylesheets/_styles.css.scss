@@ -5,7 +5,7 @@ header{background-color: $aqua; height: 100%; margin-bottom: 20px;
   .navbar.navbar-default{margin-bottom: 0px;}
   .nav.navbar-nav li { color: $green; padding: 10px 25px; font-size: 14.5px; color: white;}
   .inactive {padding: 0px !important; margin: 0px; }
-  .active{padding: 0px !important;}
+  .active{padding: 14.5px 15px !important;}
   .active:hover{ padding:0p x;}
   .nav.navbar-nav li{margin: 35px 0px;}
   .nav.navbar-nav .active{background-color: $green; color: white;}
@@ -141,7 +141,7 @@ ul li {list-style: none;}
   .blog-data{height: 112px; margin-bottom: 15px;}
   .blog-info{.title{color: $dark-green;} .description{color: $green;}}
   .blog-date{ background:$pink; opacity:0; }
-  .blog-img:hover .blog-date{opacity: 1; color: white;width: 90px; height: 90px; 
+  .blog-img:hover .blog-date{opacity: 1; color: white;width: 90px; height: 90px;
   padding-top: 30px;
 padding-left: 15px;}
 }
@@ -152,7 +152,7 @@ padding-left: 15px;}
   .section-computest{
     padding: 0px 15px;
     .section-compu-form{
-  
+
     }
   }
 }
