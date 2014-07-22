@@ -7,23 +7,16 @@
             Testimonios
 
           %ul
-            %li.test-section
-              .test-img
-                =image_tag(image_path('test1.png'))
-              .test-info
-                .title
-                  Lorena Pena
-                .description
-                  Lorem ipsum dolor sit amet consectateur nonummy...
-            
-            %li.test-section
-              .test-img
-                =image_tag(image_path('test1.png'))
-              .test-info
-                .title
-                  Lorena Pena
-                .description
-                  Lorem ipsum dolor sit amet consectateur nonummy...
+            - @last_testimonies.each do |testimony|
+              %li.test-section
+                .test-img
+                  = image_tag testimony.image.listing, class: 'img-circle'
+                .test-info
+                  .title
+                    = testimony.name
+                  .description
+                    = truncate(testimony.content, lenght: 120)
+
         .section-suscribete
           %h4.title-head
             Suscríbete

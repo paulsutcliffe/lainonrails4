@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
 
   def set_variables
     @subscriber   = @country.subscribers.new
-    @articles     = Article.all.limit(2)
-    @testimonies  = Testimony.all.limit(2)
+    @last_articles     = Article.all.limit(2)
+    @last_testimonies  = Testimony.all.limit(2)
   end
 
   rescue_from CanCan::AccessDenied do |exception|

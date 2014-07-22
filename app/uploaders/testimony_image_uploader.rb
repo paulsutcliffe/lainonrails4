@@ -26,13 +26,13 @@ class TestimonyImageUploader < CarrierWave::Uploader::Base
 
   # process :resize_to_fit => [510, nil]
   version :thumb do
-    process :resize_to_fit => [90, 90]
+    process :resize_to_fill => [90, 90]
   end
   version :listing do
-    process :resize_to_fit => [160, 160]
+    process :resize_to_fill => [160, 160]
   end
   version :detail do
-    process :resize_to_fit => [800, 800]
+    process :resize_to_fill => [800, 800]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
