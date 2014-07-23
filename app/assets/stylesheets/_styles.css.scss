@@ -61,13 +61,13 @@ ul li {list-style: none;}
   .section-segments{margin: 70px 0px;text-align: center; img{margin: 15px auto;} p:first-child{font-size: 18px; color: $dark-green; } p:last-child{font-size: 14px; color: $green;}}
   .section-segments{
     .metodo{background-image: url(image_path('metodo.png')); 
-      transition:background 0.5s !important; -webkit-transition:background 1s; }
+      transition:background 0.5s !important; -webkit-transition:background 0.5s !important; -moz-transition: background 0.5s !important; }
     .oportunidad{background-image: url(image_path('oportunidades.png'));
-      transition:background 0.5s !important; -webkit-transition:background 1s; }
+      transition:background 0.5s !important; -webkit-transition:background 0.5s !important; -moz-transition: background 0.5s !important; }
     .provincia{background-image: url(image_path('provincia.png'));
-      transition:background 0.5s !important; -webkit-transition:background 1s; }
+      transition:background 0.5s !important; -webkit-transition:background 0.5s !important; -moz-transition: background 0.5s !important; }
     .empresa{background-image: url(image_path('empresa.png'));
-      transition:background 0.5s !important; -webkit-transition:background 1s; }
+      transition:background 0.5s !important; -webkit-transition:background 0.5s !important; -moz-transition: background 0.5s !important; }
 
     .metodo:hover{background-image: url(image_path('hover-2-metodo.png'));}
     .oportunidad:hover{background-image: url(image_path('hover-1-oportunidades.png'));}
@@ -102,6 +102,12 @@ ul li {list-style: none;}
  div.clearfix.pam{padding-left: 0px !important;}
 }
 
+.form-index{
+background: url(image_path('llamaya-img.png')) no-repeat center center;
+height: 9em;
+margin: 0px 15px 15px;
+input[type=text]{position:absolute; margin-left:32.5em;}
+}
 
 .section-test-sus{
   margin-top: 30px;
@@ -169,12 +175,16 @@ ul li {list-style: none;}
     padding-right: 50px;
   .blog-img{
   transition:background 2s !important;
+  -webkit-transition: background 2s !important;
+  -moz-transition: background 2s !important;
   padding-left: 0px; border: 1px solid $green;  }
   .blog-data{height: 112px; margin-bottom: 15px;   }
   .blog-info{.title{color: $dark-green;} .description{color: $green;}}
   .blog-date{ background:$pink; opacity:0; 
-  transition:background 2s !important;}
-  .blog-img:hover .blog-date{opacity: 1; color: white;width: 90px; height: 90px; padding-top: 30px; padding-left: 15px; transition:background 2s;}
+  transition:background 2s !important;
+  -webkit-transition: background 2s !important;
+  -moz-transition: background 2s !important;}
+  .blog-img:hover .blog-date{opacity: 1; color: white;width: 90px; height: 90px; padding-top: 30px; padding-left: 15px; transition:background 2s; -moz-transition: background 2s !important;-webkit-transition: background 2s !important;}
   }
 }
 
@@ -256,6 +266,8 @@ ul li {list-style: none;}
 margin-top: -20%;
 margin-left: 25%;
 transition: background 2s !important;
+-moz-transition: background 2s !important;
+-webkit-transition: background 2s !important;
 }
 .section-test-images:hover .test-video, .section-test-images:hover .test-img{
       opacity:0.9;
@@ -263,6 +275,8 @@ transition: background 2s !important;
       background-size: contain; height: 160px; color:white;
       padding-top: 75px;
       transition: background 0.5s !important;
+      -webkit-transition: background 0.5s !important;
+      -moz-transition: background 0.5s !important;
     }
   }
 }
@@ -296,27 +310,27 @@ transition: background 2s !important;
   .section-img-lain{
     background: url(image_path('sec-img1.png')) no-repeat center center;
     background-size: cover;
-    transition:background 0.7s !important; -webkit-transition:background 0.7s;
+    transition:background 0.7s !important; -webkit-transition:background 0.7s !important; -moz-transition: background 0.7s !important;
   }
   .section-img-prod{
     background: url(image_path('sec-img2.png')) no-repeat center center;
     background-size: cover;
-    transition:background 0.7s !important; -webkit-transition:background 0.7s;
+    transition:background 0.7s !important; -webkit-transition:background 0.7s !important; -moz-transition: background 0.7s !important;
   }
   .section-img-compu{
     background: url(image_path('sec-img5.png')) no-repeat center center;
     background-size: cover;
-    transition:background 0.7s !important; -webkit-transition:background 0.7s;
+    transition:background 0.7s !important; -webkit-transition:background 0.7s !important; -moz-transition: background 0.7s !important;
   }
   .section-img-vid{
     background: url(image_path('sec-img3.png')) no-repeat center center;
     background-size: cover;
-    transition:background 0.7s !important; -webkit-transition:background 0.7s;
+    transition:background 0.7s !important; -webkit-transition:background 0.7s !important; -moz-transition: background 0.7s !important;
   }
   .section-img-foto{
     background: url(image_path('sec-img4.png')) no-repeat center center;
     background-size: cover;
-    transition:background 0.7s !important; -webkit-transition:background 0.7s;
+    transition:background 0.7s !important; -webkit-transition:background 0.7s !important; -moz-transition: background 0.7s !important;
   }
   .section-img-lain:hover{
     background: url(image_path('sec-img1-hover.png')) no-repeat center center;

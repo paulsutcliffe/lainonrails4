@@ -49,10 +49,11 @@
                         = telefono.name
                       %p
                         = telefono.phone
-
+      .clear
       .section
-        = image_tag(image_path('llamaya-img.png'), class: 'llama-ya img-responsive')
-
+        .form-index
+          = render 'inicio/free_call'
+        =# image_tag(image_path('llamaya-img.png'), class: 'llama-ya img-responsive')
       
       .section
         .section-images

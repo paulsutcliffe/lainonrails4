@@ -1,8 +1,7 @@
-%h3 Llamada Gratuita
 = form_tag(free_call_post_path, :method => 'post') do
   = hidden_field_tag(:account, "0125632145")
   = hidden_field_tag(:password, "are7regl")
   = hidden_field_tag(:second_phone_number, "01730")
   -# = label_tag(:first_phone_number, "Número")
   = text_field_tag(:first_phone_number, "", {:size => '10', :placeholder => "ingresar número"})
-  = submit_tag("¡Llame Ahora!")
+  = image_submit_tag(image_path('btn-llama.png'), class:'img-responsive')
