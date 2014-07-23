@@ -8,8 +8,9 @@
           - @last_articles.each do |article|
             %li.blog-data
               = link_to article do
-                .blog-img
-                  = image_tag article.image.listing, class: 'img-responsive'
+                .blog-img{:style => "background:url('#{article.image.listing}') no-repeat center center; background-size: contain; width: 90px; height: 90px;"}
+                  .blog-date
+                    = article.created_at.strftime('%m.%^b.%y')
                 .blog-info
                   %p.title
                     = article.title

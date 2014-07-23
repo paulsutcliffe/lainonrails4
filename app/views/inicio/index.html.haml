@@ -6,7 +6,8 @@
         = link_to image_tag(image_path('facebook.png'), width: "12px;"), "https://www.facebook.com/lain.adelgaza.peru"
         = link_to image_tag(image_path('youtube.png'), width: "22px;"), "https://www.youtube.com/channel/UCYgIEivJ2H5N4sQH2WY5i-g"
       .clear
-      #carousel-principal.carousel.slide{"data-ride" => "carousel"}
+
+      #carousel-principal.carousel.carousel-fade.slide{"data-ride" => "carousel"}
         %ol.carousel-indicators
           - @larger_banners.each_with_index do |banner, index|
             - if index == 0
@@ -49,6 +50,10 @@
                       %p
                         = telefono.phone
 
+      .section
+        = image_tag(image_path('llamaya-img.png'), class: 'llama-ya img-responsive')
+
+      
       .section
         .section-images
           = link_to '',products_path, class: 'section-img-prod'
