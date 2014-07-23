@@ -106,7 +106,8 @@ ul li {list-style: none;}
 background: url(image_path('llamaya-img.png')) no-repeat center center;
 height: 9em;
 margin: 0px 15px 15px;
-input[type=text]{position:absolute; margin-left:32.5em;}
+input[type=text]{position:absolute; margin-top: 20px; margin-left:32.5em;}
+input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
 }
 
 .section-test-sus{
