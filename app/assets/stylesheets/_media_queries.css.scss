@@ -73,11 +73,13 @@ input[type="image"]{margin-left: 52.5em; margin-top: 5.5em;}
 input[type="image"]{margin-left: 40em; margin-top: 5.5em; width: 13%;}
 }}
 
-@media (max-width: 799px) and (min-width: 767px){.form-index{input[type=text]{margin-left:20.5em;}}}
+@media (max-width: 799px) and (min-width: 767px){.form-index{input[type=text]{margin-left:20.5em;}
+input[type="image"]{margin-left: 40em; margin-top: 5.5em; width: 13%;}
+}}
 
-@media (max-width: 766px) and (min-width: 663px){.form-index{input[type=text]{margin-left:17em;}}}
-
-
+@media (max-width: 766px){.form-index{input[type=text]{margin-left:20.5em;}
+input[type="image"]{display: none; margin-left: 40em; margin-top: 5.5em; width: 13%;}
+}}
 
 
 //CAll
