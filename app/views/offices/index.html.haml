@@ -10,7 +10,7 @@
     - @offices.each do |office|
       .section-sedes
         .section-sed-img
-          = image_tag office.image.listing
+          = image_tag office.image.listing, class: 'img-responsive'
         .section-sed-info
           %h3
             = office.name
