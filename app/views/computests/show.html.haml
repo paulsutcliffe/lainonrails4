@@ -1,45 +1,52 @@
 #section-computests.container
-  .section
-    .section-title
-      %h1= page_title!('computest')
 
-  .section
+  .title-page
+    %h3= page_title!('Computest Resultado')
+
+  .container
     %p
-      %b First name:
+      %b Nombre:
       = @computest.first_name
     %p
-      %b Last name:
+      %b Apellido:
       = @computest.last_name
     %p
       %b Email:
       = @computest.email
     %p
-      %b Phone:
+      %b Teléfono:
       = @computest.phone
     %p
-      %b Gender:
+      %b Género:
       = @computest.gender
     %p
-      %b Height:
+      %b Peso:
       = @computest.height
     %p
-      %b Weight:
+      %b Altura:
       = @computest.weight
     %p
       %b Bmi:
       = @computest.bmi
     %p
-      %b State:
+      %b Estado:
       = @computest.state
     %p
-      %b Ideal weight:
+      %b Peso Ideal:
       = @computest.ideal_weight
-    %p
+    -#%p
       %b Country:
       = @computest.country_id
 
-  .section
-    - if current_admin
-      .admin-controls
-        = link_to 'crud.edit', edit_computest_path(@computest), class: 'btn btn-info'
-    = link_to 'crud.back', computests_path, class: 'btn btn-warning'
+    .section
+      - if current_admin
+        .admin-controls
+          = link_to 'crud.edit', edit_computest_path(@computest), class: 'btn btn-info'
+      = link_to 'Atrás', computests_path, class: 'btn btn-warning'
+
+
+= render 'layouts/llama_ya'
+
+= render 'layouts/categories'
+
+= render 'layouts/footer'
