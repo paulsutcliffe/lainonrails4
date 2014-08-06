@@ -246,16 +246,29 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
   text-overflow: ellipsis;
   height: 69px;
 }
-.section-article-img{background-color: $pink; padding: 0px;}
-.section-article-img .date {
-position: absolute;
-top: 5em;
-left: 50px;
+
+
+
+.section-article-img span{
+opacity: 0;
+width: 100%;
+font-size: 20px;
+text-align: center;
+position:absolute;
+}
+
+.section-article-img:hover span {
 color: white;
-z-index: 20;}
-.section-article-img img{width: 100%;  opacity: 1; transition: all 0.5s !important; background-color: black; position: relative; z-index:50;}
+opacity: 1;
+padding-top: 40%;
+transition: all 0.5s;
+position: absolute;
+}
+
+
+.section-article-img{background-color: $pink; padding: 0px; margin-top: 20px;}
+.section-article-img img{width: 100%;  transition: all 0.5s !important; background-color: black; position: relative; z-index:50;}
 .section-article-img img:hover{opacity: 0; transition: all 0.5s !important; }
-.section-article-img img:hover .date{display:none !important;}
 
 
 .section-articles-show{
@@ -296,9 +309,9 @@ transition: background 2s !important;
 #testimonies{
 
   margin: 0px 15px;
-.item:hover .test-video.element-item.transition, .item:hover .test-img.element-item.transition{transition: all 0.5s; opacity: 0.7;  }
+.item:hover .test-video.element-item.transition, .item:hover .test-img.element-item.transition{padding-top: 40px; transition: all 0.5s; opacity: 0.7;  }
 .section-test-images{
-.test-video.element-item.transition, .test-img.element-item.transition{padding-left: 40px; padding-top: 40px; width: 160px; height: 160px; opacity: 0; background-color: white; transition: all 0.5s;}
+.test-video.element-item.transition, .test-img.element-item.transition{padding-left: 40px;width: 160px; height: 160px; opacity: 0; background-color: white; transition: all 0.5s;}
   }
 }
 
@@ -325,10 +338,18 @@ transition: background 2s !important;
   }
 }
 
-.section-images > a{ display:inline-block; min-height: 200px;}
+.section-images > a{ display:inline-block; min-height: 200px; padding: 0px;}
 .section-images{
   margin-top: 50px;
   margin-bottom: 50px;
+  p {
+  min-height: 200px;
+margin: 0px;
+background: $green;
+opacity: 0;
+text-align: center;
+transition: all 0.5s;
+}
   .section-img-lain{
     background: url(image_path('sec-img1.png')) no-repeat center center;
     background-size: cover;
@@ -354,28 +375,18 @@ transition: background 2s !important;
     background-size: cover;
     transition:all 0.7s !important; -webkit-transition:all 0.7s !important; -moz-transition:all 0.7s !important;
   }
-  .section-img-lain:hover{
-    background: url(image_path('sec-img1-hover.png')) no-repeat center center;
-    background-size: cover;
-  }
-  .section-img-prod:hover{
-    background: url(image_path('sec-img2-hover.png')) no-repeat center center;
-    background-size: cover;
-  }
-  .section-img-compu:hover{
-    background: url(image_path('sec-img5-hover.png')) no-repeat center center;
-    background-size: cover;
-  }
-  .section-img-vid:hover{
-    background: url(image_path('sec-img3-hover.png')) no-repeat center center;
-    background-size: cover;
-  }
-  .section-img-foto:hover{
-    background: url(image_path('sec-img4-hover.png')) no-repeat center center;
-    background-size: cover;
-  }
-  .section-img-hover{
-  background:$green; opacity:0;
+  .section-img-foto:hover p, 
+  .section-img-prod:hover p,
+  .section-img-vid:hover p,
+  .section-img-compu:hover p,
+  {
+
+    opacity: 1;
+    transition: all 0.5s;
+    color: white;
+    font-size: 25px;
+    padding-top: 25%;
+    text-align: center;
   }
 }
 

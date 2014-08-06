@@ -57,10 +57,18 @@
       
       .section
         .section-images
-          = link_to '',products_path, class: 'section-img-prod'
-          = link_to '',new_computest_path, class: 'section-img-compu'
-          = link_to '',testimonies_path(type: 'video'), class: 'section-img-vid'
-          = link_to '',testimonies_path(type: 'antesydespues'), class: 'section-img-foto'
+          = link_to products_path, class: 'section-img-prod' do
+            %p
+              Productos
+          = link_to new_computest_path, class: 'section-img-compu' do
+            %p
+              Computest
+          = link_to testimonies_path(type: 'video'), class: 'section-img-vid' do
+            %p
+              Videos
+          = link_to testimonies_path(type: 'antesydespues'), class: 'section-img-foto' do
+            %p
+              Fotos
 
       .section
         %p.pink-text

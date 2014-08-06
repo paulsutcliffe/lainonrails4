@@ -10,10 +10,10 @@
   - @articles.each do |article|
     .section-articles
       .section-article-img
-        = image_tag article.image.listing, class: 'img-responsive'
-      
-        .date
+        %span
           = article.created_at.strftime('%m.%^b.%y')
+        = image_tag article.image.listing, class: 'img-responsive' 
+      
       .section-article-info
         %p
           = article.title
