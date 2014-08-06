@@ -274,29 +274,31 @@ z-index: 20;}
 
 #section-testimonies{
   margin-bottom: 40px;
-.links{ a{color: $green; font-weight: 700; margin-left: 30px;} float: right; margin-top: 25px;}
+.links button{
+  background: none;
+  border: none;
+  color: $green;
+  outline: none;}
+.links button:hover, .links button:active{font-weight: 700;}
+.links{ float: right; margin-top: 25px;}
 .section-testimonies{padding: 0px 15px;
   a{float: left;}
-.test-video, .test-img{
- background: #FFF;
-  opacity: 0;
-}
 .test-video img, .test-img img{
 margin-top: -20%;
 margin-left: 25%;
 transition: background 2s !important;
 -moz-transition: background 2s !important;
--webkit-transition: background 2s !important;
+-webkit-transition: background 2s !important;}
 }
-.section-test-images:hover .test-video, .section-test-images:hover .test-img{
-      opacity:0.9;
-      background-color: rgba(0, 133, 126, 1);width: 100.5%;
-      background-size: contain; height: 160px; color:white;
-      padding-top: 75px;
-      transition: background 0.5s !important;
-      -webkit-transition: background 0.5s !important;
-      -moz-transition: background 0.5s !important;
-    }
+}
+
+
+#testimonies{
+
+  margin: 0px 15px;
+.item:hover .test-video.element-item.transition, .item:hover .test-img.element-item.transition{transition: all 0.5s; opacity: 0.7;  }
+.section-test-images{
+.test-video.element-item.transition, .test-img.element-item.transition{padding-left: 40px; padding-top: 40px; width: 160px; height: 160px; opacity: 0; background-color: white; transition: all 0.5s;}
   }
 }
 

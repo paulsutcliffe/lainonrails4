@@ -1,13 +1,11 @@
 #section-subscribers.container
 
-  .section
-    .title
-      %h1
-        = page_title!('crud.new' + ' ' + 'subscriber')
+  .title-page
+    %h3= page_title!('Subscripción')
+  .container
+    .section
+      = render 'form'
 
-  .section
-    = render 'form'
-
-  .section
-    .admin-controls
-      = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'
+    .section
+      .admin-controls
+        = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'
