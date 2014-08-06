@@ -1,15 +1,47 @@
 :javascript
   $(document).ready(function(){
     $('.lightbox').lightbox();
+
+    var $container = $('#testimonies').isotope({
+      itemSelector: '.item',
+      layoutMode: 'fitRows',
+      masonry: {
+        columnWidth: 160
+      }
+    });
+
+    // filter functions
+    var filterFns = {
+      // show if number is greater than 50
+      numberGreaterThan50: function() {
+        var number = $(this).find('.number').text();
+        return parseInt( number, 10 ) > 50;
+      },
+      // show if name ends with -ium
+      ium: function() {
+        var name = $(this).find('.name').text();
+        return name.match( /ium$/ );
+      }
+    };
+
+    // bind filter button click
+    $('#filters').on( 'click', 'button', function() {
+      var filterValue = $( this ).attr('data-filter');
+      // use filterFn if matches value
+      filterValue = filterFns[ filterValue ] || filterValue;
+      $container.isotope({ filter: filterValue });
+    });
   });
 
 #section-testimonies.container
   .title-page
     %h3= page_title!('Testimonios')
-    .links
-      = link_to 'Videos y Spots', testimonies_path(type: 'video')
-      = link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
-  
+    .links#filters
+      %button{class: 'button', :'data-filter' => '.video'} Videos y Spots
+      %button{class: 'button', :'data-filter' => '.antesydespues'} Antes y Después
+      =# link_to 'Videos y Spots', testimonies_path(type: 'video')
+      =# link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
+
   .section-testimonies
     - if current_admin
       .admin-control
@@ -17,18 +49,21 @@
       %br
     %br
 
+  #testimonies
     - @testimonies.each do |testimony|
       - if testimony.testimony_type == 'video'
-        = link_to testimony.video_link, class: 'lightbox' do
-          .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 160px; background-repeat: no-repeat;"}
-            .test-video
-              = image_tag(image_path('play-hover.png'))
+        .item.transition.video{:'data-category' => 'video'}
+          = link_to testimony.video_link, class: 'lightbox' do
+            .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
+              .test-video.element-item.transition
+                = image_tag(image_path('play-hover.png'))
       - else
-        - if testimony.testimony_type == 'antesydespues'
-          = link_to image_path(testimony.image.detail), class: 'lightbox' do
-            .section-test-images{style: "background-image: url(#{testimony.image.listing}); width: 160px; height: 160px; background-repeat: no-repeat;"}
-              .test-img
-                = image_tag(image_path('camera-hover.png'))
+        .item.transition.antesydespues{:'data-category' => 'antesydespues'}
+          - if testimony.testimony_type == 'antesydespues'
+            = link_to image_path(testimony.image.detail), class: 'lightbox' do
+              .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
+                .test-img.element-item.transition
+                  = image_tag(image_path('camera-hover.png'))
       - if current_admin
         = link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
         = link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'

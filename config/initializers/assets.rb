@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += ['jquery.lightbox.js', 'jquery.lightbox.css.scss', 'ckeditor/*']
+Rails.application.config.assets.precompile += ['isotope.css', 'jquery.debounced_resize.js', 'jquery.throttled_resize.js', 'jquery.isotope.js', 'jquery.lightbox.js', 'jquery.lightbox.css.scss', 'ckeditor/*']

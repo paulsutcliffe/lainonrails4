@@ -19,3 +19,6 @@
 //= require ckeditor/init
 //= require jquery.lightbox.js
 // require_tree .
+//= require jquery.isotope
+//= require jquery.debounced_resize
+//= require jquery.throttled_resize

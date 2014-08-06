@@ -166,6 +166,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.1)
+      rails
     mime-types (1.25.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
@@ -326,6 +328,7 @@ DEPENDENCIES
   kaminari
   launchy (~> 2.4.2)
   magnific-popup-rails
+  masonry-rails
   mini_magick
   mysql2
   page_title_helper
