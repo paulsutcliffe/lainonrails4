@@ -10,7 +10,7 @@
             - @last_testimonies.each do |testimony|
               %li.test-section
                 .test-img
-                  = image_tag testimony.image.thumb, class: 'img-circle'
+                  = image_tag testimony.image.thumb, class: 'img-circle img-responsive'
                 .test-info
                   .title
                     = testimony.name
