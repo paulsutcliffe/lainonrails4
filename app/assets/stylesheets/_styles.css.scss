@@ -66,23 +66,45 @@ ul li {list-style: none;}
   .social a{margin-left: 15px;}
   .section-segments{margin: 70px 0px;text-align: center; img{margin: 15px auto;} p:first-child{font-size: 18px; color: $dark-green; } p:last-child{font-size: 14px; color: $green;}}
   .section-segments{
-    .metodo{background-image: url(image_path('metodo.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .oportunidad{background-image: url(image_path('oportunidades.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .provincia{background-image: url(image_path('provincia.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .empresa{background-image: url(image_path('empresa.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
+    
+    .metodo:before, .metodo:after,
+    .empresa:before, .empresa:after,
+    .provincia:before, .provincia:after,
+    .oportunidad:before, .oportunidad:after
+    {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+    }
 
-    .metodo:hover{background-image: url(image_path('hover-2-metodo.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .oportunidad:hover{background-image: url(image_path('hover-1-oportunidades.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .provincia:hover{background-image: url(image_path('hover-4-lain-para-provincias.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .empresa:hover{background-image: url(image_path('hover-3-nuestra-empresa.png'));
-      transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
+
+    .metodo:before{background: url(image_path('metodo.png')) no-repeat center center;
+      z-index:1;
+      transition: all 0.5s; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s; }
+    .oportunidad:before{background: url(image_path('oportunidades.png')) no-repeat center center;
+      z-index:1;
+      transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
+    .provincia:before{background: url(image_path('provincia.png')) no-repeat center center;
+      z-index:1;
+      transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
+    .empresa:before{background: url(image_path('empresa.png')) no-repeat center center;
+      z-index:1;
+      transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
+    
+    .metodo:after{background: url(image_path('hover-2-metodo.png')) no-repeat center center;}
+    .oportunidad:after{background: url(image_path('hover-1-oportunidades.png')) no-repeat center center;}
+    .provincia:after{background: url(image_path('hover-4-lain-para-provincias.png')) no-repeat center center ;}
+    .empresa:after{background: url(image_path('hover-3-nuestra-empresa.png')) no-repeat center center ;}
+    
+    .metodo:hover:before,
+    .oportunidad:hover:before,
+    .provincia:hover:before,
+    .empresa:hover:before{opacity: 0;}
+
     .metodo, .oportunidad, .provincia, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;}
   }
 
