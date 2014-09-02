@@ -12,8 +12,7 @@
       .section-article-img
         %span
           = article.created_at.strftime('%m.%^b.%y')
-        = image_tag article.image.listing, class: 'img-responsive' 
-      
+        = image_tag article.image.listing, class: 'img-circle'
       .section-article-info
         %p
           = article.title

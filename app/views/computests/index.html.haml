@@ -1,28 +1,23 @@
 #section-computests.container
   .title
-    %h1= page_title!('computests')
+    %h1= page_title!('Computests')
 
   .section
-    - if current_admin
-      .admin-control
-        = link_to I18n.t('crud.new') + ' ' + 'Computest', new_computest_path, class: 'btn btn-primary'
-
+    = link_to "Descargar en formato Excel", computests_path(format: "xls"), class: 'btn btn-primary'
+    %br
     .table-responsive
-      Download:
-      = link_to "XLS", computests_path(format: "xls")
       %table.table
         %tr
-          %th First name
-          %th Last name
+          %th Nombre
+          %th Apellido
           %th Email
-          %th Phone
-          %th Gender
-          %th Height
-          %th Weight
-          %th Bmi
-          %th State
-          %th Ideal weight
-          %th
+          %th Teléfono
+          %th Género
+          %th Altura
+          %th Peso
+          %th IMC
+          %th Estado
+          %th Peso Ideal
           %th
           %th
 
@@ -38,10 +33,9 @@
             %td= computest.bmi
             %td= computest.state
             %td= computest.ideal_weight
-            %td= link_to 'crud.show', computest, class: 'btn btn-default'
+            %td= link_to I18n.t('crud.show'), computest, class: 'btn btn-default'
             - if current_admin
-              %td= link_to 'crud.edit', edit_computest_path(computest), class: 'btn btn-info'
-              %td= link_to 'crud.delete', computest, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+              %td= link_to I18n.t('crud.delete'), computest, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
 
 
 

@@ -5,8 +5,12 @@
 
   .section-articles-show
     .section-art-show-image
-      %p
-        = image_tag @article.image.detail
+      .ribbon-pink
+        %ul.ribbon-date
+          %li= @article.created_at.strftime('%d')
+          %li= @article.created_at.strftime('%b').upcase
+          %li= @article.created_at.strftime('%y')
+      = image_tag @article.image.detail
     .section-art-show-info
       %p
         = raw(@article.content)

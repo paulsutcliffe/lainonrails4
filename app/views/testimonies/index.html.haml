@@ -39,13 +39,11 @@
     .links#filters
       %button{class: 'button', :'data-filter' => '.video'} Videos y Spots
       %button{class: 'button', :'data-filter' => '.antesydespues'} Antes y Después
-      =# link_to 'Videos y Spots', testimonies_path(type: 'video')
-      =# link_to 'Antes y Después', testimonies_path(type: 'antesydespues')
 
   .section-testimonies
     - if current_admin
       .admin-control
-        = link_to I18n.t('crud.new') + ' ' + 'Testimony', new_testimony_path, class: 'btn btn-primary'
+        = link_to I18n.t('crud.new') + ' ' + 'Testimonio', new_testimony_path, class: 'btn btn-primary'
       %br
     %br
 
@@ -57,6 +55,9 @@
             .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
               .test-video.element-item.transition
                 = image_tag(image_path('play-hover.png'))
+          - if current_admin
+            = link_to I18n.t('crud.edit'), edit_testimony_path(testimony), class: 'btn btn-info'
+            = link_to I18n.t('crud.delete'), testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
       - else
         .item.transition.antesydespues{:'data-category' => 'antesydespues'}
           - if testimony.testimony_type == 'antesydespues'
@@ -64,16 +65,15 @@
               .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
                 .test-img.element-item.transition
                   = image_tag(image_path('camera-hover.png'))
-      - if current_admin
-        = link_to 'crud.edit', edit_testimony_path(testimony), class: 'btn btn-info'
-        = link_to 'crud.delete', testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+          - if current_admin
+            = link_to I18n.t('crud.edit'), edit_testimony_path(testimony), class: 'btn btn-info'
+            = link_to I18n.t('crud.delete'), testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
 
     %br
     = paginate @testimonies
     %br
 
 = render 'layouts/llama_ya'
-
 
 = render 'layouts/categories'
 
