@@ -66,13 +66,13 @@ ul li {list-style: none;}
   .social a{margin-left: 15px;}
   .section-segments{margin: 70px 0px;text-align: center; img{margin: 15px auto;} p:first-child{font-size: 18px; color: $dark-green; } p:last-child{font-size: 14px; color: $green;}}
   .section-segments{
-    .metodo{background-image: url(image_path('metodo.png')); 
+    .metodo{background-image: url(image_path('metodo.png'));
       transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
     .oportunidad{background-image: url(image_path('oportunidades.png'));
       transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
     .provincia{background-image: url(image_path('provincia.png'));
       transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
-    .empresa{background-image: url(image_path('empresa.png'));     
+    .empresa{background-image: url(image_path('empresa.png'));
       transition:all 0.5s ease-in-out !important; -webkit-transition:all 0.5s ease-in-out!important; -moz-transition: all 0.5s ease-in-out !important; }
 
     .metodo:hover{background-image: url(image_path('hover-2-metodo.png'));
@@ -191,7 +191,7 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
   padding-left: 0px; border: 1px solid $green;  }
   .blog-data{height: 112px; margin-bottom: 15px;   }
   .blog-info{.title{color: $dark-green;} .description{color: $green;}}
-  .blog-date{ background:$pink; opacity:0; 
+  .blog-date{ background:$pink; opacity:0;
   transition:all 0.5s !important;
   -webkit-transition: all 0.5s !important;
   -moz-transition: all 0.5s !important;}
@@ -212,16 +212,19 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
   margin-bottom: 40px;
   .section-computest{
     padding: 0px 15px;
-  .compu-form p{color:$dark-green;}
-  .section-compu-form{padding: 0px 0px 0px 15px;}
-  .section-compu-img{padding: 0px 15px 0px 0px; }
+    .compu-form p{color:$dark-green;}
+    .section-compu-form{padding: 0px 0px 0px 15px;}
+    .section-compu-img{padding: 0px 15px 0px 0px; }
+    color: $green;
+    input{border: 1px solid $aqua;}
+    .controls{display: inline-block;}
+    .btn-submit{margin-top: 21px;}
+    label{text-align: left; width: 30%; font-weight: normal;}
+  }
+  .nombre{font-size: 22px;}
+  .resultado{font-size: 22px; margin-bottom: 30px;}
+  .peso {font-size: 19px; font-weight: bolder; margin-bottom: 30px;}
   color: $green;
-  input{border: 1px solid $aqua;}
-  .controls{display: inline-block;}
-  .btn-submit{margin-top: 21px;}
-  label{text-align: left; width: 30%; font-weight: normal;}  
-}
-
 }
 
 
@@ -375,7 +378,7 @@ transition: all 0.5s;
     background-size: cover;
     transition:all 0.7s !important; -webkit-transition:all 0.7s !important; -moz-transition:all 0.7s !important;
   }
-  .section-img-foto:hover p, 
+  .section-img-foto:hover p,
   .section-img-prod:hover p,
   .section-img-vid:hover p,
   .section-img-compu:hover p,

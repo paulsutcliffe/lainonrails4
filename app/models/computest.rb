@@ -1,6 +1,6 @@
 # coding: utf-8
 class Computest < ActiveRecord::Base
-  validates_presence_of :first_name, :last_name, :email, :phone, :gender, :height, :weight
+  # validates_presence_of :first_name, :last_name, :email, :phone, :gender, :height, :weight
   validates :email, email: true
 
   validates :first_name, :length => { :maximum => 50 }

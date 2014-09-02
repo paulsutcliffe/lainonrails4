@@ -3,46 +3,24 @@
   .title-page
     %h3= page_title!('Computest Resultado')
 
-  .container
-    %p
-      %b Nombre:
-      = @computest.first_name
-    %p
-      %b Apellido:
-      = @computest.last_name
-    %p
-      %b Email:
-      = @computest.email
-    %p
-      %b Teléfono:
-      = @computest.phone
-    %p
-      %b Género:
-      = @computest.gender
-    %p
-      %b Peso:
-      = @computest.height
-    %p
-      %b Altura:
-      = @computest.weight
-    %p
-      %b Bmi:
-      = @computest.bmi
-    %p
-      %b Estado:
-      = @computest.state
-    %p
-      %b Peso Ideal:
-      = @computest.ideal_weight
-    -#%p
-      %b Country:
-      = @computest.country_id
+  .section-computest
+    .section-compu-img
+      = image_tag(image_path('img-compu.png'), class: 'img-responsive')
+    .section-results
+      %p.nombre
+        = 'Resultado para ' + @computest.first_name + ' ' + @computest.last_name
+      %p.bmi
+        Índice de masa corporal (IMC):
+      %p.resultado
+        = @computest.bmi.to_s
+      %p.estado
+        Tu estado es:
+      %p.resultado
+        = @computest.state
+      %p.peso
+        = @computest.ideal_weight
 
-    .section
-      - if current_admin
-        .admin-controls
-          = link_to 'crud.edit', edit_computest_path(@computest), class: 'btn btn-info'
-      = link_to 'Atrás', computests_path, class: 'btn btn-warning'
+      = link_to 'Atrás', new_computest_path, class: 'btn-submit'
 
 
 = render 'layouts/llama_ya'
