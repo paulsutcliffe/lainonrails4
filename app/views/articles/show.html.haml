@@ -2,7 +2,14 @@
 #section-articles.container
   .title-page
     %h3= page_title!('Blog - ' + @article.title)
+    .share
+      %span
+        Compartir
+      = link_to 'http://www.facebook.com/sharer.php?u=' +  request.url, target: '_blank', class:'fb' do
+        = image_tag(image_path('facebook-share.jpg'))  
 
+      = link_to 'http://www.twitter.com/share.php?u=' +  request.url, target: '_blank' do
+        = image_tag(image_path('twitter-share.jpg'))
   .section-articles-show
     .section-art-show-image
       .ribbon-pink

@@ -220,6 +220,16 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
   }
 }
 
+
+.share{float: right; margin-top: 35px;
+.fb{margin-right: 10px;} span{font-weight:bold; color: $green; margin-top:10px;vertical-align: bottom; margin-right: 10px;}
+} 
+
+.fb-coments {
+margin-bottom: 20px;
+}
+
+
 .llama-ya{
 
   padding-left: 15px;
@@ -293,6 +303,8 @@ position: absolute;
 .section-article-img{background-color: $pink; padding: 0px; margin-top: 20px; border-radius: 50%;}
 .section-article-img img{width: 100%;  transition: all 0.5s !important; background-color: black; position: relative; z-index:50;}
 .section-article-img img:hover{opacity: 0; transition: all 0.5s !important; }
+
+
 
 
 .section-articles-show{
