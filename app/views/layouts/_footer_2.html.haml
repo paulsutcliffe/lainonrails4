@@ -4,15 +4,15 @@
       .section-blog
         %h4.title-head
           Blog - Últimas publicaciones
-        %ul
+        %ul.media-list
           - @last_articles.each do |article|
-            %li.blog-data
-              = link_to article do
+            %li.media
+              = link_to article, class: "pull-left" do
                 .blog-img{:style => "background:url('#{article.image.listing}') no-repeat center center; background-size: contain; width: 90px; height: 90px;"}
                   .blog-date
                     = article.created_at.strftime('%m.%^b.%y')
-                .blog-info
-                  %p.title
+                .media-body
+                  %h4.media-heading
                     = article.title
                   %p.description
                     = truncate(article.content, length: 120)
