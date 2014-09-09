@@ -56,6 +56,7 @@ gem "binding_of_caller"
 gem "geocoder"
 gem "httparty"
 gem 'jquery-turbolinks'
+gem 'truncate_html'
 
 group :development, :test do
   gem 'thin'
