@@ -17,14 +17,11 @@
 
 require 'net/ssh/proxy/command'
 
-server '192.168.0.2',
-  ssh_options: {
-    port: 22, # This didn't honored the global ssh_options
-    proxy: Net::SSH::Proxy::Command.new('ssh walterweb@190.41.229.186 -W %h:%p'),
-  }
+set :password, ask('Server password', nil)
+set :ssh_options, proxy: Net::SSH::Proxy::Command.new('ssh walterweb@190.41.229.186 -W %h:%p')
 
 # set :password, ask('Server password', nil)
-# server 'kosmyka.com', user: 'paul', port: 22, password: fetch(:password), roles: %w{web app db}
+server '192.168.0.2', user: 'walter', port: 22, password: fetch(:password), roles: %w{web app db}
 
 
 # Custom SSH Options
