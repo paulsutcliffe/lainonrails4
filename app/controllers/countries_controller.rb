@@ -1,12 +1,7 @@
 class CountriesController < ApplicationController
-  before_filter :detect_ip_location
 
   def index
-  end
-
-  def detect_ip_location
     @country_code = request.location.country_code
-    # I18n.locale ||= @country_code.downcase
     case @country_code
     when "PE"
       redirect_to '/pe/'
