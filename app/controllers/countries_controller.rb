@@ -6,7 +6,7 @@ class CountriesController < ApplicationController
 
   def detect_ip_location
     @country_code = request.location.country_code
-    I18n.locale ||= @country_code.downcase
+    # I18n.locale ||= @country_code.downcase
     case @country_code
     when "PE"
       redirect_to '/pe/'
