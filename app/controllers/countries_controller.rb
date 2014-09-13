@@ -1,11 +1,26 @@
 class CountriesController < ApplicationController
-  before_filter :checklocale
+  before_filter :detect_ip_location
 
   def index
   end
 
-  def checklocale
-    I18n.locale = I18nData.country_code(request.location.country.downcase)
-    redirect_to home_path
+  def detect_ip_location
+    @country_code = request.location.country_code
+    I18n.locale ||= @country_code.downcase
+    case @country_code
+    when "PE"
+      redirect_to '/pe/'
+    when "BO"
+      redirect_to '/bo/'
+    when "CR"
+      redirect_to '/cr/'
+    when "GT"
+      redirect_to '/gt/'
+    when "SV"
+      redirect_to '/sv/'
+    when "UY"
+      redirect_to '/uy/'
+    end
   end
+
 end
