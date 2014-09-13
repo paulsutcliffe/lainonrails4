@@ -5,7 +5,9 @@ class CountriesController < ApplicationController
   end
 
   def detect_ip_location
-    @country_code = request.location.country_code
+    ip_address = request.remote_ip
+    @country = Geocoder.search(ip_address)
+    @country_code = @country.country_code
     case @country_code
     when "PE"
       redirect_to '/pe/'
