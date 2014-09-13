@@ -48,5 +48,6 @@
       = render 'layouts/navigation'
     %main#main{:role => "main"}
       = render 'layouts/messages'
+      = @country_code
       = yield
     = render 'shared/google_analytics'

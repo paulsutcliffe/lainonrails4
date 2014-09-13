@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     @subscriber   = @country.subscribers.new
     @last_articles     = Article.all.limit(2)
     @last_testimonies  = Testimony.all.limit(2)
+    @country_code = request.location.country_code
   end
 
   rescue_from CanCan::AccessDenied do |exception|
