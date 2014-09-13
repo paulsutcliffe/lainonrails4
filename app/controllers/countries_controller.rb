@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
   end
 
   def checklocale
-    I18n.locale = I18nData.country_code(request.location.country)
+    I18n.locale = I18nData.country_code(request.location.country.downcase)
     redirect_to home_path
   end
 end
