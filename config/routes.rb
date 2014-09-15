@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "/countries" => "countries#index", path: "paises"
   root "countries#index"
 
+  get '/llamadas' => "inicio#free_call"
+
   scope( path_names: {new: "nuevo", edit: "editar"}) do
     # scope "(:locale)", :locale => /#{I18n.available_locales.join("|")}/ do
     scope "(:locale)", :locale => /bo|cr|gt|pe|sv|uy/ do

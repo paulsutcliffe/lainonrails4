@@ -27,4 +27,8 @@ class InicioController < ApplicationController
     redirect_to home_path, {notice: "Estamos llamándote, atento a tu teléfono."}
   end
 
+  def free_call
+
+  end
+
 end
