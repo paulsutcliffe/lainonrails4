@@ -11,13 +11,13 @@
     .section-articles
       .section-article-img
         %span
-          = article.created_at.strftime('%m.%^b.%y')
+          = article.created_at.strftime('%d.%^b.%y')
         = image_tag article.image.listing, class: 'img-circle'
       .section-article-info
         %p
           = article.title
-        %p
-          = truncate_html(article.content, length: 200, omission: '...')
+        
+        = truncate_html(article.content, length: 200, omission: '...')
         .btn-verde-2
           = link_to 'Leer más', article
       - if current_admin

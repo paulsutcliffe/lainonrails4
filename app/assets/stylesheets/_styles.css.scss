@@ -160,6 +160,7 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
 
 
 #section-pages{
+  margin-bottom: 20px;
   .section-page{
     padding: 0px 15px;
     margin-bottom: 30px;
@@ -274,11 +275,12 @@ margin-bottom: 20px;
 #section-articles{
 .section-articles{min-height: 250px; border-bottom: 2px solid #94e9e3; margin-top: 30px; padding-bottom: 30px;}
 .section-article-info{min-height: 220px; }
-.section-article-info p:first-child{margin-top: 30px; color: $dark-green; height: 45px;}
+.section-article-info p:first-child{margin-top: 30px; margin-bottom: 0px; color: $dark-green; height: 45px;}
 .section-article-info p:nth-child(2){color: $green;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 69px;
+  height: 80px;
+  margin-bottom: 0px;
 }
 
 
