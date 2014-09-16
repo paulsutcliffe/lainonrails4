@@ -2,7 +2,8 @@ class CountriesController < ApplicationController
 
   def index
     # @country_code = request.location.country_code
-    remote_ip     = request.remote_ip
+    # remote_ip     = request.remote_ip
+    remote_ip = request.env['REMOTE_ADDR']
     data_response = HTTParty.get("http://freegeoip.net/json/#{remote_ip}")
     @country_code = JSON.parse(data_response.body)["country_code"]
     Rails.logger.info "#{data_response}"
