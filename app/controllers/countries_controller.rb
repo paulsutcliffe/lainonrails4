@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
     remote_ip     = request.remote_ip
     data_response = HTTParty.get("http://freegeoip.net/json/#{remote_ip}")
     @country_code = JSON.parse(data_response.body)["country_code"]
-    # Rails.logger.info "#{data_response}"
+    Rails.logger.info "#{data_response}"
     case @country_code
     when "PE"
       redirect_to '/pe/'
