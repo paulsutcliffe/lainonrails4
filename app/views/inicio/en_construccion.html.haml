@@ -1,0 +1,9 @@
+- page_title!('LAIN - Lider mundial en adelgazamiento')
+#section-index.section-total
+  .container-fluid
+    .container{:style => 'text-align: center;'}
+      - if params[:locale] == 'gt'
+        = link_to image_tag(image_path('logo-less.png')), home_path, class: 'responsive'
+      - else
+        = link_to image_tag(image_path('logo-lain-2.png')), home_path, class: 'responsive'
+      %h2 Página web en construcción

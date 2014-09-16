@@ -31,4 +31,9 @@ class InicioController < ApplicationController
 
   end
 
+  def en_construccion
+    @contact = Contact.new
+    render(:layout => "layouts/clean")
+  end
+
 end
