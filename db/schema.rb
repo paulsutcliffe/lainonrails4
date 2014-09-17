@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917053116) do
+ActiveRecord::Schema.define(version: 20140917063901) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -123,6 +123,17 @@ ActiveRecord::Schema.define(version: 20140917053116) do
   end
 
   add_index "opportunities", ["slug"], name: "index_opportunities_on_slug", unique: true, using: :btree
+
+  create_table "page_translations", force: true do |t|
+    t.integer  "page_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "content"
+  end
+
+  add_index "page_translations", ["locale"], name: "index_page_translations_on_locale", using: :btree
+  add_index "page_translations", ["page_id"], name: "index_page_translations_on_page_id", using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "title"

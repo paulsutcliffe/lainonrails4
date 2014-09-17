@@ -58,6 +58,7 @@ gem "i18n_data"
 gem "httparty"
 gem 'jquery-turbolinks'
 gem 'truncate_html'
+gem 'globalize', '~> 4.0.2'
 
 group :development, :test do
   gem 'thin'

@@ -4,6 +4,8 @@ class Page < ActiveRecord::Base
 
   mount_uploader :imagen, ImagenUploader
 
+  translates :content
+
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 

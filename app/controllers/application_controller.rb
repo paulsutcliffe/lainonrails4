@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_variables
 
   def set_variables
-    @subscriber   = @country.subscribers.new
+    @subscriber = @subscriber ? @subscriber : @country.subscribers.new
     articles_ids = Article.pluck(:id).shuffle[0..1]
     testimonies_ids = Testimony.pluck(:id).shuffle[0..1]
     @last_articles     = Article.where(id: articles_ids)

@@ -2,6 +2,8 @@
 class Article < ActiveRecord::Base
   include CommonScopes
   validates_presence_of :title, :content, :image
+
+  belongs_to :country
   mount_uploader :image, ArticleImageUploader
 
   extend FriendlyId

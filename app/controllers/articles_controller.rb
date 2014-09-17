@@ -4,7 +4,7 @@ class ArticlesController < InheritedResources::Base
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.ordered.page(params[:page] || 1).per(20) if @country
+    @articles = @country.articles.ordered.page(params[:page] || 1).per(20) if @country
   end
 
   private

@@ -1,14 +1,14 @@
 class ContactMailer < ActionMailer::Base
   default :from => "info@lainadelgaza.net"
 
-  def contact_confirmation contact
-    @contact = contact
-    mail  :to => "#{contact.first_name} #{contact.last_name} <#{contact.email}>",
+  def contact_confirmation subscriber
+    @subscriber = subscriber
+    mail  :to => "#{subscriber.first_name} #{subscriber.last_name} <#{subscriber.email}>",
       :subject => "LAIN Adelgaza"
   end
 
-  def new_contact contact, locale
-    @contact  = contact
+  def new_contact subscriber, locale
+    @subscriber  = subscriber
     country   = {
       "bo" => ["Bolivia", "lain1004scz@entelnet.bo"],
       "cr" => ["Costa Rica", "contactoweb.cr@laininternacional.com"],

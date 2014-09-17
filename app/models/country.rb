@@ -3,6 +3,7 @@ class Country < ActiveRecord::Base
   include CommonScopes
   validates_presence_of :name, :code
   validates_uniqueness_of :code
+  has_many :articles
   has_many :products
   has_many :testimonies
   has_many :offices

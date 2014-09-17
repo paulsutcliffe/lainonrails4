@@ -2,6 +2,7 @@ class SubscribersController < InheritedResources::Base
   load_and_authorize_resource
   skip_load_resource :only => [:create]
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
+  after_filter :send_emails, :only => :create
 
   def index
     @subscribers = @country.subscribers.ordered.page(params[:page] || 1).per(20) if @country
@@ -10,7 +11,7 @@ class SubscribersController < InheritedResources::Base
   def create
     @subscriber = Subscriber.new(subscriber_params)
     @subscriber.country_id = @country.try(:id)
-    create!(notice: "Su suscripción fue guardada correctamente.")
+    create!(notice: "Sus datos fueron enviados correctamente.") { home_path }
   end
 
   def update
@@ -19,6 +20,13 @@ class SubscribersController < InheritedResources::Base
   end
 
   private
+
+  def send_emails
+    if @subscriber.valid?
+      ContactMailer.new_contact(@subscriber, @locale).deliver
+      ContactMailer.contact_confirmation(@subscriber).deliver
+    end
+  end
 
   def set_subscriber
     @subscriber = Subscriber.find(params[:id])
