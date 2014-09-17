@@ -116,8 +116,7 @@
                 .media-body
                   %h4.media-heading
                     = article.title
-                  %p.description
-                    = truncate_html(article.content, length: 200, omission: '...')
+                  = truncate_html(article.content, length: 200, omission: '...')
       .section-fb
         %h4.title-head
           Nuestros Seguidores

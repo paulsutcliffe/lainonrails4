@@ -66,7 +66,7 @@ ul li {list-style: none;}
   .social a{margin-left: 15px;}
   .section-segments{margin: 70px 0px;text-align: center; img{margin: 15px auto;} p:first-child{font-size: 18px; color: $dark-green; } p:last-child{font-size: 14px; color: $green;}}
   .section-segments{
-    
+
     .metodo:before, .metodo:after,
     .empresa:before, .empresa:after,
     .provincia:before, .provincia:after,
@@ -94,12 +94,12 @@ ul li {list-style: none;}
     .empresa:before{background: url(image_path('empresa.png')) no-repeat center center;
       z-index:1;
       transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
-    
+
     .metodo:after{background: url(image_path('hover-2-metodo.png')) no-repeat center center;}
     .oportunidad:after{background: url(image_path('hover-1-oportunidades.png')) no-repeat center center;}
     .provincia:after{background: url(image_path('hover-4-lain-para-provincias.png')) no-repeat center center ;}
     .empresa:after{background: url(image_path('hover-3-nuestra-empresa.png')) no-repeat center center ;}
-    
+
     .metodo:hover:before,
     .oportunidad:hover:before,
     .provincia:hover:before,
@@ -212,7 +212,7 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
   -webkit-transition: background 2s !important;
   -moz-transition: background 2s !important;
   padding-left: 0px; border: 1px solid $green;  }
-  .media-body{.media-heading{color: $dark-green; margin-left: 15px } .description{color: $green; margin-left:15px;}}
+  .media-body{.media-heading{color: $dark-green; margin-left: 15px } p{color: $green; margin-left:15px;}}
   .blog-date{ background:$pink; opacity:0;
   transition:all 0.5s !important;
   -webkit-transition: all 0.5s !important;
@@ -224,7 +224,7 @@ input[type="image"]{margin-left: 65.5em; margin-top: 5.5em;}
 
 .share{float: right; margin-top: 35px;
 .fb{margin-right: 10px;} span{font-weight:bold; color: $green; margin-top:10px;vertical-align: bottom; margin-right: 10px;}
-} 
+}
 
 .fb-coments {
 margin-bottom: 20px;
