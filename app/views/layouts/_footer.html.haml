@@ -8,14 +8,15 @@
 
           %ul
             - @last_testimonies.each do |testimony|
-              %li.test-section
-                .test-img
-                  = image_tag testimony.image.thumb, class: 'img-circle img-responsive'
-                .test-info
-                  .title
-                    = testimony.name
-                  .description
-                    = truncate(testimony.content, lenght: 120)
+              = link_to testimonies_path do
+                %li.test-section
+                  .test-img
+                    = image_tag testimony.image.thumb, class: 'img-circle img-responsive'
+                  .test-info
+                    .title
+                      = testimony.name
+                    .description
+                      = truncate(testimony.content, lenght: 120)
 
         .section-suscribete
           %h4.title-head
