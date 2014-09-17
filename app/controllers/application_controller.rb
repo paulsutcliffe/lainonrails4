@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
 
   def set_variables
     @subscriber   = @country.subscribers.new
-    @last_articles     = Article.all.limit(2)
-    @last_testimonies  = Testimony.all.limit(2)
+    articles_ids = Article.pluck(:id).shuffle[0..1]
+    testimonies_ids = Testimony.pluck(:id).shuffle[0..1]
+    @last_articles     = Article.where(id: articles_ids)
+    @last_testimonies  = Testimony.where(id: testimonies_ids)
   end
 
   rescue_from CanCan::AccessDenied do |exception|

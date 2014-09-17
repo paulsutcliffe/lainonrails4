@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712040757) do
+ActiveRecord::Schema.define(version: 20140917053116) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 20140712040757) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "country_id"
   end
 
+  add_index "articles", ["country_id"], name: "index_articles_on_country_id", using: :btree
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
 
   create_table "banners", force: true do |t|

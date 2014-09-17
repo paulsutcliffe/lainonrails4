@@ -7,7 +7,7 @@ class InicioController < ApplicationController
     @medium_banners = @country.banners.medium
     @small_banners  = @country.banners.small
 
-    @telefonos = Office.all
+    @telefonos = @country ? @country.offices : Office.all
 
     if params[:dest]
       HTTParty.get('http://proxy.lemmor.com/VSServices/callback.aspx?source=00001825&dest=' + params[:dest] + '&login=012365&password=1653$&type=1')

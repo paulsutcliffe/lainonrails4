@@ -51,10 +51,10 @@
                       %p
                         = telefono.phone
       .clear
-      .section
-        .form-index
-          = render 'inicio/free_call'
-        =# image_tag(image_path('llamaya-img.png'), class: 'llama-ya img-responsive')
+      - if I18n.locale == :pe
+        .section
+          .form-index
+            = render 'inicio/free_call'
 
       .section
         .section-images
@@ -125,19 +125,7 @@
                   %h4.media-heading
                     = article.title
                   %p.description
-                    = truncate(article.content, length: 120)
-      -#  %ul
-          - @last_articles.each do |article|
-            %li.blog-data
-              = link_to article do
-                .blog-img{:style => "background:url('#{article.image.listing}') no-repeat center center; background-size: contain; width: 90px; height: 90px;"}
-                  .blog-date
-                    = article.created_at.strftime('%m.%^b.%y')
-                .blog-info
-                  %p.title
-                    = article.title
-                  %p.description
-                    = truncate(article.content, length: 120)
+                    = truncate_html(article.content, length: 200, omission: '...')
       .section-fb
         %h4.title-head
           Nuestros Seguidores
