@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :countries
+
   mount Ckeditor::Engine => '/ckeditor'
   get "/countries" => "countries#index", path: "paises"
   root "countries#index"

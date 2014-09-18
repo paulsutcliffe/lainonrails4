@@ -1,4 +1,8 @@
-class CountriesController < ApplicationController
+class CountriesController < InheritedResources::Base
+  load_and_authorize_resource
+
+  skip_before_filter :set_locale, except: :index
+  skip_before_filter :set_variables
 
   def index
     # @country_code = request.location.country_code
@@ -26,6 +30,12 @@ class CountriesController < ApplicationController
     # when "UY"
     #   redirect_to '/uy/'
     # end
+  end
+
+  private
+
+  def permitted_params
+    params.permit(:country => [:name, :code, :facebook, :email, :telefono])
   end
 
 end

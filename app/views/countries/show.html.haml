@@ -1,0 +1,27 @@
+#section-countries.container
+  .section
+    .section-title
+      %h1= page_title!('country')
+
+  .section
+    %p
+      %b Name:
+      = @country.name
+    %p
+      %b Code:
+      = @country.code
+    %p
+      %b Facebook:
+      = @country.facebook
+    %p
+      %b Email:
+      = @country.email
+    %p
+      %b Telefono:
+      = @country.telefono
+
+  .section
+    - if current_admin
+      .admin-controls
+        = link_to 'crud.edit', edit_country_path(@country), class: 'btn btn-info'
+    = link_to 'crud.back', countries_path, class: 'btn btn-warning'

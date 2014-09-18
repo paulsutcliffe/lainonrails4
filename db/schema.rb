@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917063901) do
+ActiveRecord::Schema.define(version: 20140918190919) do
 
   create_table "ads", force: true do |t|
     t.string   "ad"
@@ -94,6 +94,9 @@ ActiveRecord::Schema.define(version: 20140917063901) do
     t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "facebook"
+    t.string   "email"
+    t.string   "telefono"
   end
 
   add_index "countries", ["code"], name: "index_countries_on_code", using: :btree

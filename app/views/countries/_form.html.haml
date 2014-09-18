@@ -1,0 +1,12 @@
+= simple_form_for(@country) do |f|
+  = render 'layouts/error_messages', :target => f.object
+
+  .form-inputs
+    = f.input :name
+    = f.input :code
+    = f.input :facebook
+    = f.input :email
+    = f.input :telefono
+
+  .form-actions
+    = f.button :submit
