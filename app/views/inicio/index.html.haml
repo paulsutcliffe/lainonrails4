@@ -4,7 +4,7 @@
     .container
       .social
         = image_tag(image_path('flag_' + params[:locale] + '.png'), width: "22px;")
-        = link_to image_tag(image_path('facebook.png'), width: "12px;"), "https://www.facebook.com/lain.adelgaza.peru"
+        = link_to image_tag(image_path('facebook.png'), width: "12px;"), @country.facebook
         = link_to image_tag(image_path('youtube.png'), width: "22px;"), "https://www.youtube.com/channel/UCYgIEivJ2H5N4sQH2WY5i-g"
       .clear
 
@@ -28,7 +28,7 @@
 
       .section-info
         .section-contact
-          = mail_to 'contacto@lainadelgaza.net', image_tag(image_path('mail.png'), class:'img-responsive')
+          = mail_to @country.email, image_tag(image_path('mail.png'), class:'img-responsive')
 
         .section-contact
           #carousel-llamada.carousel.slide{"data-ride" => "carousel"}
@@ -96,7 +96,11 @@
               Nuestra Empresa
             .empresa
         .section-segments
-          = link_to 'http://www.summerkit.net/' do
+          - if I18n.locale == :pe
+            - link_address = 'http://www.summerkit.net/'
+          - else
+            - link_address = offices_path
+          = link_to link_address do
             %p
               LAIN para provincias
             .provincia
