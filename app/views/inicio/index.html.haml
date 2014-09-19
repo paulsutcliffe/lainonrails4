@@ -28,7 +28,10 @@
 
       .section-info
         .section-contact
-          = mail_to @country.email, image_tag(image_path('mail.png'), class:'img-responsive')
+          = mail_to @country.email do
+            = image_tag(image_path('mail.png'), class:'img-responsive')
+            %span.mail-country
+              = @country.email
 
         .section-contact
           #carousel-llamada.carousel.slide{"data-ride" => "carousel"}
