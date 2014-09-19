@@ -116,14 +116,18 @@ ul li {list-style: none;}
   .section-contact:nth-child(2){padding-left: 7.5px; }
 
 .fb-like-box.fb_iframe_widget {
-margin: 0px -10px;
+min-width: 100% !important;
+margin-left:-10px;
+span{
+min-width: 100% !important;
+}
 }
 .mail-country{
 
   position: absolute;
-  margin-top: -147px;
+  margin-top: -25%;
   font-style: italic;
-  margin-left: 140px;
+  margin-left: 26%;
   font-size: 30px;
   color: #00857e;
 }
