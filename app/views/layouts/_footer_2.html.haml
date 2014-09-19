@@ -15,7 +15,7 @@
                   %h4.media-heading
                     = article.title
                   %p.description
-                    = truncate(article.content, length: 120)
+                    = truncate_html(article.content, length: 200, omission: '...')
 
       .section-suscribete
         %h4.title-head
