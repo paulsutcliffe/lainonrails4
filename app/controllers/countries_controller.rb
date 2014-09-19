@@ -1,5 +1,6 @@
 class CountriesController < InheritedResources::Base
   load_and_authorize_resource
+  skip_authorize_resource :only => :index
 
   skip_before_filter :set_locale, except: :index
   skip_before_filter :set_variables
