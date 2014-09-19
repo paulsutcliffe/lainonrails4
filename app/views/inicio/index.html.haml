@@ -124,15 +124,6 @@
       .section-fb
         %h4.title-head
           Nuestros Seguidores
-        #fb-root
-        :javascript
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=171330932924716&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
-        .fb-like-box{:'data-href' => @country.facebook, :'data-width' => '500px', :'data-colorscheme' => 'light', :'data-show-faces' => 'true', :'data-header' => 'false', :'data-stream' => 'false', :'data-show-border' => 'false'}
-
+        == <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fsoniem%2F128766450475056&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+        == <iframe src=“//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Flain.adelgaza.peru&amp;width=500px&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false” scrolling=“no” frameborder=“0” style=“border:none; overflow:hidden; width:500pxpx; height:258px;” allowTransparency=“true”></iframe>
 = render 'layouts/footer'
