@@ -30,7 +30,7 @@
         .section-contact
           = mail_to @country.email do
             = image_tag(image_path('mail.png'), class:'img-responsive')
-            %span.mail-country
+            %span{:class => 'mail-country' + ' mail-' + I18n.locale.to_s}
               = @country.email
 
         .section-contact
@@ -101,12 +101,16 @@
         .section-segments
           - if I18n.locale == :pe
             - link_address = 'http://www.summerkit.net/'
+            - title = 'LAIN para provincias'
+            - image = 'mapa-peru'
           - else
             - link_address = offices_path
+            - title = 'Sucursales'
+            - image = 'provincia'
           = link_to link_address do
             %p
-              LAIN para provincias
-            .provincia
+              = title
+            %div{:class => image}
 
   .container-fluid
     .container.section-blog-fb

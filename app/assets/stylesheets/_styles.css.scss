@@ -70,6 +70,7 @@ ul li {list-style: none;}
     .metodo:before, .metodo:after,
     .empresa:before, .empresa:after,
     .provincia:before, .provincia:after,
+    .mapa-peru:before, .mapa-peru:after,
     .oportunidad:before, .oportunidad:after
     {
       content: "";
@@ -91,6 +92,9 @@ ul li {list-style: none;}
     .provincia:before{background: url(image_path('provincia.png')) no-repeat center center;
       z-index:1;
       transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
+    .mapa-peru:before{background: url(image_path('mapa-peru.png')) no-repeat center center;
+      z-index:1;
+      transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
     .empresa:before{background: url(image_path('empresa.png')) no-repeat center center;
       z-index:1;
       transition: all 0.5s !important; -webkit-transition:all 0.5s !important; -moz-transition: all 0.5s !important; }
@@ -98,14 +102,16 @@ ul li {list-style: none;}
     .metodo:after{background: url(image_path('hover-2-metodo.png')) no-repeat center center;}
     .oportunidad:after{background: url(image_path('hover-1-oportunidades.png')) no-repeat center center;}
     .provincia:after{background: url(image_path('hover-4-lain-para-provincias.png')) no-repeat center center ;}
+    .mapa-peru:after{background: url(image_path('hover-4-lain-para-provincias.png')) no-repeat center center ;}
     .empresa:after{background: url(image_path('hover-3-nuestra-empresa.png')) no-repeat center center ;}
 
     .metodo:hover:before,
     .oportunidad:hover:before,
     .provincia:hover:before,
+    .mapa-peru:hover:before,
     .empresa:hover:before{opacity: 0;}
 
-    .metodo, .oportunidad, .provincia, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;}
+    .metodo, .oportunidad, .provincia, .mapa-peru, .empresa{height: 190px; background-repeat: no-repeat; background-position: center center;}
   }
 
 
@@ -123,14 +129,21 @@ min-width: 100% !important;
 }
 }
 .mail-country{
-
   position: absolute;
   margin-top: -25%;
   font-style: italic;
   margin-left: 26%;
-  font-size: 30px;
   color: #00857e;
 }
+.mail-pe {font-size: 30px;}
+.mail-cr {font-size: 20px;}
+.mail-uy {font-size: 30px;}
+.mail-bo {font-size: 22px;}
+.mail-sv {font-size: 22px;}
+.mail-gt {font-size: 32px;}
+
+
+
   #carousel-principal{
     padding: 0px 15px;
    img{min-width: 100%;}

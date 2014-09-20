@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
 
   def set_variables
     @subscriber = @subscriber ? @subscriber : @country.subscribers.new
-    articles_ids = Article.pluck(:id).shuffle[0..1]
-    testimonies_ids = Testimony.pluck(:id).shuffle[0..1]
+    articles_ids = @country.articles.pluck(:id).shuffle[0..1]
+    testimonies_ids = @country.testimonies.pluck(:id).shuffle[0..1]
     @last_articles     = Article.where(id: articles_ids)
     @last_testimonies  = Testimony.where(id: testimonies_ids)
   end
