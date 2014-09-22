@@ -1,29 +1,27 @@
 - page_title!('LAIN Lider Mundial en Adelgazamiento')
-#country-code
-  .hide= request.location.country_code
 %div{:class => "cont-responsive", :style => "text-align:center; margin-left:auto; margin-right:auto;"}
   %img#Image-Maps_5201210241318352{:alt => "", :class => "class-responsive", :border => "0", :height => "608", :src => "#{image_path("mapa-lain.jpg")}", :usemap => "#Image-Maps_5201210241318352", :width => "746"}/
   %map#_Image-Maps_5201210241318352{:name => "Image-Maps_5201210241318352"}
     %area{:alt => "perú", :coords => "291,294,291,305,302,309,304,302,308,295,317,289,325,283,330,276,329,270,340,278,347,286,355,287,366,289,365,298,362,306,356,307,350,309,348,317,344,323,343,329,346,339,352,347,362,348,367,357,378,361,381,369,382,379,383,387,379,392,382,402,379,408,372,415,366,414,363,408,355,405,345,402,338,397,332,390,327,385,327,378,323,370,319,365,315,360,313,353,310,348,307,342,302,336,300,331,297,326,296,322,292,321,287,320,284,317,286,314,284,310,283,304,284,299,288,296,", :href => "/pe/", :shape => "poly", :title => "perú"}/
-    %area{:alt => "guatemala", :coords => "220,158,214,158,210,155,206,151,207,147,209,140,215,138,222,136,217,132,218,128,221,125,230,124,233,131,232,138,238,140,236,145,232,148,230,152,225,154,", :href => "/en-construccion", :shape => "poly", :title => "guatemala"}/
-    %area{:alt => "el salvador", :coords => "228,165,235,166,241,164,238,158,233,158,229,160,", :href => "/en-construccion", :shape => "poly", :title => "el salvador"}/
-    %area{:alt => "costa rica", :coords => "268,182,264,180,257,179,252,179,253,187,261,192,267,200,274,199,275,194,276,189,", :href => "/en-construccion", :shape => "poly", :title => "costa rica"}/
-    %area{:alt => "Bolivia", :coords => "465,432,469,420,465,410,462,399,448,398,444,376,432,376,420,369,407,363,405,346,395,346,382,357,376,357,381,370,380,382,378,393,385,400,377,410,387,427,385,432,398,454,409,445,417,445,423,451,435,449,437,430,456,426,465,428,", :href => "/en-construccion", :shape => "poly", :title => "Bolivia"}/
-    %area{:alt => "Uruguay", :coords => "485,511,493,515,501,522,512,526,517,534,515,545,505,550,494,546,480,542,481,529,479,516,482,514,", :href => "/en-construccion", :shape => "poly", :title => "Uruguay"}/
+    %area{:alt => "guatemala", :coords => "220,158,214,158,210,155,206,151,207,147,209,140,215,138,222,136,217,132,218,128,221,125,230,124,233,131,232,138,238,140,236,145,232,148,230,152,225,154,", :href => "/gt/", :shape => "poly", :title => "guatemala"}/
+    %area{:alt => "el salvador", :coords => "228,165,235,166,241,164,238,158,233,158,229,160,", :href => "/sv/", :shape => "poly", :title => "el salvador"}/
+    %area{:alt => "costa rica", :coords => "268,182,264,180,257,179,252,179,253,187,261,192,267,200,274,199,275,194,276,189,", :href => "/cr/", :shape => "poly", :title => "costa rica"}/
+    %area{:alt => "Bolivia", :coords => "465,432,469,420,465,410,462,399,448,398,444,376,432,376,420,369,407,363,405,346,395,346,382,357,376,357,381,370,380,382,378,393,385,400,377,410,387,427,385,432,398,454,409,445,417,445,423,451,435,449,437,430,456,426,465,428,", :href => "/bo/", :shape => "poly", :title => "Bolivia"}/
+    %area{:alt => "Uruguay", :coords => "485,511,493,515,501,522,512,526,517,534,515,545,505,550,494,546,480,542,481,529,479,516,482,514,", :href => "/uy/", :shape => "poly", :title => "Uruguay"}/
     %area{:alt => "Image Map", :coords => "744,606,746,608", :href => "http://www.image-maps.com/index.php?aff=mapped_users_5201210241318352", :shape => "rect", :title => "Image Map"}/
   / Image map text links - Start - If you do not wish to have text links under your image map, you can move or delete this DIV
   %div
     %a{:href => "/pe/", :title => "Perú"} Perú
     |
-    %a{:href => "/en-construccion", :title => "Guatemala"} Guatemala
+    %a{:href => "/gt/", :title => "Guatemala"} Guatemala
     |
-    %a{:href => "/en-construccion", :title => "El Salvador"} El Salvador
+    %a{:href => "/sv/", :title => "El Salvador"} El Salvador
     |
-    %a{:href => "/en-construccion", :title => "Costa Rica"} Costa Rica
+    %a{:href => "/cr/", :title => "Costa Rica"} Costa Rica
     |
-    %a{:href => "/en-construccion", :title => "Bolivia"} Bolivia
+    %a{:href => "/bo/", :title => "Bolivia"} Bolivia
     |
-    %a{:href => "/en-construccion", :title => "Uruguay"} Uruguay
+    %a{:href => "/uy/", :title => "Uruguay"} Uruguay
   / Image map text links - End -
   %p#introduction
     LAIN, es un Centro Médico que realiza tratamientos contra la obesidad.
