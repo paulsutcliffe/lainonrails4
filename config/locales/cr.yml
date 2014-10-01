@@ -1,6 +1,6 @@
-pe:
+cr:
   app:
-    name: LAIN Costa Rica
+    name: LAIN
   # title: Lain Adelgaza
   pages:
     index:
