@@ -22,6 +22,17 @@ header{background-color: $aqua; height: 100%; margin-bottom: 20px;
 
 }
 
+.sign-in{
+margin: 0px 15px;
+}
+
+.alert{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: 1100px;
+}
 
 .carousel-fade {
   .carousel-inner {
@@ -269,6 +280,8 @@ margin-bottom: 20px;
 
 #section-computests{
   margin-bottom: 40px;
+    .title{ margin: 0px 15px;}
+    .section{margin: 10px 15px;}
   .section-computest{
     padding: 0px 15px;
     .compu-form p{color:$dark-green;}
@@ -368,7 +381,7 @@ position: absolute;
   outline: none;}
 .links button:hover, .links button:active{font-weight: 700;}
 .links{ float: right; margin-top: 25px;}
-.section-testimonies{padding: 0px 15px;
+.section-testimonies{padding: 0px 15px; margin-bottom: 10px;
   a{float: left;}
 .test-video img, .test-img img{
 margin-top: -20%;
@@ -400,7 +413,9 @@ transition: background 2s !important;
       background-size: contain; height: 170px; color:white;
       padding-top: 75px;
       font-size: 17px;
-    word-break: break-all;
+    word-break: break-word;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
     transition: all 0.5s;
   }

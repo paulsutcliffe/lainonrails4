@@ -3,12 +3,12 @@
   .section
     .title
       %h1
-        = page_title!('crud.edit'+ ' ' + 'product')
+        = page_title!('Editar Producto')
 
   .section
     = render 'form'
 
   .section
     .admin-controls
-      = link_to 'crud.show', @product, class: 'btn btn-info'
+      = link_to 'Mostrar', @product, class: 'btn btn-info'
       = link_to 'crud.back', 'javascript:history.back(-1)', class: 'btn btn-warning'

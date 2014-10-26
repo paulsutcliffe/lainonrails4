@@ -9,7 +9,7 @@
       %br
     - @products.each do |product|
       = link_to product do 
-        .product-img{style: "background-image: url(#{product.image.listing}); width: 160px; height: 170px; background-repeat: no-repeat;" }
+        .product-img{style: "background-image: url(#{product.image.listing}); width: 158px; height: 170px; background-repeat: no-repeat;" }
           .product-txt
             = product.name
           - if current_admin
