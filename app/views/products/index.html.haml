@@ -12,9 +12,10 @@
         .product-img{style: "background-image: url(#{product.image.listing}); width: 158px; height: 170px; background-repeat: no-repeat;" }
           .product-txt
             = product.name
-          - if current_admin
-            = link_to 'edit', edit_product_path(product), class: 'btn btn-info'
-            = link_to 'delete', product, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+            - if current_admin
+              %br
+              = link_to 'edit', edit_product_path(product), class: 'btn btn-info'
+              = link_to 'delete', product, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
 
 = render 'layouts/llama_ya' 
 

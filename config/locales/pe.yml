@@ -128,3 +128,7 @@ pe:
     delete: "Eliminar"
     back: "Volver"
     new: "Nuevo(a)"
+  devise:
+    sessions:
+      signed_in: "Bienvenido, entraste satisfactoriamente"
+      signed_out: "Hasta luego, saliste satisfactoriamente"

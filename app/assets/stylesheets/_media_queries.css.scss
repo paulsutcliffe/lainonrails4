@@ -95,13 +95,14 @@ margin-bottom: 10px;}
 input[type="image"]{margin-left: 52.5em; margin-top: 5.5em;}
 }}
 
+@media (min-width: 768px){
+.alert{width: 680px;}
+}
+
 @media (min-width: 992px){
 .alert{width: 900px;}
 }
 
-@media (min-width: 768px){
-.alert{width: 680px;}
-}
 
 @media (max-width: 991px) and (min-width: 800px){.form-index{input[type=text]{position: absolute; margin-left:19.5em;}
 input[type="image"]{margin-left: 40em; margin-top: 5.5em; width: 13%;}
