@@ -1,6 +1,22 @@
 :javascript
+
   $(document).ready(function(){
-    $('.lightbox').lightbox();
+
+
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+      });
+
+       $('#open-image').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+                $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+
 
     var $container = $('#testimonies').isotope({
       itemSelector: '.item',
@@ -51,7 +67,7 @@
     - @testimonies.each do |testimony|
       - if testimony.testimony_type == 'video'
         .item.transition.video{:'data-category' => 'video'}
-          = link_to testimony.video_link, class: 'lightbox' do
+          = link_to testimony.video_link,  :data => { :toggle => 'lightbox', :gallery => 'mixedgallery', :footer => testimony.content } do
             .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
               .test-video.element-item.transition
                 = image_tag(image_path('play-hover.png'))
@@ -60,13 +76,14 @@
                   = link_to I18n.t('crud.edit'), edit_testimony_path(testimony), class: 'btn btn-info'
                   = link_to I18n.t('crud.delete'), testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
       - else
+        
         .item.transition.antesydespues{:'data-category' => 'antesydespues'}
           - if testimony.testimony_type == 'antesydespues'
-            = link_to image_path(testimony.image.detail), class: 'lightbox' do
+            = link_to image_path(testimony.image.detail), :data => { :toggle => 'lightbox', :gallery => 'mixedgallery', :footer => testimony.content } do
               .section-test-images{style: "background-image: url(#{testimony.image.listing}); float: left; width: 160px; height: 160px; background-repeat: no-repeat;"}
                 .test-img.element-item.transition
                   = image_tag(image_path('camera-hover.png'))
-                  - if current_admin
+                    - if current_admin
                     %br
                     = link_to I18n.t('crud.edit'), edit_testimony_path(testimony), class: 'btn btn-info'
                     = link_to I18n.t('crud.delete'), testimony, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'

@@ -17,7 +17,7 @@
 //= require bootstrap
 //= require ckeditor/override
 //= require ckeditor/init
-//= require jquery.lightbox.js
+//= require ekko-lightbox.js
 // require_tree .
 //= require jquery.isotope
 //= require jquery.debounced_resize
