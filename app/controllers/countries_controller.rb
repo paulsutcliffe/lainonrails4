@@ -7,7 +7,7 @@ class CountriesController < InheritedResources::Base
 
   def index
     remote_ip = request.env['REMOTE_ADDR']
-    data_response = HTTParty.get("http://freegeoip.net/json/#{remote_ip}")
+    data_response = HTTParty.get("http://www.telize.com/geoip/#{remote_ip}")
     @country_code = JSON.parse(data_response.body)["country_code"]
     Rails.logger.info "#{data_response}"
     case @country_code
