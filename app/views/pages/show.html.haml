@@ -4,7 +4,7 @@
 
   .section-page
     .section-page-img
-      = image_tag @page.imagen.regular if @page.imagen.present?
+      = image_tag @page.imagen.regular, class:'img-responsive' if @page.imagen.present?
     .section-page-info
       = @page.content.html_safe
 
