@@ -31,7 +31,9 @@
           = mail_to @country.email do
             = image_tag(image_path('mail.png'), class:'img-responsive')
             %span{:class => 'mail-country' + ' mail-' + I18n.locale.to_s}
-              = @country.email
+              = 'contacto@lainadelgaza.net'
+              -#= @country.email
+
 
         .section-contact
           #carousel-llamada.carousel.slide{"data-ride" => "carousel"}

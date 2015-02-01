@@ -44,18 +44,42 @@
      max-width: 100%;
    }
 
-
    .cont-responsive{
     margin-top: 8em;
     padding: 0px 15px;
    }
 }
-@media(min-width: 768px){
-  .cont-responsive{
-    width: 746px;
-  }
+@media(min-width: 768px){ .cont-responsive{ width: 746px; }}
+
+@media (min-width: 992px ) and (max-width: 1199px){ #section-index .mail-pe{ font-size: 1.7em; }}
+@media (min-width: 768px ) and (max-width: 991px){ #section-index .mail-pe{ font-size: 1.3em; }}
+@media (min-width: 490px ) and (max-width: 619px){ #section-index .mail-pe{ font-size: 1.6em; }}
+@media (min-width:390px ) and (max-width: 489px){ #section-index .mail-pe{ font-size: 1.2em; }}
+@media (min-width:320px ) and (max-width: 389px){
+#section-index .mail-pe{
+  font-size: 1em;
+  margin-left: 70px;
+  padding-top: 3px;
+}
+.section-total .container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 }
 
+@media (max-width: 320px){
+  #section-testimonies .title-page h3{ padding-right: 135px;}
+  .title-page{ margin: 40px 0px 20px;}
+  }
+
+@media (max-width: 375px){
+  .section-products .product-img{
+    margin-left: 25%;
+  }
+  #testimonies{
+    margin-left: 25%;
+  }
+}
 
 @media(max-width: 460px){
 .section-segments{
@@ -69,12 +93,14 @@
 .section-images > a{width: 100%;}
 .social{margin-top: 45px;}
 }
+
 @media(max-width:339px){
 .blog-info{width:100%;}
 .blog-img{margin-left: 25%;
 margin-bottom: 10px;}
 .social{margin-top: 45px;}
 }
+
 @media(min-width: 340px) and (max-width:389px){
 .blog-info{width:60%;}
 .social{margin-top: 45px;}
@@ -95,14 +121,8 @@ margin-bottom: 10px;}
 input[type="image"]{margin-left: 52.5em; margin-top: 5.5em;}
 }}
 
-@media (min-width: 768px){
-.alert{width: 680px;}
-}
-
-@media (min-width: 992px){
-.alert{width: 900px;}
-}
-
+@media (min-width: 768px){ .alert{width: 680px;}}
+@media (min-width: 992px){ .alert{ width: 900px; }}
 
 @media (max-width: 991px) and (min-width: 800px){.form-index{input[type=text]{position: absolute; margin-left:19.5em;}
 input[type="image"]{margin-left: 40em; margin-top: 5.5em; width: 13%;}
