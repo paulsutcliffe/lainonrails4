@@ -170,6 +170,15 @@ min-width: 100% !important;
     p { font-size: 48px;
     font-style: italic;
     text-shadow: none;}
+
+    .carousel-caption{
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      left: 0;
+      right: 0;
+      padding-bottom: 40px;
+    }
   }
  iframe{max-width: 100%; min-width: 100%;
  }
