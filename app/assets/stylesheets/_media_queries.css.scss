@@ -87,6 +87,19 @@
 }
 }
 
+@media (min-width: 300px) and (max-width: 390px){
+  .container-fluid.aqua .call .llama {
+    margin-left: 38% !important;
+    margin-right: 0px;
+  }
+  .container-fluid.aqua .call img{
+  margin-top: 20px;}
+
+  .container-fluid.aqua .call .txt{
+  margin-left: 23px;
+  }
+}
+
 @media (max-width: 320px){
   #section-testimonies .title-page h3{ padding-right: 135px;}
   .title-page{ margin: 40px 0px 20px;}
