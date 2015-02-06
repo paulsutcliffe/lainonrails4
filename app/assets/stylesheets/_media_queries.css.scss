@@ -69,8 +69,9 @@
     }
    }
 }
-@media(min-width: 768px){ .cont-responsive{ width: 746px; }}
-
+@media (min-width: 768px) and (max-width: 991px){ .call{ .llama{margin-left: 45% !important;} .txt{margin-left: 35% !important;} }}
+@media (min-width: 768px){ .cont-responsive{ width: 746px; }}
+@media (max-width: 339px){ .section-blog .media-list .media-body{width: 100%;}}
 @media (min-width: 992px ) and (max-width: 1199px){ #section-index .mail-pe{ font-size: 1.7em; }}
 @media (min-width: 768px ) and (max-width: 991px){ #section-index .mail-pe{ font-size: 1.3em; }}
 @media (min-width: 490px ) and (max-width: 619px){ #section-index .mail-pe{ font-size: 1.6em; }}
