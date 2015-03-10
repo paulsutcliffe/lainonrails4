@@ -31,8 +31,8 @@
           = mail_to @country.email do
             = image_tag(image_path('mail.png'), class:'img-responsive')
             %span{:class => 'mail-country' + ' mail-' + I18n.locale.to_s}
-              = 'contacto@lainadelgaza.net'
-              -#= @country.email
+              = @country.email
+              -# = 'contacto@lainadelgaza.net'
 
 
         .section-contact
