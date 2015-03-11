@@ -86,27 +86,117 @@
        .mail-uy, .mail-bo, .mail-cr, .mail-sv{ font-size: 1em; }
        }
      }
-@media (min-width: 490px ) and (max-width: 619px){ 
+
+//PERU - GUATEMALA
+
+@media (min-width: 420px ) and (max-width: 449px){ 
+   #section-index{
+       .mail-pe, .mail-gt{ font-size: 1.3em; }
+    }
+}
+@media (min-width: 450px ) and (max-width: 499px){ 
+   #section-index{
+       .mail-pe, .mail-gt{ font-size: 1.5em; }
+    }
+}
+@media (min-width: 500px ) and (max-width: 587px){ 
+   #section-index{
+       .mail-pe, .mail-gt{ font-size: 1.7em; }
+    }
+}
+@media (min-width: 588px ) and (max-width: 688px){ 
+   #section-index{
+       .mail-pe, .mail-gt{ font-size: 2em; }
+    }
+}
+
+@media (min-width: 690px ) and (max-width: 767px){ 
+   #section-index{
+       .mail-pe, .mail-gt{ font-size: 2.5em; }
+    }
+}
+
+//URUGUAR-BOLIVIA-COSTA-SALVADOR
+
+@media (min-width: 687px ) and (max-width: 767px){ 
+    #section-index{
+       .mail-uy, .mail-bo, .mail-cr, .mail-sv{ font-size: 1.8em; }
+       }
+}
+
+@media (min-width: 620px ) and (max-width: 686px){ 
+    #section-index{
+       .mail-uy, .mail-bo, .mail-cr, .mail-sv{ font-size: 1.6em; }
+       }
+}
+     
+@media (min-width: 586px ) and (max-width: 619px){ 
       #section-index{
-        .mail-pe, .mail-gt{ font-size: 1.6em; }
-        .mail-bo{ font-size: 1.2em; }
-        .mail-uy, .mail-cr{ font-size: 1.15em; }
-        .mail-sv{ font-size: 1.18em; }
+        .mail-uy, .mail-cr, .mail-bo, .mail-sv{ font-size: 1.5em; }
       }
     }
-@media (min-width: 390px ) and (max-width: 489px){ 
+
+@media (min-width: 525px ) and (max-width: 585px){ 
       #section-index{
-        .mail-bo, .mail-pe{ font-size: 1.2em; }
-        .mail-sv, .mail-uy, .mail-cr{ font-size: 1.1em; }
-        .mail-gt{ font-size: 1.5em; }
+        .mail-uy, .mail-cr, .mail-sv, .mail-bo{ font-size: 1.3em; }
+      }
+}
+
+@media (min-width: 490px ) and (max-width: 524px){ 
+      #section-index{
+        .mail-uy, .mail-cr, .mail-sv, .mail-bo{ font-size: 1.16em; }
+      }
+}
+
+
+@media (min-width: 460px ) and (max-width: 489px){ 
+      #section-index{
+        .mail-sv, .mail-uy, .mail-cr, .mail-bo{ font-size: 1.1em; }
+}
+  }
+
+@media (min-width: 420px ) and (max-width: 459px){ 
+      #section-index{
+        .mail-sv, .mail-uy, .mail-cr, .mail-bo{ font-size: 0.95em; }
       }
   }
-@media (max-width: 389px){ #section-index .mail-country{ font-size: 1em; margin-left: 70px; padding-top: 3px; }
-                          .section-total .container-fluid{
-                            padding-left: 0px;
-                            padding-right: 0px;
-                          }
+
+@media (min-width: 390px ) and (max-width: 419px){ 
+      #section-index{
+        .mail-sv, .mail-uy, .mail-cr, .mail-bo{ font-size: 0.86em; }
+        .mail-gt, .mail-pe{ font-size: 1.2em; }
+      }
+  }
+
+//-------------------------
+
+
+@media (min-width: 350px) and (max-width: 389px){ 
+      #section-index{
+        .mail-sv, .mail-uy, .mail-cr, .mail-bo{ font-size: 0.82em; }
+        .mail-gt, .mail-pe{ font-size: 1.2em; }
+      }
 }
+
+@media (max-width: 349px){ 
+      #section-index{
+        .mail-sv, .mail-uy, .mail-cr, .mail-bo{ font-size: 0.72em; }
+        .mail-gt, .mail-pe{ font-size: 0.95em; }
+      }
+}
+
+
+@media (max-width: 389px){ 
+      #section-index{
+        padding-top: 3px;
+      }
+        .section-total .container-fluid{
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+}
+
+
 
 @media (min-width: 300px) and (max-width: 390px){
   .container-fluid.aqua .call .llama {
@@ -257,9 +347,13 @@ h3{margin-bottom: 0px;}
 }
 }
 
-@media(min-width: 0px) and (max-width: 360px){
+@media(min-width: 341px) and (max-width: 360px){
+  #section-index #carousel-llamada h3{ margin-bottom: 15px;font-size: 24px; }
+}
+
+@media(min-width: 0px) and (max-width: 340px){
 #carousel-llamada .carousel-caption{ padding-bottom: 0px !important;}
-#section-index #carousel-llamada h3{ font-size: 1em; margin-bottom: 15px; margin-top: 0px;}
+#section-index #carousel-llamada h3{ font-size: 1em; margin-bottom: 5px; margin-top: 0px;}
 #section-index #carousel-llamada p { font-size: 2em; }
 }
 
