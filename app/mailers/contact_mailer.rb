@@ -15,7 +15,7 @@ class ContactMailer < ActionMailer::Base
       "gt" => ["Guatemala", "lessguatemala@terra.com.gt"],
       "pe" => ["Perú", "contacto@lainadelgaza.net"],
       "sv" => ["El Salvador", "info.elsalvador@laininternacional.com"],
-      "uy" => ["Uruguay", "lainuru@montevideo.com.uy"] }
+      "uy" => ["Uruguay", "lainventas.mvd@laininternacional.com"] }
 
     if country[locale]
       @country_name = country[locale][0]
