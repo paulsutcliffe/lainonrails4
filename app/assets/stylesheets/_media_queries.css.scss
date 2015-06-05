@@ -1,5 +1,5 @@
-@media(max-width: 767px){
-  header .navbar-default .navbar-collapse, header .navbar-default .navbar-form{
+@media (max-width: 991px) {
+    header .navbar-default .navbar-collapse, header .navbar-default .navbar-form{
   margin-left:0px !important;
   }
 
@@ -18,11 +18,57 @@
   #main{
     margin-top: 5em;
   }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+
+}
+
+
+
+@media(max-width: 767px){
+  
 
   .section-blog-fb{
     .section-fb{padding-left: 15px !important;}
     .section-blog{padding-right: 15px !important;}
     .blog-img img{margin: 10px auto;}
+  }
+
+  .section-test-sus{
+    .section-testi{padding-right: 15px !important;}
   }
   
   .section-suscribete{
@@ -65,11 +111,28 @@
       img{margin-top: -7px;}
       margin-bottom: 5px;
       .txt{padding-left: 25%;}
-      .llama{margin-left: 45% !important;}
     }
    }
 }
-@media (min-width: 768px) and (max-width: 991px){ .call{ .llama{margin-left: 45% !important;} .txt{margin-left: 35% !important;} }}
+
+@media (max-width:320px){.enviar{margin-bottom:20px; width: 40% !important; } .privacy{width: 111% !important;}}
+
+@media (min-width: 600px) and (max-width: 715px){.test-info{.title, .description{margin-left: 10% !important;}}}
+@media (min-width: 716px) and (max-width: 767px){.test-info{.title, .description{margin-left: 16% !important;}}}
+
+@media (min-width: 992px) and (max-width: 1199px){.nav.navbar-nav {width: 103%;}}
+
+@media (min-width: 561px) and (max-width: 767px){ 
+  .call {
+    .txt{padding-left: 0 !important; margin-left: 20px; width: 100%;}
+    .telefono{background-color: $green; width: 35%; margin: 0;}
+    .llama{margin: 0; padding-right: 20px; text-align: right; width: 50%;}
+  }
+}
+@media (max-width: 767px){#section-index .section-contact:first-child{padding-right: 0px;} #section-index .section-contact:nth-child(2){padding-left: 0px;} }
+@media (max-width: 350px){ .title-page h3{padding-right: 50px !important;} }
+@media (max-width: 269px){ .call .telefono {margin-right: 0px;} }
+//@media (min-width: 768px) and (max-width: 991px){ .call{ .llama{margin-left: 45% !important;} .txt{margin-left: 35% !important;} }}
 @media (min-width: 768px){ .cont-responsive{ width: 746px; }}
 @media (max-width: 339px){ .section-blog .media-list .media-body{width: 100%;}}
 @media (min-width: 992px ) and (max-width: 1199px){ 
@@ -85,7 +148,22 @@
        .mail-pe, .mail-gt{ font-size: 1.3em; }
        .mail-uy, .mail-bo, .mail-cr, .mail-sv{ font-size: 1em; }
        }
-     }
+     
+    .call{
+      .llama{margin-left: 12%; margin-right: 20px; font-size: 25px;}
+
+      .telefono{margin-right: 15px;
+        i {padding: 0px 20px; font-size: 25px;}
+      }
+
+      .txt{
+        font-size: 15px;
+      }
+
+    }
+
+}
+
 
 //PERU - GUATEMALA
 
@@ -197,12 +275,29 @@
 }
 
 
+@media(max-width: 359px){
+  .call{
+    img{display: none;}
+  }
+}
+
+@media(max-width: 560px){
+  .call{
+
+    img{margin-top: 0px !important;}
+    .llama{width: 100%; margin: 0px !important;}
+    .telefono{width: 100%; margin-right: 0px;}
+    .txt{margin: 0px !important; padding: 0px !important; width: 100%;}
+
+  }
+
+}
 
 @media (min-width: 300px) and (max-width: 390px){
-  .container-fluid.aqua .call .llama {
+  /*.container-fluid.aqua .call .llama {
     margin-left: 38% !important;
     margin-right: 0px;
-  }
+  }*/
   .container-fluid.aqua .call img{
   margin-top: 20px;}
 
@@ -348,7 +443,10 @@ h3{margin-bottom: 0px;}
 }
 
 @media(min-width: 341px) and (max-width: 360px){
-  #section-index #carousel-llamada h3{ margin-bottom: 15px;font-size: 24px; }
+  #section-index #carousel-llamada h3{ margin-bottom: 5px !important;font-size: 24px !important; }
+  #carousel-llamada .carousel-caption{padding-bottom: 0px !important;
+  p{font-size: 38px !important;}
+  }
 }
 
 @media(min-width: 0px) and (max-width: 340px){

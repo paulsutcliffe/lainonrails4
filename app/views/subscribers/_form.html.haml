@@ -2,6 +2,7 @@
   = render 'layouts/error_messages', :target => f.object
 
   .form-inputs
+  
     = f.input :first_name, label: false, placeholder: "Nombres"
     = f.input :last_name, label: false, placeholder: "Apellidos"
     = f.input :email, label: false, placeholder: "Correo electrónico"
@@ -19,6 +20,6 @@
             de LAIN
 
             %i.icon-external-link
-
+    .enviar
       .form-actions
         = f.button :submit,'Enviar' , class: 'btn-green'

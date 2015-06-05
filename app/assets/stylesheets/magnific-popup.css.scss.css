@@ -1,15 +1,8 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html class="   ">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    
     <title>Magnific-Popup/dist/magnific-popup.css at master · dimsemenov/Magnific-Popup · GitHub</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
@@ -18,42 +11,28 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
     <meta property="fb:app_id" content="1401488693436528"/>
-
-      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="dimsemenov/Magnific-Popup" name="twitter:title" /><meta content="Magnific-Popup - Light and responsive lightbox script with focus on performance." name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/1061115?s=400" name="twitter:image:src" />
-<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/1061115?s=400" property="og:image" /><meta content="dimsemenov/Magnific-Popup" property="og:title" /><meta content="https://github.com/dimsemenov/Magnific-Popup" property="og:url" /><meta content="Magnific-Popup - Light and responsive lightbox script with focus on performance." property="og:description" />
+    <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="dimsemenov/Magnific-Popup" name="twitter:title" /><meta content="Magnific-Popup - Light and responsive lightbox script with focus on performance." name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/1061115?s=400" name="twitter:image:src" />
+    <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/1061115?s=400" property="og:image" /><meta content="dimsemenov/Magnific-Popup" property="og:title" /><meta content="https://github.com/dimsemenov/Magnific-Popup" property="og:url" /><meta content="Magnific-Popup - Light and responsive lightbox script with focus on performance." property="og:description" />
 
     <link rel="assets" href="https://assets-cdn.github.com/">
     <link rel="conduit-xhr" href="https://ghconduit.com:25035">
-    
-
     <meta name="msapplication-TileImage" content="/windows-tile.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="selected-link" value="repo_source" data-pjax-transient />
-      <meta name="google-analytics" content="UA-3769691-2">
-
+    <meta name="google-analytics" content="UA-3769691-2">
     <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="B543F33B:18CD:781C017:53C0F4FB" name="octolytics-dimension-request_id" />
-    
-
-    
-    
+   
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico" />
 
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="III41a7vWEfz+UBslY9uEmtQ5a9hqfFp+mP1djKsgH0YbmqAOIDJspKAJaWg/a3LJ82HxJVpjZ5S8UyDtnBWJg==" name="csrf-token" />
+    <meta content="III41a7vWEfz+UBslY9uEmtQ5a9hqfFp+mP1djKsgH0YbmqAOIDJspKAJaWg/a3LJ82HxJVpjZ5S8UyDtnBWJg==" name="csrf-token" />
 
     <link href="https://assets-cdn.github.com/assets/github-b9a1c847ef551948680288a22129b0083ad12de8.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://assets-cdn.github.com/assets/github2-4bc7c36bb70ec593ca11b80ab3394924897aec51.css" media="all" rel="stylesheet" type="text/css" />
-    
-
-
     <meta http-equiv="x-pjax-version" content="ad6f84b3f555fac1e51e203712f4be37">
-
-      
-  <meta name="description" content="Magnific-Popup - Light and responsive lightbox script with focus on performance." />
-
-
-  <meta content="1061115" name="octolytics-dimension-user_id" /><meta content="dimsemenov" name="octolytics-dimension-user_login" /><meta content="7544081" name="octolytics-dimension-repository_id" /><meta content="dimsemenov/Magnific-Popup" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="7544081" name="octolytics-dimension-repository_network_root_id" /><meta content="dimsemenov/Magnific-Popup" name="octolytics-dimension-repository_network_root_nwo" />
+    <meta name="description" content="Magnific-Popup - Light and responsive lightbox script with focus on performance." />
+    <meta content="1061115" name="octolytics-dimension-user_id" /><meta content="dimsemenov" name="octolytics-dimension-user_login" /><meta content="7544081" name="octolytics-dimension-repository_id" /><meta content="dimsemenov/Magnific-Popup" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="7544081" name="octolytics-dimension-repository_network_root_id" /><meta content="dimsemenov/Magnific-Popup" name="octolytics-dimension-repository_network_root_nwo" />
 
   <link href="https://github.com/dimsemenov/Magnific-Popup/commits/master.atom" rel="alternate" title="Recent Commits to Magnific-Popup:master" type="application/atom+xml" />
 
@@ -63,15 +42,8 @@
   <body class="logged_out  env-production macintosh vis-public page-blob">
     <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
     <div class="wrapper">
-      
-      
-      
-      
-
-
-      
-      <div class="header header-logged-out">
-  <div class="container clearfix">
+    <div class="header header-logged-out">
+    <div class="container clearfix">
 
     <a class="header-logo-wordmark" href="https://github.com/">
       <span class="mega-octicon octicon-logo-github"></span>

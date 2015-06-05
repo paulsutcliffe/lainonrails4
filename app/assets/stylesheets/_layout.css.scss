@@ -1,19 +1,28 @@
 .section-contact, .section-sedes, .section-articles,
 .section-blog, .section-fb, .section-suscribete, 
 .section-testi, .section-imagen, .section-descrip,
-.section-art-image, .section-art-info{ 
+.section-art-image, .section-art-info, .section-art-show-info, 
+.section-art-show-image, .section-compu-img, .section-compu-form{ 
   @extend .col-md-6;
   @extend .col-sm-6;
   @extend .col-ld-6;
   @extend .col-xs-12;
 }
 
-.section-art-show-info, .section-art-show-image{
-  @extend .col-md-6;
-  @extend .col-sm-6;
-  @extend .col-ld-6;
+.section-img-opor{
+  @extend .col-md-5;
+  @extend .col-sm-5;
+  @extend .col-ld-5;
   @extend .col-xs-12;
 }
+
+.section-descrip-opor{
+  @extend .col-md-7;
+  @extend .col-sm-7;
+  @extend .col-ld-7;
+  @extend .col-xs-12;
+}
+
 
 .section-images, .test-section{
   @extend .col-md-12;
@@ -22,7 +31,7 @@
   @extend .col-xs-12;
 }
 
-.test-img, .blog-img{
+.test-img, .blog-img,  .section-segments{
   @extend .col-md-3;
   @extend .col-sm-3;
   @extend .col-ld-3;
@@ -35,13 +44,6 @@
   @extend .col-ld-9;
   @extend .col-xs-12;
 }
- .section-segments{
-  @extend .col-md-3;
-  @extend .col-sm-3;
-  @extend .col-ld-3;
-  @extend .col-xs-12;
-  }
-
 
 
 
@@ -67,13 +69,7 @@
   @extend .col-xs-8;
 }
 
-.section-compu-img, .section-compu-form{
 
-  @extend .col-md-6;
-  @extend .col-sm-6;
-  @extend .col-ld-6;
-  @extend .col-xs-12;
-}
 
 .section-images > a{
 

@@ -1,27 +1,73 @@
 #section-opportunities.container
   .title-page
-    %h3= page_title!('LAIN - Oportunidades')
+    %h3= page_title!('LAIN - Franquicias')
+  .section-show
+    .section-img-opor
+      =image_tag(image_path("work.png"), class: 'img-responsive')
+    .section-descrip-opor
+      %p
+        Formar parte de la franquicia de LAIN es apostar por una marca y un modelo de negocio ya desarrollado que ha sido probado y que funciona con éxito. ​
+        %br
+        %br
+        ​La calidad de nuestros productos y tratamientos orientados, nuestra atención personalizada a cada paciente y la búsqueda permanente de mejores y más novedosos servicios es lo que nos define y lo que compartimos con cada una de nuestras franquicias.
+        %br
+        %br
+        ​Si deseas introducir nuestra marca en tu mercado, ciudad o región y cuentas con los recursos y experiencia para el desarrollo de esta línea de negocio​​​ puedes comunicarte con nosotros a través de nuestro correo y número telefónico:
+        %br
 
-  .section
-    - if current_admin
-      .admin-control
-        = link_to I18n.t('crud.new') + ' ' + 'Opportunity', new_opportunity_path, class: 'btn btn-primary'
+      .email-opor
+        %span
+          =mail_to "franquicias@lainadelgaza.net"
+
+      .phone-opor
+        %span
+          2262471
+
+  .title-page
+    %h3= page_title!('LAIN - Trabaja con Nosotros')
+  .section-show
+    .section-img-opor
+      =image_tag(image_path("work-1.png"), class: 'img-responsive')
+    .section-descrip-opor
+      %p
+        En Lain apostamos por nuestra gente, por eso buscamos siempre el desarrollo profesional y personal de cada uno de nuestros trabajadores. 
+        %br
+        %br
+        Compromiso, trabajo en equipo, servicio al cliente, son los valores que compartimos dentro de nuestra empresa y por los cuales nos esforzamos cada día.
+        %br
+        %br
+        Si compartes nuestros valores y deseas trabajar en una empresa de éxito, Lain es el espacio donde podrás aprender continuamente, desarrollar tu carrera y aportar a una marca de trayectoria. Puedes comunicarte con nosotros a través de nuestro correo y número telefónico:
+        %br
+        %br
+
+      .email-opor
+        %span
+          =mail_to "buscochamba@lainadelgaza.net"
+
+      .phone-opor
+        %span
+          2262471
+
+  -#.section
+    -# if current_admin
+      -#.admin-control
+        -#= link_to I18n.t('crud.new') + ' ' + 'Opportunity', new_opportunity_path, class: 'btn btn-primary'
 
 
-        - @opportunities.each do |opportunity|
-          %tr
-            %td= opportunity.title
-            %td= opportunity.description
-            %td= opportunity.image
-            %td= opportunity.active
-            %td= link_to 'crud.show', opportunity, class: 'btn btn-default'
-            - if current_admin
-              %td= link_to 'crud.edit', edit_opportunity_path(opportunity), class: 'btn btn-info'
-              %td= link_to 'crud.delete', opportunity, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
-      %br
-      = paginate @opportunities
-      %br
+        -# @opportunities.each do |opportunity|
+          -#%tr
+            -#%td= opportunity.title
+            -#%td= opportunity.description
+            -#%td= opportunity.image
+            -#%td= opportunity.active
+            -#%td= link_to 'crud.show', opportunity, class: 'btn btn-default'
+            -# if current_admin
+              -#%td= link_to 'crud.edit', edit_opportunity_path(opportunity), class: 'btn btn-info'
+              -#%td= link_to 'crud.delete', opportunity, :method => :delete, :data => { :confirm => 'crud.are-you-sure' }, class: 'btn btn-danger'
+      -#%br
+      -#= paginate @opportunities
+      -#%br
 
 = render 'layouts/llama_ya' 
-
 = render 'layouts/categories'
+= render 'layouts/footer'
