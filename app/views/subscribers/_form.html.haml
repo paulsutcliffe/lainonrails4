@@ -7,6 +7,9 @@
     = f.input :last_name, label: false, placeholder: "Apellidos"
     = f.input :email, label: false, placeholder: "Correo electrónico"
     = f.input :phone, label: false, placeholder: "Teléfono"
+
+    -#  = f.input :coment, label: false, placeholder: "Comentario"
+ 
     .privacy
       = content_tag :label, class: 'check_box' do
         = f.check_box :privacy_policy

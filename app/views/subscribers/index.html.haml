@@ -26,6 +26,7 @@
             %td= subscriber.email
             %td= subscriber.phone
             %td= subscriber.country_id
+            -#%td= subscriber.coment
             %td= link_to 'crud.show', subscriber, class: 'btn btn-default'
             - if current_admin
               %td= link_to 'crud.edit', edit_subscriber_path(subscriber), class: 'btn btn-info'
