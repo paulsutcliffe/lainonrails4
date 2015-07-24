@@ -5,6 +5,7 @@
 / [if gt IE 8]><!
 %html.no-js
   / <![endif]
+/ 
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
@@ -45,8 +46,8 @@
 
   %body
     %header{:role => "navigation", :id => "#{body_id} #{body_class}" }
-      = render 'layouts/navigation'
+      /= render 'layouts/navigation'
     %main#main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+      /= render 'layouts/messages'
+      /= yield
     = render 'shared/google_analytics'
