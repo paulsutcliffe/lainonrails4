@@ -547,7 +547,7 @@ transition: all 0.5s;
   }
 
 .email-opor span::before{
-content: url("mini-mail.png");
+content: url(image_path('mini-mail.png'));
 display: inline-block;
 vertical-align: middle;
 margin-right: 5px;
@@ -555,7 +555,7 @@ margin-right: 5px;
 }
 
 .phone-opor span::before{
-content: url("mini-phone.png");
+content: url(image_path('mini-phone.png'));
 display: inline-block;
 vertical-align: middle;
 margin-left:2px;
